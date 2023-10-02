@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+:root {
+  --sprint: #39AB32;
+  --mountation: #E10813;
+  --finishColor: gold;
+  --polka: hsl(20, 12%, 90%);
+  --polkaDot: #d50000;
+}
+
+html,body {
+  height: 100%;
+}
+
+#root {
+  height: inherit;
+}
+
 .hide {
   display: none;
 }

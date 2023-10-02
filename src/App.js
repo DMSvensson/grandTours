@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 
+import Stage from './components/stage/stage';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -14,13 +16,11 @@ class App extends React.Component {
   
   render() {
     return (
-      <div>
+      <div style={{height: 'inherit'}}>
         <div id="box" className='box' style={{width: `${this.state.boxWidth}px`}}></div>
         <div onWheel={this.scrollBehavior} className='container mandatory-scroll-snapping'>
-          <div style={{height:'90vh', width:'100%', backgroundColor: 'red', position:'relative', zIndex:2}}>
-  
-          </div>
-          <div style={{height:'90vh', width:'100%', backgroundColor: 'blue', position:'relative', zIndex:2}}>
+          <Stage />
+          <div style={{width:'100%', backgroundColor: 'blue', position:'relative', zIndex:2}}>
   
           </div>
         </div>
