@@ -1,6 +1,75 @@
 import React from "react";
 import styles from './stage.module.css';
-import stage from '../../assets/stages/stage7.png'
+import stage from '../../assets/stages/stage7.png';
+import KeyPoint from "../keyPoint/keyPoint";
+
+const stageLength = 176.6;
+
+const _keyPoint = {
+    name: 'Gérardmer',
+    keyPointLength: 'short',
+    flagDirectionLeft: true,
+    text: 'S',
+    km: 101,
+    type: 'sprint',
+    results: [
+        {
+            name: 'Mads P',
+            team: 'Trek-Segafredo',
+            points: 20
+        },
+        {
+            name: 'Geschke Simon',
+            team: 'Cofidis',
+            points: 17
+        }
+    ]
+}
+const _keyPoint2 = {
+    name: 'Col de la Grosse Pierre',
+    keyPointLength: 'medimum',
+    flagDirectionLeft: false,
+    text: '3',
+    km: 107,
+    length: '3.1 km',
+    avgProcent: '6.3%',
+    altitude: '954km',
+    type: 'mountain',
+    results: [
+        {
+            name: 'Geschke Simon',
+            team: 'Cofidis',
+            points: 2
+        },
+        {
+            name: 'Kamna Lennard',
+            team: 'BORA - hansgrohe',
+            points: 1
+        }
+    ]
+}
+const _keyPointfinish = {
+    name: 'Finish',
+    keyPointLength: 'extraLong',
+    flagDirectionLeft: true,
+    text: 'F',
+    km: stageLength,
+    type: 'finish',
+    results: [
+        {
+            name: 'Pogačar Tadej',
+            team: 'UAE Team Emirates',
+            points: 30
+        },
+        {
+            name: 'Vingegaard Jonas',
+            team: 'Jumbo - Visma',
+            points: 25
+        }
+    ]
+}
+
+const keyPoints = [_keyPoint, _keyPoint2, _keyPointfinish];
 
 function Stage() {
     return (
@@ -15,16 +84,14 @@ function Stage() {
             <div className={styles.distance}>
                 <span>0 km</span>
                 <div className={styles.line}></div>
-                <span>176.3km</span>
+                <span>{`${stageLength}km`}</span>
             </div>
-            <div className={`${styles.keyPoints} ${styles.sprint} ${styles.short}`}>
-                <div className={`${styles.flag} ${styles.left}`}>
-                    <span>S</span>
-                    <div className={styles.keyPointInfo}>
-                        <h3>Gerardmer</h3>
-                    </div>
-                </div>
-            </div>
+            {keyPoints.map((keyPoint) => {
+                return (
+                    <KeyPoint keyPoint={keyPoint} stageKm={stageLength}/>
+                );
+            })}
+            
         </div>
     </div>
     );
