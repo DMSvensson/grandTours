@@ -71,7 +71,7 @@ const _keyPointfinish = {
 
 const keyPoints = [_keyPoint, _keyPoint2, _keyPointfinish];
 
-function Stage() {
+function Stage({boxRef}) {
     return (
     <div className={styles.stageContainer}>
         <div className={styles.stageInfo}>
@@ -88,7 +88,7 @@ function Stage() {
             </div>
             {keyPoints.map((keyPoint) => {
                 return (
-                    <KeyPoint keyPoint={keyPoint} stageKm={stageLength}/>
+                    <KeyPoint boxRef={boxRef} keyPoint={keyPoint} stageKm={stageLength} key={keyPoint.name}/>
                 );
             })}
             

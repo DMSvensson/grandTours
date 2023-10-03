@@ -1,5 +1,8 @@
 import React from "react";
 import styles from './keyPoint.module.css';
+import WinnerTable from "../winnerTable/winnerTable";
+import { useRef } from 'react';
+import useHasPassedDetection from "../../hooks/hasPassedDetection";
 
 const getTypeClass = (type) => {
     if(type === 'sprint') {
@@ -33,9 +36,10 @@ const calculatePosition = (keyPointKm, stageKm, type) => {
     return keyPointKm/stageKm * 100;
 }
 
-function KeyPoint({keyPoint, stageKm}) {
+function KeyPoint({keyPoint, stageKm, boxRef}) {
+    const element2Ref = useRef(null);
     return (
-        <div className={`${styles.keyPoint} ${getTypeClass(keyPoint.type)} ${getLengthClass(keyPoint.keyPointLength)}`} style={{left: `${calculatePosition(keyPoint.km, stageKm)}%`}}>
+        <div ref={element2Ref} className={`${styles.keyPoint} ${getTypeClass(keyPoint.type)} ${getLengthClass(keyPoint.keyPointLength)}`} style={{left: `${calculatePosition(keyPoint.km, stageKm)}%`}}>
             <div className={`${styles.flag} ${keyPoint.flagDirectionLeft ? styles.left : styles.right}`}>
                 <span>{keyPoint.text}</span>
                 <div className={styles.keyPointInfo}>
@@ -43,6 +47,7 @@ function KeyPoint({keyPoint, stageKm}) {
                     {keyPoint.type === 'mountain' && <div><p>{keyPoint.avgProcent}</p><p>{keyPoint.length}</p><p>{keyPoint.altitude}</p></div>}
                 </div>
             </div>
+            <WinnerTable hide={useHasPassedDetection(boxRef, element2Ref)} winners={keyPoint.results} type={keyPoint.type} flagDirectionLeft={keyPoint.flagDirectionLeft} key={keyPoint.tableId}/>
         </div>
     )
 }
