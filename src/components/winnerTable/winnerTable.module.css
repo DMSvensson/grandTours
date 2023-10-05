@@ -1,17 +1,17 @@
 .winners {
     position: relative;
     top: -35px;
-    width: 164px;
+    width: 187px;
     max-height: 163px;
     overflow: auto;
 }
 
 .winners.left {
-    right: 165px;
+    right: 189px;
 }
 
 .winners.right {
-    left: 8px;
+    left: 5px;
 }
 
 .winners > table {
