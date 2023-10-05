@@ -23,11 +23,3 @@ html,body {
 .hide {
   display: none;
 }
-
-.box {
-  position: absolute;
-  width: 0px;
-  height: 100%;
-  background-color: yellow;
-  z-index: 1;
-}
