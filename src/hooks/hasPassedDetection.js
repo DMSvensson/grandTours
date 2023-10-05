@@ -15,6 +15,8 @@ function useHasPassedDetection(element1Ref, element2Ref) {
                     
                     if(element1Rect.width >= element2Rect.x) {
                         setIsColliding(true);
+                    } else {
+                        setIsColliding(false);
                     }
                 }
             }, 10);
