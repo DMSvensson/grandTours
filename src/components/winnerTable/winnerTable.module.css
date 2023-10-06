@@ -1,0 +1,63 @@
+.winners {
+    position: relative;
+    top: -35px;
+    width: 187px;
+    max-height: 163px;
+    overflow: auto;
+}
+
+.winners.left {
+    right: 189px;
+}
+
+.winners.right {
+    left: 5px;
+}
+
+.winners > table {
+    text-align: center;
+    line-height: 20px;
+    border-collapse: collapse;
+    color: white;
+}
+
+.winners  table  tr:nth-child(odd) {
+    background-color: hsl(0, 0%, 25%);
+}
+  
+.winners table tr:nth-child(even) {
+    background-color: hsl(0, 0%, 33%);
+}
+
+.winners table tr td {
+    padding: 10px 10px;
+    font-size: 0.8rem;
+}
+
+.sprint > table > tbody > tr:first-child {
+    background-color: var(--sprint);
+}
+
+.finish table tbody tr:first-child {
+    background-color: var(--sprint);
+}
+
+.mountain table tbody tr:first-child {
+    background-color: var(--mountation);
+}
+
+.animationFromTop {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+}
+
+@keyframes slidein {
+    from {
+      height: 0px;
+    }
+  
+    to {
+      height: 200px;
+    }
+  }

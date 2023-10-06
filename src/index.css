@@ -4,14 +4,22 @@
   box-sizing: border-box;
 }
 
-.hide {
-  display: none;
+:root {
+  --sprint: #39AB32;
+  --mountation: #E10813;
+  --finishColor: gold;
+  --polka: hsl(20, 12%, 90%);
+  --polkaDot: #d50000;
 }
 
-.box {
-  position: absolute;
-  width: 0px;
+html,body {
   height: 100%;
-  background-color: yellow;
-  z-index: 1;
+}
+
+#root {
+  height: inherit;
+}
+
+.hide {
+  display: none;
 }
