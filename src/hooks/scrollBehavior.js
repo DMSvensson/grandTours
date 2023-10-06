@@ -3,6 +3,7 @@ import { useState } from "react";
 function useScrollBehavior(viewportWidth, scrollSpeed, numberOfStages) {
     const [currentStage, setCurrentState] = useState(0);
     const [boxWidth, setBoxWidth] = useState(0);
+    const [showOverview, setShowOvevriew] = useState(false);
 
     const handleStageChange = (currentStage) => {
         setCurrentState(currentStage)
@@ -12,14 +13,24 @@ function useScrollBehavior(viewportWidth, scrollSpeed, numberOfStages) {
         setBoxWidth(width);
     }
 
+    const handleShowOverviewChange = (bool) => {
+      setShowOvevriew(bool);
+    }
+
     function scroll(event) {     
         if(event.deltaY < 0) {
             // scroll up
             if(boxWidth <= 0) {
-              if(currentStage > 0) {
-                handleStageChange(currentStage - 1);
+              if(showOverview) {
+                handleShowOverviewChange(false);
+                handleBoxWidth(viewportWidth);
+                return;
               }
-              handleBoxWidth(0);
+              if(currentStage > 0) {
+                handleBoxWidth(viewportWidth);
+                handleStageChange(currentStage - 1);
+                handleShowOverviewChange(true);
+              }
               return;
             }
             
@@ -27,9 +38,14 @@ function useScrollBehavior(viewportWidth, scrollSpeed, numberOfStages) {
           } else {
             // scroll down
             if(boxWidth >= viewportWidth) {
+              handleBoxWidth(0);
+              if(!showOverview) {
+                handleShowOverviewChange(true);
+                return;
+              }
               if(currentStage < numberOfStages - 1) {
                 handleStageChange(currentStage + 1);
-                handleBoxWidth(0);
+                handleShowOverviewChange(false);
               }
               return;
             }
@@ -38,7 +54,7 @@ function useScrollBehavior(viewportWidth, scrollSpeed, numberOfStages) {
           }
     }
     
-    return {currentStage, boxWidth, scrollBehavior: scroll};
+    return {currentStage, boxWidth, showOverview, scrollBehavior: scroll};
 }
 
 export default useScrollBehavior;

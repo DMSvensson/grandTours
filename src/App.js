@@ -4,6 +4,7 @@ import './App.css';
 import Stage from './components/stage/stage';
 import useScrollBehavior from './hooks/scrollBehavior';
 import {useWheelActive } from './contexts/WheelActiveContext';
+import StageOverview from './components/stageOverview/stageOverview';
 
 async function getData() {
   const response = await fetch('/data.json', {
@@ -49,14 +50,15 @@ function App() {
 
   const isLoading = data === null;
   const numberOfStages = isLoading ? 0 : data.stages.length;
-  const {currentStage, boxWidth, scrollBehavior} = useScrollBehavior(viewportWidth, scrollSpeed, numberOfStages);
+  const {currentStage, boxWidth, showOverview, scrollBehavior} = useScrollBehavior(viewportWidth, scrollSpeed, numberOfStages);
   const stage = isLoading ? 'Loading...' : data.stages[currentStage];
 
   return (
     <div style={{height: 'inherit'}}>
       <div ref={boxRef} id="box" className='box' style={{width: `${boxWidth}px`}}></div>
       <div onWheel={handleWheel} id='scrollContainer' className='container'>
-        {!isLoading && <Stage stage={stage} boxRef={boxRef}/>}
+        {!isLoading && !showOverview && <Stage stage={stage} boxRef={boxRef}/>}
+        {!isLoading && showOverview && <StageOverview />}
       </div>
     </div>
   );
