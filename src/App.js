@@ -58,7 +58,7 @@ function App() {
       <div ref={boxRef} id="box" className='box' style={{width: `${boxWidth}px`}}></div>
       <div onWheel={handleWheel} id='scrollContainer' className='container'>
         {!isLoading && !showOverview && <Stage stage={stage} boxRef={boxRef}/>}
-        {!isLoading && showOverview && <StageOverview />}
+        {!isLoading && showOverview && <StageOverview results={stage.overview} stageNumber={stage.id}/>}
       </div>
     </div>
   );

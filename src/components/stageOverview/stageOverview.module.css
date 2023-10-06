@@ -1,216 +1,83 @@
 .overviewContainer {
-    position: relative;
-    width: 100vw;
-    z-index: 2;
-    height: 100%;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: hsl(51, 81%, 66%);
-    padding: 10px 0px;
-    margin-bottom: 5px;
-  }
-  
-  .header .logo {
-    max-width: 5%;
-  }
-  
-  .header > span {
-    font-size: 1.5rem;
-  }
-  
-  .polkaDot {
-    position: absolute;
-    --radius: 20px;
-    background-color: var(--polkaDot);
-    border-radius: 50%;
-    height: var(--radius);
-    width: var(--radius);
-  }
-  
-  .dotPosOne {
-    top: 62%;
-    left: 9%;
-  }
-  .dotPosTwo {
-    top: 13%;
-    left: 20%;
-  }
-  .dotPosThree {
-    top: 60%;
-    left: 70%;
-  }
-  .dotPosFour {
-    top: -8%;
-    left: 3%;
-  }
-  .dotPosFive {
-    top: 15%;
-    left: 82%;
-  }
-  .dotPosSix {
-    top: 45%;
-    left: 97%;
-  }
-  .dotPosSeven {
-    top: 81%;
-    left: 29%;
-  }
-  .dotPosEight {
-    top: -2%;
-    left: 59%;
-  }
-  
-  .gridContainer {
+  position: relative;
+  width: 100vw;
+  z-index: 2;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: hsl(51, 81%, 66%);
+  padding: 10px 0px;
+  margin-bottom: 5px;
+}
+
+.header .logo {
+  max-width: 5%;
+}
+
+.header > span {
+  font-size: 1.5rem;
+}
+
+.gridContainer {
   display: grid;
   background-color: #4a4a4a;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "stageWin general points mountion"
     "stageWin young team fighter";
-   column-gap: 10px;
-   row-gap: 10px;
-   color: white;
-   padding: 20px;
-   height: 88svh;
-  }
-  
-  .gridContainer > div {
-    display: flex;
-    flex-direction: column;
-    background-color: hsla(51, 80%, 8%, .8);
-    backdrop-filter: blur(5px);
-    border-radius: 10px;
-    overflow: auto;
-    height: 100%;
-  }
-  
-  .gridContentHeader {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 65px;
-    max-height: 65px;
-    overflow: hidden;
-  }
-  
-  .gridContentHeader .jersey {
-    position: relative;
-    top: 30px;
-    width: 36%;
-    background-color: hsla(0, 0%, 70%, .2);
-  }
-  
-  .gridContentBody {
-    margin-top: 10px;
-    padding: 0 20px;
-    overflow: auto;
-  }
+  column-gap: 10px;
+  row-gap: 10px;
+  color: white;
+  padding: 20px;
+  height: 90%;
+}
 
-  .yellowBg {
-    background-color: hsl(56, 100%, 53%);
-  }
-  
-  .greenBg {
-    background-color: hsl(129, 50%, 44%);
-  }
-  
-  .polkaBg {
-    background-color: var(--polka);
-    color: black;
-  }
-  
-  .whiteBg {
-    background-color: hsl(264, 11%, 91%);
-    color: black;
-  }
-  
-  .winnerBg {
-    background-color: gold;
-  }
-  
-  .stageResults {
-    grid-area: stageWin;
-  }  
-  
-  .yellowJersey {
-    grid-area: general;
-  }
-  
-  .greenJersey {
-    grid-area: points;
-  }
-  
-  .mountainJersey {
-    grid-area: mountion;
-  }
-  
-  .youngJersey {
-    grid-area: young;
-  }
-  
-  .team {
-    grid-area: team;
-  }
-  
-  .bestTeam > img {
-    width: 60px;
-  }
-  
-  .fighter {
-    grid-area: fighter;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .fighter > img {
-    width: 35%;
-  }
-  
-  .table {
-    width: 100%;
-    text-align: center;
-    color: white;
-    line-height: 25px;
-    border-collapse: collapse;
-  }
-  
-  .tableTeam {
-    font-size: 0.7rem;
-  }
-  
-  .bodyStageResults tr:nth-child(1) {
-    background-color: gold;
-    color: black;
-  }
-  .bodyStageResults tr:nth-child(2) {
-    background-color: silver;
-    color: black;
-  }
-  .bodyStageResults tr:nth-child(3) {
-    background-color: #CD7F32;
-    color: black;
-  }
-  
-  tbody tr:nth-child(odd) {
-    background-color: hsl(0, 0%, 25%);
-  }
-  
-  tbody tr:nth-child(even) {
-    background-color: hsl(0, 0%, 33%);
-  }
-  
-  tbody tr td {
-    padding: 15px 0;
-  }
-  
-  .teamLogo {
-    width: 50px;
-  }
+.gridContainer > div {
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(51, 80%, 8%, 0.8);
+  border-radius: 10px;
+  overflow: auto;
+  height: 100%;
+}
+
+.stageResults {
+  grid-area: stageWin;
+}
+
+.yellowJersey {
+  grid-area: general;
+}
+
+.greenJersey {
+  grid-area: points;
+}
+
+.mountainJersey {
+  grid-area: mountion;
+}
+
+.youngJersey {
+  grid-area: young;
+}
+
+.team {
+  grid-area: team;
+}
+
+.fighter {
+  grid-area: fighter;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fighter > img {
+  width: 35%;
+}

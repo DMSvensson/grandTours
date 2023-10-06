@@ -1,0 +1,135 @@
+.gridContentHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 65px;
+  max-height: 65px;
+  overflow: hidden;
+}
+
+.gridContentHeader .jersey {
+  position: relative;
+  top: 30px;
+  width: 36%;
+  background-color: hsla(0, 0%, 70%, 0.2);
+}
+
+.gridContentBody {
+  margin-top: 10px;
+  padding: 0 20px;
+  overflow: auto;
+}
+
+.yellowBg {
+  background-color: hsl(56, 100%, 53%);
+}
+
+.greenBg {
+  background-color: hsl(129, 50%, 44%);
+}
+
+.polkaBg {
+  background-color: var(--polka);
+  color: black;
+}
+
+.whiteBg {
+  background-color: hsl(264, 11%, 91%);
+  color: black;
+}
+
+.winnerBg {
+  background-color: gold;
+}
+
+.polkaDot {
+  position: absolute;
+  --radius: 20px;
+  background-color: var(--polkaDot);
+  border-radius: 50%;
+  height: var(--radius);
+  width: var(--radius);
+}
+
+.dotPosOne {
+  top: 62%;
+  left: 9%;
+}
+.dotPosTwo {
+  top: 13%;
+  left: 20%;
+}
+.dotPosThree {
+  top: 60%;
+  left: 70%;
+}
+.dotPosFour {
+  top: -8%;
+  left: 3%;
+}
+.dotPosFive {
+  top: 15%;
+  left: 82%;
+}
+.dotPosSix {
+  top: 45%;
+  left: 97%;
+}
+.dotPosSeven {
+  top: 81%;
+  left: 29%;
+}
+.dotPosEight {
+  top: -2%;
+  left: 59%;
+}
+
+.bestTeam > img {
+  width: 60px;
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+  color: white;
+  line-height: 25px;
+  border-collapse: collapse;
+}
+
+.tableTeam {
+  font-size: 0.7rem;
+}
+
+.bodyStageResults tr:nth-child(1) {
+  background-color: gold;
+  color: black;
+}
+.bodyStageResults tr:nth-child(2) {
+  background-color: silver;
+  color: black;
+}
+.bodyStageResults tr:nth-child(3) {
+  background-color: #cd7f32;
+  color: black;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: hsl(0, 0%, 25%);
+}
+
+tbody tr:nth-child(even) {
+  background-color: hsl(0, 0%, 33%);
+}
+
+tbody tr td {
+  padding: 15px 0;
+}
+
+.teamLogo {
+  width: 50px;
+}
+
+.jersey {
+  width: 60px;
+}

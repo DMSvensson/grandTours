@@ -7,449 +7,513 @@
             "date": "08 July 2022",
             "stageLength": 176,
             "keyPoints": [
-            {
-                "name": "Gérardmer",
-                "keyPointLength": "short",
-                "flagDirectionLeft": true,
-                "text": "S",
-                "km": 101,
-                "type": "sprint",
-                "results": [
-                    {
-                        "name": "Pedersen Mads",
-                        "team": "Trek-Segafredo",
-                        "points": 20
-                    },{
-                        "name": "Geschke Simon",
-                        "team": "Cofidis",
-                        "points": 17
-                    },{
-                        "name": "Barthe Cyril",
-                        "team": "B&B Hotels - KTM",
-                        "points": 15
-                    },{
-                        "name": "Erviti Imanol",
-                        "team": "Movistar Team",
-                        "points": 13
-                    },{
-                        "name": "Durbridge Luke",
-                        "team": "Team BikeExchange - Jayco",
-                        "points": 11
-                    },{
-                        "name": "Ciccone Giulio",
-                        "team": "Trek-Segafredo",
-                        "points": 10
-                    },{
-                        "name": "Teuns Dylan",
-                        "team": "Bahrain - Victorious",
-                        "points": 9
-                    },{
-                        "name": "Kämna Lennard",
-                        "team": "BORA - hansgrohe",
-                        "points": 8
-                    },{
-                        "name": "Schachmann Maximilian",
-                        "team": "BORA - hansgrohe",
-                        "points": 7
-                    },{
-                        "name": "Asgreen Kasper",
-                        "team": "Quick-Step Alpha Vinyl Team",
-                        "points": 6
-                    },{
-                        "name": "Van Aeart Wout",
-                        "team": "Jumbo-Visma",
-                        "points": 5
-                    },{
-                        "name": "Laporte Christophe",
-                        "team": "Jumbo-Visma",
-                        "points": 4
-                    },{
-                        "name": "Jakobsen Fabio",
-                        "team": "Quick-Step Alpha Vinyl Team",
-                        "points": 3
-                    },{
-                        "name": "Mørkøv Micheal",
-                        "team": "Quick-Step Alpha Vinyl Team",
-                        "points": 2
-                    },{
-                        "name": "Sénéchal Florian",
-                        "team": "Quick-Step Alpha Vinyl Team",
-                        "points": 1
-                    }
-                ]
-            },
-            {
-                "name": "Col de la Grosse Pierre",
-                "keyPointLength": "medimum",
-                "flagDirectionLeft": false,
-                "km": 107,
-                "text": 3,
-                "length": "3.1 km",
-                "avgProcent": "6.3%",
-                "altitude": "954m",
-                "type": "mountain",
-                "results": [
-                    {
-                        "name": "Geschke Simon",
-                        "team": "Cofidis",
-                        "points": 2
-                    },
-                    {
-                        "name": "Kämna Lennard",
-                        "team": "BORA - hansgrohe",
-                        "points": 1
-                    }
-                ]
-            },
-            {
-                "name": "Col des Croix",
-                "keyPointLength": "medimum",
-                "flagDirectionLeft": false,
-                "km": 136,
-                "text": 3,
-                "length": "3.3 km",
-                "avgProcent": "5.4%",
-                "altitude": "674m",
-                "type": "mountain",
-                "results": [
-                    {
-                        "name": "Geschke Simon",
-                        "team": "Cofidis",
-                        "points": 2
-                    },{
-                        "name": "Teuns Dylan",
-                        "team": "Bahrain - Victorious",
-                        "points": 1
-                    }
-                ]
-            },
-            {
-                "name": "La Super Planche des Belles Filles",
-                "keyPointLength": "short",
-                "flagDirectionLeft": true,
-                "km": 176,
-                "text": 1,
-                "length": "7 km",
-                "avgProcent": "8.5%",
-                "altitude": "1141m",
-                "type": "mountain",
-                "results": [
-                    {
-                        "name": "Pogačar Tadej",
-                        "team": "UAE Team Emirates",
-                        "points": 10
-                    },{
-                        "name": "Vingegaard Jonas",
-                        "team": "Jumbo-Visma",
-                        "points": 8
-                    },{
-                        "name": "Roglič Primož",
-                        "team": "Jumbo-Visma",
-                        "points": 6
-                    },{
-                        "name": "Kämna Lennard",
-                        "team": "BORA - hansgrohe",
-                        "points": 4
-                    },{
-                        "name": "Thomas Geraint",
-                        "team": "INEOS Grenadiers",
-                        "points": 2
-                    },{
-                        "name": "Gaudu David",
-                        "team": "Groupama - FDJ",
-                        "points": 1
-                    }
-                ]
-            },
-            {
-                "name": "Finish",
-                "keyPointLength": "longer",
-                "flagDirectionLeft": true,
-                "km": 176,
-                "text": "F",
-                "type": "finish",
-                "results": [
-                    {
-                        "name": "Pogačar Tadej",
-                        "team": "UAE Team Emirates",
-                        "points": 30
-                    },{
-                        "name": "Vingegaard Jonas",
-                        "team": "Jumbo-Visma",
-                        "points": 25
-                    },{
-                        "name": "Roglič Primož",
-                        "team": "Jumbo-Visma",
-                        "points": 22
-                    },{
-                        "name": "Kämna Lennard",
-                        "team": "BORA - hansgrohe",
-                        "points": 19
-                    },{
-                        "name": "Thomas Geraint",
-                        "team": "INEOS Grenadiers",
-                        "points": 17
-                    },{
-                        "name": "Gaudu David",
-                        "team": "Groupama - FDJ",
-                        "points": 15
-                    },{
-                        "name": "Mas Enric",
-                        "team": "Movistar Team",
-                        "points": 13
-                    },{
-                        "name": "Bardet Romain",
-                        "team": "Team DSM",
-                        "points": 11
-                    },{
-                        "name": "Yates Adam",
-                        "team": "INEOS Grenadiers",
-                        "points": 9
-                    },{
-                        "name": "Kuss Sepp",
-                        "team": "Jumbo-Visma",
-                        "points": 7
-                    },{
-                        "name": "Martinez Daniel Felipe",
-                        "team": "INEOS Grenadiers",
-                        "points": 6
-                    },{
-                        "name": "Urán Rigoberto",
-                        "team": "EF Education-EasyPost",
-                        "points": 5
-                    },{
-                        "name": "Martin Guillaume",
-                        "team": "Cofidis",
-                        "points": 4
-                    },{
-                        "name": "Pidcock Thomas",
-                        "team": "INEOS Grenadiers",
-                        "points": 3
-                    },{
-                        "name": "Quintana Nario",
-                        "team": "Team Arkéa Samsic",
-                        "points": 2
-                    }
-                ]
-            }
+                {
+                    "name": "Gérardmer",
+                    "keyPointLength": "short",
+                    "flagDirectionLeft": true,
+                    "text": "S",
+                    "km": 101,
+                    "type": "sprint",
+                    "results": [
+                        {
+                            "name": "Pedersen Mads",
+                            "team": "Trek-Segafredo",
+                            "points": 20
+                        },
+                        {
+                            "name": "Geschke Simon",
+                            "team": "Cofidis",
+                            "points": 17
+                        },
+                        {
+                            "name": "Barthe Cyril",
+                            "team": "B&B Hotels - KTM",
+                            "points": 15
+                        },
+                        {
+                            "name": "Erviti Imanol",
+                            "team": "Movistar Team",
+                            "points": 13
+                        },
+                        {
+                            "name": "Durbridge Luke",
+                            "team": "Team BikeExchange - Jayco",
+                            "points": 11
+                        },
+                        {
+                            "name": "Ciccone Giulio",
+                            "team": "Trek-Segafredo",
+                            "points": 10
+                        },
+                        {
+                            "name": "Teuns Dylan",
+                            "team": "Bahrain - Victorious",
+                            "points": 9
+                        },
+                        {
+                            "name": "Kämna Lennard",
+                            "team": "BORA - hansgrohe",
+                            "points": 8
+                        },
+                        {
+                            "name": "Schachmann Maximilian",
+                            "team": "BORA - hansgrohe",
+                            "points": 7
+                        },
+                        {
+                            "name": "Asgreen Kasper",
+                            "team": "Quick-Step Alpha Vinyl Team",
+                            "points": 6
+                        },
+                        {
+                            "name": "Van Aeart Wout",
+                            "team": "Jumbo-Visma",
+                            "points": 5
+                        },
+                        {
+                            "name": "Laporte Christophe",
+                            "team": "Jumbo-Visma",
+                            "points": 4
+                        },
+                        {
+                            "name": "Jakobsen Fabio",
+                            "team": "Quick-Step Alpha Vinyl Team",
+                            "points": 3
+                        },
+                        {
+                            "name": "Mørkøv Micheal",
+                            "team": "Quick-Step Alpha Vinyl Team",
+                            "points": 2
+                        },
+                        {
+                            "name": "Sénéchal Florian",
+                            "team": "Quick-Step Alpha Vinyl Team",
+                            "points": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Col de la Grosse Pierre",
+                    "keyPointLength": "medimum",
+                    "flagDirectionLeft": false,
+                    "km": 107,
+                    "text": 3,
+                    "length": "3.1 km",
+                    "avgProcent": "6.3%",
+                    "altitude": "954m",
+                    "type": "mountain",
+                    "results": [
+                        {
+                            "name": "Geschke Simon",
+                            "team": "Cofidis",
+                            "points": 2
+                        },
+                        {
+                            "name": "Kämna Lennard",
+                            "team": "BORA - hansgrohe",
+                            "points": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Col des Croix",
+                    "keyPointLength": "medimum",
+                    "flagDirectionLeft": false,
+                    "km": 136,
+                    "text": 3,
+                    "length": "3.3 km",
+                    "avgProcent": "5.4%",
+                    "altitude": "674m",
+                    "type": "mountain",
+                    "results": [
+                        {
+                            "name": "Geschke Simon",
+                            "team": "Cofidis",
+                            "points": 2
+                        },
+                        {
+                            "name": "Teuns Dylan",
+                            "team": "Bahrain - Victorious",
+                            "points": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "La Super Planche des Belles Filles",
+                    "keyPointLength": "short",
+                    "flagDirectionLeft": true,
+                    "km": 176,
+                    "text": 1,
+                    "length": "7 km",
+                    "avgProcent": "8.5%",
+                    "altitude": "1141m",
+                    "type": "mountain",
+                    "results": [
+                        {
+                            "name": "Pogačar Tadej",
+                            "team": "UAE Team Emirates",
+                            "points": 10
+                        },
+                        {
+                            "name": "Vingegaard Jonas",
+                            "team": "Jumbo-Visma",
+                            "points": 8
+                        },
+                        {
+                            "name": "Roglič Primož",
+                            "team": "Jumbo-Visma",
+                            "points": 6
+                        },
+                        {
+                            "name": "Kämna Lennard",
+                            "team": "BORA - hansgrohe",
+                            "points": 4
+                        },
+                        {
+                            "name": "Thomas Geraint",
+                            "team": "INEOS Grenadiers",
+                            "points": 2
+                        },
+                        {
+                            "name": "Gaudu David",
+                            "team": "Groupama - FDJ",
+                            "points": 1
+                        }
+                    ]
+                },
+                {
+                    "name": "Finish",
+                    "keyPointLength": "longer",
+                    "flagDirectionLeft": true,
+                    "km": 176,
+                    "text": "F",
+                    "type": "finish",
+                    "results": [
+                        {
+                            "name": "Pogačar Tadej",
+                            "team": "UAE Team Emirates",
+                            "points": 30
+                        },
+                        {
+                            "name": "Vingegaard Jonas",
+                            "team": "Jumbo-Visma",
+                            "points": 25
+                        },
+                        {
+                            "name": "Roglič Primož",
+                            "team": "Jumbo-Visma",
+                            "points": 22
+                        },
+                        {
+                            "name": "Kämna Lennard",
+                            "team": "BORA - hansgrohe",
+                            "points": 19
+                        },
+                        {
+                            "name": "Thomas Geraint",
+                            "team": "INEOS Grenadiers",
+                            "points": 17
+                        },
+                        {
+                            "name": "Gaudu David",
+                            "team": "Groupama - FDJ",
+                            "points": 15
+                        },
+                        {
+                            "name": "Mas Enric",
+                            "team": "Movistar Team",
+                            "points": 13
+                        },
+                        {
+                            "name": "Bardet Romain",
+                            "team": "Team DSM",
+                            "points": 11
+                        },
+                        {
+                            "name": "Yates Adam",
+                            "team": "INEOS Grenadiers",
+                            "points": 9
+                        },
+                        {
+                            "name": "Kuss Sepp",
+                            "team": "Jumbo-Visma",
+                            "points": 7
+                        },
+                        {
+                            "name": "Martinez Daniel Felipe",
+                            "team": "INEOS Grenadiers",
+                            "points": 6
+                        },
+                        {
+                            "name": "Urán Rigoberto",
+                            "team": "EF Education-EasyPost",
+                            "points": 5
+                        },
+                        {
+                            "name": "Martin Guillaume",
+                            "team": "Cofidis",
+                            "points": 4
+                        },
+                        {
+                            "name": "Pidcock Thomas",
+                            "team": "INEOS Grenadiers",
+                            "points": 3
+                        },
+                        {
+                            "name": "Quintana Nario",
+                            "team": "Team Arkéa Samsic",
+                            "points": 2
+                        }
+                    ]
+                }
             ],
             "overview": {
-        "stageResults": [
-            {
-                "name": "Pogačar Tadej", 
-                "team": "UAE Team Emirates",
-                "time": "3:58:40"
-            },
-            {
-                "name": "Vingegaard Jonas", 
-                "team": "Jumbo-Visma",
-                "time": "--"
-            },
-            {
-                "name": "Roglič Primož", 
-                "team": "Jumbo-Visma",
-                "time": "0:12"
-            },
-            {
-                "name": "Kämna Lennard", 
-                "team": "BORA - hansgrohe",
-                "time": "0:14"
-            },
-            {
-                "name": "Thomas Geraint", 
-                "team": "INEOS Grenadiers",
-                "time": "--"
-            },
-            {
-                "name": "Gaudu David", 
-                "team": "Groupama - FDJ",
-                "time": "0:19"
-            },
-            {
-                "name": "Mas Enric", 
-                "team": "Movistar Team",
-                "time": "0:21"
-            },
-            {
-                "name": "Bardet Romain", 
-                "team": "Team DSM",
-                "time": "--"
-            },
-            {
-                "name": "Kuss Sepp", 
-                "team": "Jumbo-Visma",
-                "time": "0:41"
+                "stageResults": {
+                    "id": "SR",
+                    "type": "stage_results",
+                    "isTime": true,
+                    "results": [
+                        {
+                            "name": "Pogačar Tadej",
+                            "team": "UAE Team Emirates",
+                            "time": "3:58:40"
+                        },
+                        {
+                            "name": "Vingegaard Jonas",
+                            "team": "Jumbo-Visma",
+                            "time": "--"
+                        },
+                        {
+                            "name": "Roglič Primož",
+                            "team": "Jumbo-Visma",
+                            "time": "0:12"
+                        },
+                        {
+                            "name": "Kämna Lennard",
+                            "team": "BORA - hansgrohe",
+                            "time": "0:14"
+                        },
+                        {
+                            "name": "Thomas Geraint",
+                            "team": "INEOS Grenadiers",
+                            "time": "--"
+                        },
+                        {
+                            "name": "Gaudu David",
+                            "team": "Groupama - FDJ",
+                            "time": "0:19"
+                        },
+                        {
+                            "name": "Mas Enric",
+                            "team": "Movistar Team",
+                            "time": "0:21"
+                        },
+                        {
+                            "name": "Bardet Romain",
+                            "team": "Team DSM",
+                            "time": "--"
+                        },
+                        {
+                            "name": "Kuss Sepp",
+                            "team": "Jumbo-Visma",
+                            "time": "0:41"
+                        }
+                    ]
+                },
+                "yellow": {
+                    "id": "Yellow",
+                    "type": "yellow",
+                    "isTime": true,
+                    "results": [
+                        {
+                            "name": "Pogačar Tadej",
+                            "team": "UAE Team Emirates",
+                            "time": "3:58:40"
+                        },
+                        {
+                            "name": "Vingegaard Jonas",
+                            "team": "Jumbo-Visma",
+                            "time": "0:35"
+                        },
+                        {
+                            "name": "Thomas Geraint",
+                            "team": "INEOS Grenadiers",
+                            "time": "1:10"
+                        },
+                        {
+                            "name": "Yates Adam",
+                            "team": "INEOS Grenadiers",
+                            "time": "1:18"
+                        },
+                        {
+                            "name": "Gaudu David",
+                            "team": "Groupama - FDJ",
+                            "time": "1:31"
+                        },
+                        {
+                            "name": "Bardet Romain",
+                            "team": "Team DSM",
+                            "time": "1:32"
+                        },
+                        {
+                            "name": "Pidcock Thomas",
+                            "team": "INEOS Grenadiers",
+                            "time": "1:35"
+                        },
+                        {
+                            "name": "Powless",
+                            "team": "EF Education-EasyPost",
+                            "time": "1:37"
+                        },
+                        {
+                            "name": "Martinez Daniel Felipe",
+                            "team": "INEOS Grenadiers",
+                            "time": "1:55"
+                        }
+                    ]
+                },
+                "green": {
+                    "id": "Green",
+                    "type": "green",
+                    "isTime": false,
+                    "results": [
+                        {
+                            "name": "Van Aeart Wout",
+                            "team": "Jumbo-Visma",
+                            "point": "203"
+                        },
+                        {
+                            "name": "Jakobsen Fabio",
+                            "team": "Quick-Step Alpha Vinyl Team",
+                            "point": "140"
+                        },
+                        {
+                            "name": "Pogačar Tadej",
+                            "team": "UAE Team Emirates",
+                            "point": "108"
+                        },
+                        {
+                            "name": "Philipsen Jasper",
+                            "team": "Alpecin-Deceuninck",
+                            "point": "89"
+                        },
+                        {
+                            "name": "Laporte Christophe",
+                            "team": "Jumbo-Visma",
+                            "point": "87"
+                        }
+                    ]
+                },
+                "polka": {
+                    "id": "Polka",
+                    "type": "polka",
+                    "isTime": false,
+                    "results": [
+                        {
+                            "name": "Cort Magnus",
+                            "team": "EF Education-EasyPost",
+                            "point": "11"
+                        },
+                        {
+                            "name": "Pogačar Tadej",
+                            "team": "UAE Team Emirates",
+                            "point": "10"
+                        },
+                        {
+                            "name": "Vingegaard Jonas",
+                            "team": "Jumbo-Visma",
+                            "point": "8"
+                        },
+                        {
+                            "name": "Roglič Primož",
+                            "team": "Jumbo-Visma",
+                            "point": "6"
+                        },
+                        {
+                            "name": "Kämna Lennard",
+                            "team": "BORA - hansgrohe",
+                            "point": "5"
+                        }
+                    ]
+                },
+                "youth": {
+                    "id": "Youth",
+                    "type": "youth",
+                    "isTime": true,
+                    "results": [
+                        {
+                            "name": "Pogačar Tadej",
+                            "team": "UAE Team Emirates",
+                            "time": "24:43:14"
+                        },
+                        {
+                            "name": "Pidcock Thomas",
+                            "team": "INEOS Grenadiers",
+                            "time": "1:35"
+                        },
+                        {
+                            "name": "Mcnulty Brandon",
+                            "team": "UAE Team Emirates",
+                            "time": "6:28"
+                        },
+                        {
+                            "name": "Leknessund Andreas",
+                            "team": "Team DSM",
+                            "time": "6:28"
+                        },
+                        {
+                            "name": "Jorgenson Matteo",
+                            "team": "Movistar Team",
+                            "time": "15:30"
+                        }
+                    ]
+                },
+                "teams": {
+                    "id": "Teams",
+                    "type": "team",
+                    "isTime": true,
+                    "results": [
+                        {
+                            "team": "INEOS Grenadiers",
+                            "time": "74:13:25"
+                        },
+                        {
+                            "team": "Jumbo-Visma",
+                            "time": "0:26"
+                        },
+                        {
+                            "team": "EF Education-EasyPost",
+                            "time": "5:55"
+                        },
+                        {
+                            "team": "BORA - hansgrohe",
+                            "time": "6:20"
+                        },
+                        {
+                            "team": "Groupama - FDJ",
+                            "time": "7:38"
+                        },
+                        {
+                            "team": "UAE Team Emirates",
+                            "time": "8:22"
+                        },
+                        {
+                            "team": "Bahrain - Victorious",
+                            "time": "8:45"
+                        },
+                        {
+                            "team": "Trek - Segafredo",
+                            "time": "12:35"
+                        },
+                        {
+                            "team": "Team Arkéa Samsic",
+                            "time": "13:55"
+                        }
+                    ]
+                },
+                "combativity": "Simon Geschke"
             }
-        ],
-        "yellow": [
-            {
-                "name": "Pogačar Tadej", 
-                "team": "UAE Team Emirates",
-                "time": "3:58:40"
-            },
-            {
-                "name": "Vingegaard Jonas", 
-                "team": "Jumbo-Visma",
-                "time": "0:35"
-            },
-            {
-                "name": "Thomas Geraint", 
-                "team": "INEOS Grenadiers",
-                "time": "1:10"
-            },
-            {
-                "name": "Yates Adam", 
-                "team": "INEOS Grenadiers",
-                "time": "1:18"
-            },
-            {
-                "name": "Gaudu David", 
-                "team": "Groupama - FDJ",
-                "time": "1:31"
-            },
-            {
-                "name": "Bardet Romain", 
-                "team": "Team DSM",
-                "time": "1:32"
-            },
-            {
-                "name": "Pidcock Thomas", 
-                "team": "INEOS Grenadiers",
-                "time": "1:35"
-            },
-            {
-                "name": "Powless", 
-                "team": "EF Education-EasyPost",
-                "time": "1:37"
-            },
-            {
-                "name": "Martinez Daniel Felipe", 
-                "team": "INEOS Grenadiers",
-                "time": "1:55"
-            }
-        ],
-        "green": [
-            {
-                "name": "Van Aeart Wout", 
-                "team": "Jumbo-Visma",
-                "point": "203"
-            },
-            {
-                "name": "Jakobsen Fabio", 
-                "team": "Quick-Step Alpha Vinyl Team",
-                "point": "140"
-            },
-            {
-                "name": "Pogačar Tadej", 
-                "team": "UAE Team Emirates",
-                "point": "108"
-            },
-            {
-                "name": "Philipsen Jasper", 
-                "team": "Alpecin-Deceuninck",
-                "point": "89"
-            },
-            {
-                "name": "Laporte Christophe", 
-                "team": "Jumbo-Visma",
-                "point": "87"
-            }
-        ],
-        "polka": [
-            {
-                "name": "Cort Magnus", 
-                "team": "EF Education-EasyPost",
-                "point": "11"
-            },
-            {
-                "name": "Pogačar Tadej", 
-                "team": "UAE Team Emirates",
-                "point": "10"
-            },
-            {
-                "name": "Vingegaard Jonas", 
-                "team": "Jumbo-Visma",
-                "point": "8"
-            },
-            {
-                "name": "Roglič Primož", 
-                "team": "Jumbo-Visma",
-                "point": "6"
-            },
-            {
-                "name": "Kämna Lennard", 
-                "team": "BORA - hansgrohe",
-                "point": "5"
-            }
-        ],
-        "youth": [
-            {
-                "name": "Pogačar Tadej", 
-                "team": "UAE Team Emirates",
-                "time": "24:43:14"
-            },
-            {
-                "name": "Pidcock Thomas", 
-                "team": "INEOS Grenadiers",
-                "time": "1:35"
-            },
-            {
-                "name": "Mcnulty Brandon", 
-                "team": "UAE Team Emirates",
-                "time": "6:28"
-            },
-            {
-                "name": "Leknessund Andreas", 
-                "team": "Team DSM",
-                "time": "6:28"
-            },
-            {
-                "name": "Jorgenson Matteo", 
-                "team": "Movistar Team",
-                "time": "15:30"
-            }
-        ],
-        "teams": [
-            {
-                "team": "INEOS Grenadiers",
-                "time": "74:13:25"
-            },
-            {
-                "team": "Jumbo-Visma",
-                "time": "0:26"
-            },
-            {
-                "team": "EF Education-EasyPost",
-                "time": "5:55"
-            },
-            {
-                "team": "BORA - hansgrohe",
-                "time": "6:20"
-            },
-            {
-                "team": "Groupama - FDJ",
-                "time": "7:38"
-            },
-            {
-                "team": "UAE Team Emirates",
-                "time": "8:22"
-            },
-            {
-                "team": "Bahrain - Victorious",
-                "time": "8:45"
-            },
-            {
-                "team": "Trek - Segafredo",
-                "time": "12:35"
-            },
-            {
-                "team": "Team Arkéa Samsic",
-                "time": "13:55"
-            }
-        ],
-        "combativity": "Simon Geschke"
-            }
-        }, 
+        },
         {
             "id": 8,
             "stageImg": "stage8.png",
@@ -465,67 +529,81 @@
                     "km": 46.9,
                     "type": "sprint",
                     "results": [
-                {
-                    "name": "Wright Fred",
-                    "team": "Bahrain - Victorious",
-                    "points": 20
-                },{
-                    "name": "Frison Fredrik",
-                    "team": "Lotto Soudal",
-                    "points": 17
-                },{
-                    "name": "Cattaneo Mattia",
-                    "team": "Quick-Step Alpha Vinyl Team",
-                    "points": 15
-                },{
-                    "name": "Philipsen Jasper",
-                    "team": "Alpecin-Deceuninck",
-                    "points": 13
-                },{
-                    "name": "Van Aeart Wout",
-                    "team": "Jumbo-Visma",
-                    "points": 11
-                },{
-                    "name": "Laporte Christophe",
-                    "team": "Jumbo-Visma",
-                    "points": 10
-                },{
-                    "name": "Jakobsen Fabio",
-                    "team": "Quick-Step Alpha Vinyl Team",
-                    "points": 9
-                },{
-                    "name": "Mørkøv Micheal",
-                    "team": "Quick-Step Alpha Vinyl Team",
-                    "points": 8
-                },{
-                    "name": "Kruijswijk Steven",
-                    "team": "Jumbo-Visma",
-                    "points": 7
-                },{
-                    "name": "Juul-Jensen Christopher",
-                    "team": "Team BikeExchange - Jayco",
-                    "points": 6
-                },{
-                    "name": "Van Hooydonck Nathan",
-                    "team": "Jumbo-Visma",
-                    "points": 5
-                },{
-                    "name": "Bjerg Mikkel",
-                    "team": "UAE Team Emirates",
-                    "points": 4
-                },{
-                    "name": "Soler Marc",
-                    "team": "UAE Team Emirates",
-                    "points": 3
-                },{
-                    "name": "Bennett George",
-                    "team": "UAE Team Emirates",
-                    "points": 2
-                },{
-                    "name": "Hirschi Marc",
-                    "team": "UAE Team Emirates",
-                    "points": 1
-                }
+                        {
+                            "name": "Wright Fred",
+                            "team": "Bahrain - Victorious",
+                            "points": 20
+                        },
+                        {
+                            "name": "Frison Fredrik",
+                            "team": "Lotto Soudal",
+                            "points": 17
+                        },
+                        {
+                            "name": "Cattaneo Mattia",
+                            "team": "Quick-Step Alpha Vinyl Team",
+                            "points": 15
+                        },
+                        {
+                            "name": "Philipsen Jasper",
+                            "team": "Alpecin-Deceuninck",
+                            "points": 13
+                        },
+                        {
+                            "name": "Van Aeart Wout",
+                            "team": "Jumbo-Visma",
+                            "points": 11
+                        },
+                        {
+                            "name": "Laporte Christophe",
+                            "team": "Jumbo-Visma",
+                            "points": 10
+                        },
+                        {
+                            "name": "Jakobsen Fabio",
+                            "team": "Quick-Step Alpha Vinyl Team",
+                            "points": 9
+                        },
+                        {
+                            "name": "Mørkøv Micheal",
+                            "team": "Quick-Step Alpha Vinyl Team",
+                            "points": 8
+                        },
+                        {
+                            "name": "Kruijswijk Steven",
+                            "team": "Jumbo-Visma",
+                            "points": 7
+                        },
+                        {
+                            "name": "Juul-Jensen Christopher",
+                            "team": "Team BikeExchange - Jayco",
+                            "points": 6
+                        },
+                        {
+                            "name": "Van Hooydonck Nathan",
+                            "team": "Jumbo-Visma",
+                            "points": 5
+                        },
+                        {
+                            "name": "Bjerg Mikkel",
+                            "team": "UAE Team Emirates",
+                            "points": 4
+                        },
+                        {
+                            "name": "Soler Marc",
+                            "team": "UAE Team Emirates",
+                            "points": 3
+                        },
+                        {
+                            "name": "Bennett George",
+                            "team": "UAE Team Emirates",
+                            "points": 2
+                        },
+                        {
+                            "name": "Hirschi Marc",
+                            "team": "UAE Team Emirates",
+                            "points": 1
+                        }
                     ]
                 },
                 {
@@ -561,7 +639,8 @@
                             "name": "Cattaneo Mattia",
                             "team": "Quick-Step Alpha Vinyl Team",
                             "points": 2
-                        },{
+                        },
+                        {
                             "name": "Frison Fredrik",
                             "team": "Lotto Soudal",
                             "points": 1
@@ -601,7 +680,8 @@
                             "name": "Van Aeart Wout",
                             "team": "Jumbo-Visma",
                             "points": 2
-                        },{
+                        },
+                        {
                             "name": "Matthews Michael",
                             "team": "Team BikeExchange - Jayco",
                             "points": 1
@@ -620,59 +700,73 @@
                             "name": "Van Aeart Wout",
                             "team": "Jumbo-Visma",
                             "points": 50
-                        },{
+                        },
+                        {
                             "name": "Matthews Michael",
                             "team": "Team BikeExchange - Jayco",
                             "points": 30
-                        },{
+                        },
+                        {
                             "name": "Pogačar Tadej",
                             "team": "UAE Team Emirates",
                             "points": 20
-                        },{
+                        },
+                        {
                             "name": "Kron Andreas",
                             "team": "Lotto Soudal",
                             "points": 18
-                        },{
+                        },
+                        {
                             "name": "Bettiol Alberto",
                             "team": "EF Education-EasyPost",
                             "points": 16
-                        },{
+                        },
+                        {
                             "name": "Vlasov Aleksendr",
                             "team": "BORA - hansgrohe",
                             "points": 14
-                        },{
+                        },
+                        {
                             "name": "Thomas Benjamin",
                             "team": "Cofidis",
                             "points": 12
-                        },{
+                        },
+                        {
                             "name": "Vingegaard Jonas",
                             "team": "Jumbo-Visma",
                             "points": 10
-                        },{
+                        },
+                        {
                             "name": "Jungels Bob",
                             "team": "AG2R Citroen Team",
                             "points": 8
-                        },{
+                        },
+                        {
                             "name": "Pidcock Thomas",
                             "team": "INEOS Grenadiers",
                             "points": 7
-                        },{
+                        },
+                        {
                             "name": "Thomas Geraint",
                             "team": "INEOS Grenadiers",
                             "points": 6
-                        },{
+                        },
+                        {
                             "name": "Gaudu David",
                             "team": "Groupama - FDJ",
                             "points": 5
-                        },{
+                        },
+                        {
                             "name": "Martin Guillaume",
                             "team": "Cofidis",
                             "points": 4
-                        },{
+                        },
+                        {
                             "name": "Roglič Primož",
                             "team": "Jumbo-Visma",
                             "points": 3
-                        },{
+                        },
+                        {
                             "name": "Quintana Nario",
                             "team": "Team Arkéa Samsic",
                             "points": 2
@@ -683,190 +777,190 @@
             "overview": {
                 "stageResults": [
                     {
-                        "name": "Van Aeart Wout", 
+                        "name": "Van Aeart Wout",
                         "team": "Jumbo-Visma",
                         "time": "4:13:06"
                     },
                     {
-                        "name": "Matthews Michael", 
+                        "name": "Matthews Michael",
                         "team": "Team BikeExchange - Jayco",
                         "time": "--"
                     },
                     {
-                        "name": "Pogačar Tadej", 
+                        "name": "Pogačar Tadej",
                         "team": "UAE Team Emirates",
                         "time": "--"
                     },
                     {
-                        "name": "Kron Andreas", 
+                        "name": "Kron Andreas",
                         "team": "Lotto Soudal",
                         "time": "--"
                     },
                     {
-                        "name": "Bettiol Alberto", 
+                        "name": "Bettiol Alberto",
                         "team": "EF Education-EasyPost",
                         "time": "--"
                     },
                     {
-                        "name": "Vlasov Aleksendr", 
+                        "name": "Vlasov Aleksendr",
                         "team": "BORA - hansgrohe",
                         "time": "--"
                     },
                     {
-                        "name": "Thomas Benjamin", 
+                        "name": "Thomas Benjamin",
                         "team": "Cofidis",
                         "time": "--"
                     },
                     {
-                        "name": "Vingegaard Jonas", 
+                        "name": "Vingegaard Jonas",
                         "team": "Jumbo-Visma",
                         "time": "--"
                     },
                     {
-                        "name": "Jungels Bob", 
+                        "name": "Jungels Bob",
                         "team": "AG2R Citroen Team",
                         "time": "--"
                     },
                     {
-                        "name": "Pidcock Thomas", 
+                        "name": "Pidcock Thomas",
                         "team": "INEOS Grenadiers",
                         "time": "--"
                     },
                     {
-                        "name": "Thomas Geraint", 
+                        "name": "Thomas Geraint",
                         "team": "INEOS Grenadiers",
                         "time": "--"
                     },
                     {
-                        "name": "Gaudu David", 
+                        "name": "Gaudu David",
                         "team": "Groupama - FDJ",
                         "time": "--"
                     }
                 ],
                 "yellow": [
                     {
-                        "name": "Pogačar Tadej", 
+                        "name": "Pogačar Tadej",
                         "team": "UAE Team Emirates",
                         "time": "28:55:16"
                     },
                     {
-                        "name": "Vingegaard Jonas", 
+                        "name": "Vingegaard Jonas",
                         "team": "Jumbo-Visma",
                         "time": "0:39"
                     },
                     {
-                        "name": "Thomas Geraint", 
+                        "name": "Thomas Geraint",
                         "team": "INEOS Grenadiers",
                         "time": "1:14"
                     },
                     {
-                        "name": "Yates Adam", 
+                        "name": "Yates Adam",
                         "team": "INEOS Grenadiers",
                         "time": "1:22"
                     },
                     {
-                        "name": "Gaudu David", 
+                        "name": "Gaudu David",
                         "team": "Groupama - FDJ",
                         "time": "1:35"
                     },
                     {
-                        "name": "Bardet Romain", 
+                        "name": "Bardet Romain",
                         "team": "Team DSM",
                         "time": "1:36"
                     },
                     {
-                        "name": "Pidcock Thomas", 
+                        "name": "Pidcock Thomas",
                         "team": "INEOS Grenadiers",
                         "time": "1:39"
                     },
                     {
-                        "name": "Powless", 
+                        "name": "Powless",
                         "team": "EF Education-EasyPost",
                         "time": "1:41"
                     },
                     {
-                        "name": "Mas Enric", 
+                        "name": "Mas Enric",
                         "team": "Movistar Team",
                         "time": "1:47"
                     }
                 ],
                 "green": [
                     {
-                        "name": "Van Aeart Wout", 
+                        "name": "Van Aeart Wout",
                         "team": "Jumbo-Visma",
                         "point": "264"
                     },
                     {
-                        "name": "Jakobsen Fabio", 
+                        "name": "Jakobsen Fabio",
                         "team": "Quick-Step Alpha Vinyl Team",
                         "point": "149"
                     },
                     {
-                        "name": "Pogačar Tadej", 
+                        "name": "Pogačar Tadej",
                         "team": "UAE Team Emirates",
                         "point": "128"
                     },
                     {
-                        "name": "Philipsen Jasper", 
+                        "name": "Philipsen Jasper",
                         "team": "Alpecin-Deceuninck",
                         "point": "102"
                     },
                     {
-                        "name": "Laporte Christophe", 
+                        "name": "Laporte Christophe",
                         "team": "Jumbo-Visma",
                         "point": "97"
                     }
                 ],
                 "polka": [
                     {
-                        "name": "Cort Magnus", 
+                        "name": "Cort Magnus",
                         "team": "EF Education-EasyPost",
                         "point": "11"
                     },
                     {
-                        "name": "Pogačar Tadej", 
+                        "name": "Pogačar Tadej",
                         "team": "UAE Team Emirates",
                         "point": "10"
                     },
                     {
-                        "name": "Vingegaard Jonas", 
+                        "name": "Vingegaard Jonas",
                         "team": "Jumbo-Visma",
                         "point": "8"
                     },
                     {
-                        "name": "Roglič Primož", 
+                        "name": "Roglič Primož",
                         "team": "Jumbo-Visma",
                         "point": "6"
                     },
                     {
-                        "name": "Kämna Lennard", 
+                        "name": "Kämna Lennard",
                         "team": "BORA - hansgrohe",
                         "point": "5"
                     }
                 ],
                 "youth": [
                     {
-                        "name": "Pogačar Tadej", 
+                        "name": "Pogačar Tadej",
                         "team": "UAE Team Emirates",
                         "time": "28:56:16"
                     },
                     {
-                        "name": "Pidcock Thomas", 
+                        "name": "Pidcock Thomas",
                         "team": "INEOS Grenadiers",
                         "time": "1:39"
                     },
                     {
-                        "name": "Mcnulty Brandon", 
+                        "name": "Mcnulty Brandon",
                         "team": "UAE Team Emirates",
                         "time": "7:02"
                     },
                     {
-                        "name": "Leknessund Andreas", 
+                        "name": "Leknessund Andreas",
                         "team": "Team DSM",
                         "time": "14:50"
                     },
                     {
-                        "name": "Jorgenson Matteo", 
+                        "name": "Jorgenson Matteo",
                         "team": "Movistar Team",
                         "time": "16:55"
                     }
