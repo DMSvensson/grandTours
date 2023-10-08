@@ -1,5 +1,6 @@
 import React from "react";
 import styles from './overviewTable.module.css';
+import useToggleScrollBehaviorByMouse from "../../utility/toggleScrollBeavhior";
 
 const resultsTypes = {
   "stage_results": "Stage results",
@@ -30,9 +31,26 @@ const getResultsClass = (resultType) => {
   }
 };
 
+const getGridClass = (resultType) => {
+  if (resultType === 'stage_results') {
+    return styles.stageResults;
+  } else if (resultType === 'yellow') {
+    return styles.yellowJersey;
+  } else if (resultType === 'green') {
+    return styles.greenJersey;
+  } else if (resultType === 'polka') {
+    return styles.polkaJersey;
+  } else if (resultType === 'youth') {
+    return styles.youngJersey;
+  } else if (resultType === 'team') {
+    return styles.team;
+  }
+};
+
 function OverviewTable({ riders, type, isTime }) {
+  const {handleMouseEnter, handleMouseLeave} = useToggleScrollBehaviorByMouse();
   return (
-    <div>
+    <div className={getGridClass(type)}>
       <div className={`${styles.gridContentHeader} ${getResultsClass(type)}`}>
         {type !== "stage_results" && <img className={type !== 'team' ? styles.jersey : ''} src={require(`../../assets/jerseys/${getHeaderByType(type)}`)} alt={`${type} jersey`} />}
         {type === "stage_results" && <h2>{getHeaderByType(type)}</h2>}
@@ -49,7 +67,7 @@ function OverviewTable({ riders, type, isTime }) {
         </div>}
       </div>
       <hr />
-      <div className={styles.gridContentBody}>
+      <div className={styles.gridContentBody} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <table className={styles.table}>
           <thead>
             <tr>

@@ -46,30 +46,6 @@
   height: 100%;
 }
 
-.stageResults {
-  grid-area: stageWin;
-}
-
-.yellowJersey {
-  grid-area: general;
-}
-
-.greenJersey {
-  grid-area: points;
-}
-
-.mountainJersey {
-  grid-area: mountion;
-}
-
-.youngJersey {
-  grid-area: young;
-}
-
-.team {
-  grid-area: team;
-}
-
 .fighter {
   grid-area: fighter;
   display: flex;

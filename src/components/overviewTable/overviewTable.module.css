@@ -1,3 +1,27 @@
+.stageResults {
+  grid-area: stageWin;
+}
+
+.yellowJersey {
+  grid-area: general;
+}
+
+.greenJersey {
+  grid-area: points;
+}
+
+.mountainJersey {
+  grid-area: mountion;
+}
+
+.youngJersey {
+  grid-area: young;
+}
+
+.team {
+  grid-area: team;
+}
+
 .gridContentHeader {
   position: relative;
   display: flex;

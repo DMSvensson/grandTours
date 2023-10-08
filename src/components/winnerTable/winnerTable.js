@@ -1,25 +1,10 @@
 import React, { useRef } from "react";
 import styles from "./winnerTable.module.css";
-import { useWheelActive } from "../../contexts/WheelActiveContext";
+import useToggleScrollBehaviorByMouse from "../../utility/toggleScrollBeavhior";
 
 function WinnerTable({winners, type, flagDirectionLeft, hide}) {
     const table = useRef(null);
-    const {setWheelActive} = useWheelActive();
-    const handleMouseEnter = (event) => {
-        let target = event.target;
-
-        if(event.target.parentNode.parentNode.parentNode.parentNode === table.current) {
-            target = event.target.parentNode.parentNode.parentNode.parentNode;
-        }
-        
-        var hasVerticalScrollbar  = target.scrollHeight  > target.clientHeight;
-        if(!hasVerticalScrollbar) return;
-        setWheelActive(false);
-    };
-    
-    const handleMouseLeave = () => {
-        setWheelActive(true);
-    };    
+    const {handleMouseEnter, handleMouseLeave} = useToggleScrollBehaviorByMouse();
     return (
         <div ref={table} 
             onMouseEnter={handleMouseEnter}
