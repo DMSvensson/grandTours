@@ -269,7 +269,7 @@
             ],
             "overview": {
                 "stageResults": {
-                    "id": "SR",
+                    "id": "SR7",
                     "type": "stage_results",
                     "isTime": true,
                     "results": [
@@ -321,7 +321,7 @@
                     ]
                 },
                 "yellow": {
-                    "id": "Yellow",
+                    "id": "Yellow7",
                     "type": "yellow",
                     "isTime": true,
                     "results": [
@@ -373,7 +373,7 @@
                     ]
                 },
                 "green": {
-                    "id": "Green",
+                    "id": "Green7",
                     "type": "green",
                     "isTime": false,
                     "results": [
@@ -405,7 +405,7 @@
                     ]
                 },
                 "polka": {
-                    "id": "Polka",
+                    "id": "Polka7",
                     "type": "polka",
                     "isTime": false,
                     "results": [
@@ -437,7 +437,7 @@
                     ]
                 },
                 "youth": {
-                    "id": "Youth",
+                    "id": "Youth7",
                     "type": "youth",
                     "isTime": true,
                     "results": [
@@ -469,7 +469,7 @@
                     ]
                 },
                 "teams": {
-                    "id": "Teams",
+                    "id": "Teams7",
                     "type": "team",
                     "isTime": true,
                     "results": [
@@ -775,286 +775,316 @@
                 }
             ],
             "overview": {
-                "stageResults": [
-                    {
-                        "name": "Van Aeart Wout",
-                        "team": "Jumbo-Visma",
-                        "time": "4:13:06"
-                    },
-                    {
-                        "name": "Matthews Michael",
-                        "team": "Team BikeExchange - Jayco",
-                        "time": "--"
-                    },
-                    {
-                        "name": "Pogačar Tadej",
-                        "team": "UAE Team Emirates",
-                        "time": "--"
-                    },
-                    {
-                        "name": "Kron Andreas",
-                        "team": "Lotto Soudal",
-                        "time": "--"
-                    },
-                    {
-                        "name": "Bettiol Alberto",
-                        "team": "EF Education-EasyPost",
-                        "time": "--"
-                    },
-                    {
-                        "name": "Vlasov Aleksendr",
-                        "team": "BORA - hansgrohe",
-                        "time": "--"
-                    },
-                    {
-                        "name": "Thomas Benjamin",
-                        "team": "Cofidis",
-                        "time": "--"
-                    },
-                    {
-                        "name": "Vingegaard Jonas",
-                        "team": "Jumbo-Visma",
-                        "time": "--"
-                    },
-                    {
-                        "name": "Jungels Bob",
-                        "team": "AG2R Citroen Team",
-                        "time": "--"
-                    },
-                    {
-                        "name": "Pidcock Thomas",
-                        "team": "INEOS Grenadiers",
-                        "time": "--"
-                    },
-                    {
-                        "name": "Thomas Geraint",
-                        "team": "INEOS Grenadiers",
-                        "time": "--"
-                    },
-                    {
-                        "name": "Gaudu David",
-                        "team": "Groupama - FDJ",
-                        "time": "--"
-                    }
-                ],
-                "yellow": [
-                    {
-                        "name": "Pogačar Tadej",
-                        "team": "UAE Team Emirates",
-                        "time": "28:55:16"
-                    },
-                    {
-                        "name": "Vingegaard Jonas",
-                        "team": "Jumbo-Visma",
-                        "time": "0:39"
-                    },
-                    {
-                        "name": "Thomas Geraint",
-                        "team": "INEOS Grenadiers",
-                        "time": "1:14"
-                    },
-                    {
-                        "name": "Yates Adam",
-                        "team": "INEOS Grenadiers",
-                        "time": "1:22"
-                    },
-                    {
-                        "name": "Gaudu David",
-                        "team": "Groupama - FDJ",
-                        "time": "1:35"
-                    },
-                    {
-                        "name": "Bardet Romain",
-                        "team": "Team DSM",
-                        "time": "1:36"
-                    },
-                    {
-                        "name": "Pidcock Thomas",
-                        "team": "INEOS Grenadiers",
-                        "time": "1:39"
-                    },
-                    {
-                        "name": "Powless",
-                        "team": "EF Education-EasyPost",
-                        "time": "1:41"
-                    },
-                    {
-                        "name": "Mas Enric",
-                        "team": "Movistar Team",
-                        "time": "1:47"
-                    }
-                ],
-                "green": [
-                    {
-                        "name": "Van Aeart Wout",
-                        "team": "Jumbo-Visma",
-                        "point": "264"
-                    },
-                    {
-                        "name": "Jakobsen Fabio",
-                        "team": "Quick-Step Alpha Vinyl Team",
-                        "point": "149"
-                    },
-                    {
-                        "name": "Pogačar Tadej",
-                        "team": "UAE Team Emirates",
-                        "point": "128"
-                    },
-                    {
-                        "name": "Philipsen Jasper",
-                        "team": "Alpecin-Deceuninck",
-                        "point": "102"
-                    },
-                    {
-                        "name": "Laporte Christophe",
-                        "team": "Jumbo-Visma",
-                        "point": "97"
-                    }
-                ],
-                "polka": [
-                    {
-                        "name": "Cort Magnus",
-                        "team": "EF Education-EasyPost",
-                        "point": "11"
-                    },
-                    {
-                        "name": "Pogačar Tadej",
-                        "team": "UAE Team Emirates",
-                        "point": "10"
-                    },
-                    {
-                        "name": "Vingegaard Jonas",
-                        "team": "Jumbo-Visma",
-                        "point": "8"
-                    },
-                    {
-                        "name": "Roglič Primož",
-                        "team": "Jumbo-Visma",
-                        "point": "6"
-                    },
-                    {
-                        "name": "Kämna Lennard",
-                        "team": "BORA - hansgrohe",
-                        "point": "5"
-                    }
-                ],
-                "youth": [
-                    {
-                        "name": "Pogačar Tadej",
-                        "team": "UAE Team Emirates",
-                        "time": "28:56:16"
-                    },
-                    {
-                        "name": "Pidcock Thomas",
-                        "team": "INEOS Grenadiers",
-                        "time": "1:39"
-                    },
-                    {
-                        "name": "Mcnulty Brandon",
-                        "team": "UAE Team Emirates",
-                        "time": "7:02"
-                    },
-                    {
-                        "name": "Leknessund Andreas",
-                        "team": "Team DSM",
-                        "time": "14:50"
-                    },
-                    {
-                        "name": "Jorgenson Matteo",
-                        "team": "Movistar Team",
-                        "time": "16:55"
-                    }
-                ],
-                "teams": [
-                    {
-                        "team": "INEOS Grenadiers",
-                        "time": "86:52:43"
-                    },
-                    {
-                        "team": "Jumbo-Visma",
-                        "time": "0:26"
-                    },
-                    {
-                        "team": "EF Education-EasyPost",
-                        "time": "6:06"
-                    },
-                    {
-                        "team": "UAE Team Emirates",
-                        "time": "9:00"
-                    },
-                    {
-                        "team": "Bahrain - Victorious",
-                        "time": "9:32"
-                    },
-                    {
-                        "team": "BORA - hansgrohe",
-                        "time": "9:36"
-                    },
-                    {
-                        "team": "Groupama - FDJ",
-                        "time": "10:38"
-                    },
-                    {
-                        "team": "Team Arkéa Samsic",
-                        "time": "16:00"
-                    },
-                    {
-                        "team": "Trek - Segafredo",
-                        "time": "17:22"
-                    },
-                    {
-                        "team": "Isreal - Premier Tech",
-                        "time": "20:34"
-                    },
-                    {
-                        "team": "Cofidis",
-                        "time": "21:05"
-                    },
-                    {
-                        "team": "AG2R Citroen Team",
-                        "time": "21:16"
-                    },
-                    {
-                        "team": "Team DSM",
-                        "time": "17:22"
-                    },
-                    {
-                        "team": "InterMarché - Wanty - Gobert Matériaux",
-                        "time": "17:22"
-                    },
-                    {
-                        "team": "Movistar Team",
-                        "time": "17:22"
-                    },
-                    {
-                        "team": "B&B Hotels - KTM",
-                        "time": "17:22"
-                    },
-                    {
-                        "team": "TotalEnergies",
-                        "time": "17:22"
-                    },
-                    {
-                        "team": "Lotto Soudal",
-                        "time": "17:22"
-                    },
-                    {
-                        "team": "Alpecin-Deceuninck",
-                        "time": "17:22"
-                    },
-                    {
-                        "team": "Quick-Step Alpha Vinyl Team",
-                        "time": "17:22"
-                    },
-                    {
-                        "team": "Team BikeExchange - Jayco",
-                        "time": "17:22"
-                    },
-                    {
-                        "team": "Astana Qazaqstan Team",
-                        "time": "17:22"
-                    }
-                ],
+                "stageResults": {
+                    "id": "SR8",
+                    "type": "stage_results",
+                    "isTime": true,
+                    "results": [
+                        {
+                            "name": "Van Aeart Wout",
+                            "team": "Jumbo-Visma",
+                            "time": "4:13:06"
+                        },
+                        {
+                            "name": "Matthews Michael",
+                            "team": "Team BikeExchange - Jayco",
+                            "time": "--"
+                        },
+                        {
+                            "name": "Pogačar Tadej",
+                            "team": "UAE Team Emirates",
+                            "time": "--"
+                        },
+                        {
+                            "name": "Kron Andreas",
+                            "team": "Lotto Soudal",
+                            "time": "--"
+                        },
+                        {
+                            "name": "Bettiol Alberto",
+                            "team": "EF Education-EasyPost",
+                            "time": "--"
+                        },
+                        {
+                            "name": "Vlasov Aleksendr",
+                            "team": "BORA - hansgrohe",
+                            "time": "--"
+                        },
+                        {
+                            "name": "Thomas Benjamin",
+                            "team": "Cofidis",
+                            "time": "--"
+                        },
+                        {
+                            "name": "Vingegaard Jonas",
+                            "team": "Jumbo-Visma",
+                            "time": "--"
+                        },
+                        {
+                            "name": "Jungels Bob",
+                            "team": "AG2R Citroen Team",
+                            "time": "--"
+                        },
+                        {
+                            "name": "Pidcock Thomas",
+                            "team": "INEOS Grenadiers",
+                            "time": "--"
+                        },
+                        {
+                            "name": "Thomas Geraint",
+                            "team": "INEOS Grenadiers",
+                            "time": "--"
+                        },
+                        {
+                            "name": "Gaudu David",
+                            "team": "Groupama - FDJ",
+                            "time": "--"
+                        }
+                    ]
+                },
+                "yellow": {
+                    "id": "Yellow8",
+                    "type": "yellow",
+                    "isTime": true,
+                    "results": [
+                        {
+                            "name": "Pogačar Tadej",
+                            "team": "UAE Team Emirates",
+                            "time": "28:55:16"
+                        },
+                        {
+                            "name": "Vingegaard Jonas",
+                            "team": "Jumbo-Visma",
+                            "time": "0:39"
+                        },
+                        {
+                            "name": "Thomas Geraint",
+                            "team": "INEOS Grenadiers",
+                            "time": "1:14"
+                        },
+                        {
+                            "name": "Yates Adam",
+                            "team": "INEOS Grenadiers",
+                            "time": "1:22"
+                        },
+                        {
+                            "name": "Gaudu David",
+                            "team": "Groupama - FDJ",
+                            "time": "1:35"
+                        },
+                        {
+                            "name": "Bardet Romain",
+                            "team": "Team DSM",
+                            "time": "1:36"
+                        },
+                        {
+                            "name": "Pidcock Thomas",
+                            "team": "INEOS Grenadiers",
+                            "time": "1:39"
+                        },
+                        {
+                            "name": "Powless",
+                            "team": "EF Education-EasyPost",
+                            "time": "1:41"
+                        },
+                        {
+                            "name": "Mas Enric",
+                            "team": "Movistar Team",
+                            "time": "1:47"
+                        }
+                    ]
+                },
+                "green": {
+                    "id": "Green8",
+                    "type": "green",
+                    "isTime": false,
+                    "results": [
+                        {
+                            "name": "Van Aeart Wout",
+                            "team": "Jumbo-Visma",
+                            "point": "264"
+                        },
+                        {
+                            "name": "Jakobsen Fabio",
+                            "team": "Quick-Step Alpha Vinyl Team",
+                            "point": "149"
+                        },
+                        {
+                            "name": "Pogačar Tadej",
+                            "team": "UAE Team Emirates",
+                            "point": "128"
+                        },
+                        {
+                            "name": "Philipsen Jasper",
+                            "team": "Alpecin-Deceuninck",
+                            "point": "102"
+                        },
+                        {
+                            "name": "Laporte Christophe",
+                            "team": "Jumbo-Visma",
+                            "point": "97"
+                        }
+                    ]
+                },
+                "polka": {
+                    "id": "Polka8",
+                    "type": "polka",
+                    "isTime": false,
+                    "results": [
+                        {
+                            "name": "Cort Magnus",
+                            "team": "EF Education-EasyPost",
+                            "point": "11"
+                        },
+                        {
+                            "name": "Pogačar Tadej",
+                            "team": "UAE Team Emirates",
+                            "point": "10"
+                        },
+                        {
+                            "name": "Vingegaard Jonas",
+                            "team": "Jumbo-Visma",
+                            "point": "8"
+                        },
+                        {
+                            "name": "Roglič Primož",
+                            "team": "Jumbo-Visma",
+                            "point": "6"
+                        },
+                        {
+                            "name": "Kämna Lennard",
+                            "team": "BORA - hansgrohe",
+                            "point": "5"
+                        }
+                    ]
+                },
+                "youth": {
+                    "id": "Youth8",
+                    "type": "youth",
+                    "isTime": true,
+                    "results": [
+                        {
+                            "name": "Pogačar Tadej",
+                            "team": "UAE Team Emirates",
+                            "time": "28:56:16"
+                        },
+                        {
+                            "name": "Pidcock Thomas",
+                            "team": "INEOS Grenadiers",
+                            "time": "1:39"
+                        },
+                        {
+                            "name": "Mcnulty Brandon",
+                            "team": "UAE Team Emirates",
+                            "time": "7:02"
+                        },
+                        {
+                            "name": "Leknessund Andreas",
+                            "team": "Team DSM",
+                            "time": "14:50"
+                        },
+                        {
+                            "name": "Jorgenson Matteo",
+                            "team": "Movistar Team",
+                            "time": "16:55"
+                        }
+                    ]
+                },
+                "teams": {
+                    "id": "Teams8",
+                    "type": "team",
+                    "isTime": true,
+                    "results": [
+                        {
+                            "team": "INEOS Grenadiers",
+                            "time": "86:52:43"
+                        },
+                        {
+                            "team": "Jumbo-Visma",
+                            "time": "0:26"
+                        },
+                        {
+                            "team": "EF Education-EasyPost",
+                            "time": "6:06"
+                        },
+                        {
+                            "team": "UAE Team Emirates",
+                            "time": "9:00"
+                        },
+                        {
+                            "team": "Bahrain - Victorious",
+                            "time": "9:32"
+                        },
+                        {
+                            "team": "BORA - hansgrohe",
+                            "time": "9:36"
+                        },
+                        {
+                            "team": "Groupama - FDJ",
+                            "time": "10:38"
+                        },
+                        {
+                            "team": "Team Arkéa Samsic",
+                            "time": "16:00"
+                        },
+                        {
+                            "team": "Trek - Segafredo",
+                            "time": "17:22"
+                        },
+                        {
+                            "team": "Isreal - Premier Tech",
+                            "time": "20:34"
+                        },
+                        {
+                            "team": "Cofidis",
+                            "time": "21:05"
+                        },
+                        {
+                            "team": "AG2R Citroen Team",
+                            "time": "21:16"
+                        },
+                        {
+                            "team": "Team DSM",
+                            "time": "17:22"
+                        },
+                        {
+                            "team": "InterMarché - Wanty - Gobert Matériaux",
+                            "time": "17:22"
+                        },
+                        {
+                            "team": "Movistar Team",
+                            "time": "17:22"
+                        },
+                        {
+                            "team": "B&B Hotels - KTM",
+                            "time": "17:22"
+                        },
+                        {
+                            "team": "TotalEnergies",
+                            "time": "17:22"
+                        },
+                        {
+                            "team": "Lotto Soudal",
+                            "time": "17:22"
+                        },
+                        {
+                            "team": "Alpecin-Deceuninck",
+                            "time": "17:22"
+                        },
+                        {
+                            "team": "Quick-Step Alpha Vinyl Team",
+                            "time": "17:22"
+                        },
+                        {
+                            "team": "Team BikeExchange - Jayco",
+                            "time": "17:22"
+                        },
+                        {
+                            "team": "Astana Qazaqstan Team",
+                            "time": "17:22"
+                        }
+                    ]
+                },
                 "combativity": "Mattia Cattaneo"
             }
         }
