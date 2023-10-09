@@ -5,22 +5,7 @@ import Stage from '../../components/stage/stage';
 import useScrollBehavior from '../../hooks/scrollBehavior';
 import {useWheelActive } from '../../contexts/WheelActiveContext';
 import StageOverview from '../../components/stageOverview/stageOverview';
-
-async function getData() {
-  const response = await fetch('/data.json', {
-    headers: {
-      'content-type': 'application/json',
-      'Attept': 'application/json'
-    }
-  });
-  if (!response.ok) {
-    console.error(`Response status: ${response.status}`);
-    console.error(`Response text: ${await response.text()}`);
-    return;
-  }
-  const json = await response.json();
-  return json;
-}
+import { getJsonData } from '../../utility/dataFetch';
 
 function StagesPage() {
   const [data, setData] = useState(null);
@@ -41,7 +26,7 @@ function StagesPage() {
   };
   
   useEffect(() => {
-    getData().then((json) => {
+    getJsonData('/data.json').then((json) => {
       handleDataChange(json);
     }).catch((err) => {
       console.error(err);
