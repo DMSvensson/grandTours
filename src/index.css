@@ -23,3 +23,41 @@ html,body {
 .hide {
   display: none;
 }
+
+button, .btn {
+  display: inline-block;
+  background-color: hsl(0, 0%, 20%);
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+.btn-large {
+  padding: 20px 40px;
+  font-size: large;
+}
+
+button:hover, .btn:hover {
+  background-color: hsl(0, 0%, 30%);
+}
+
+button:focus, .btn:focus {
+  box-shadow: hsla(0, 0%, 40%, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+button:disabled, .btn:disabled {
+  background-color: hsl(0, 0%, 70%);
+  cursor: default;
+}
+
+button:active, .btn:active {
+  background-color: hsl(0, 0%, 30%);;
+}
