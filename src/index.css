@@ -1,3 +1,8 @@
+@font-face {
+  font-family: JosefinSans;
+  src: local('JosefinSans'), url(./assets/fonts/JosefinSans-VariableFont_wght.ttf) format('ttf');
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -14,6 +19,10 @@
 
 html,body {
   height: 100%;
+}
+
+h1,h2,h3,h4,p,span,tr {
+  font-family: JosefinSans, sans-serif, system-ui;
 }
 
 #root {
