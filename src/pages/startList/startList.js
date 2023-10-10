@@ -36,12 +36,12 @@ function StartListPage() {
                 <div className={styles.teams}>
                     {!isLoading && teams.map((team) => {
                         return (
-                            <div className={styles.team}>
+                            <div className={styles.team} key={team.name}>
                                 <img src={require(`../../assets/teams/jerseys/${team.name}.png`)} alt={team.name} />
                                 <p>{team.name}</p>
                                 <ul>
                                     {team.riders.map((rider) => {
-                                        return <li>{rider}</li>
+                                        return <li key={rider}>{rider}</li>
                                     })}
                                     </ul>
                             </div>
