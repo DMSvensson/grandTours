@@ -1,7 +1,7 @@
 {
     "teams": [
         {
-            "name": "AG2R Citroen Team",
+            "name": "AG2R Citroën Team",
             "riders": [
                 "Ben O'Conner",
                 "Geoffrey Bouchard",
@@ -131,7 +131,7 @@
             ]
         },
         {
-            "name": "InterMarché - Wanty - Gobert Matériaux",
+            "name": "Intermarché - Wanty - Gobert Matériaux",
             "riders": [
                 "Alexander Kristoff",
                 "Sven Erik Bystrøm",
@@ -144,7 +144,7 @@
             ]
         },
         {
-            "name": "Isreal - Premier Tech",
+            "name": "Israel - Premier Tech",
             "riders": [
                 "Chris Froome",
                 "Guillaume Boivin",
