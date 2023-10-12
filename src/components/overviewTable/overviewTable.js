@@ -78,7 +78,7 @@ function OverviewTable({ riders, type, isTime }) {
             </tr>
           </thead>
           <tbody className={type === "stage_results" ? styles.bodyStageResults : ''}>
-            {riders.map((rider, index) => {
+            {riders && riders.map((rider, index) => {
               return (
                 <tr>
                   <td>{index + 1}</td>
@@ -87,7 +87,7 @@ function OverviewTable({ riders, type, isTime }) {
                     {type === 'team' && <img src={require(`../../assets/teams/logos/${rider.team}.jpg`)} alt={rider.team} className={styles.teamLogo} />}
                     {type !== 'team' && <img src={require(`../../assets/teams/jerseys/${rider.team}.png`)} alt={rider.team} className={styles.jersey} />}
                   </td>
-                  <td>{isTime ? rider.time : rider.point}</td>
+                  <td>{isTime ? rider.time : rider.points}</td>
                 </tr>
               );
             })}
