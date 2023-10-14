@@ -1,0 +1,290 @@
+{
+    "teams": [
+        {
+            "name": "AG2R Citroën Team",
+            "riders": [
+                "Ben O'Conner",
+                "Geoffrey Bouchard",
+                "Mikaël Cherel",
+                "Benoît Cosnefroy",
+                "Stan Dewulf",
+                "Bob Jungels",
+                "Oliver Naesen",
+                "Aurélien Paret-Peintre"
+            ]
+        },
+        {
+            "name": "Alpecin-Deceuninck",
+            "riders": [
+                "Mathieu Van Der Poel",
+                "Silvan Diller",
+                "Michael Gogl",
+                "Alexander Krieger",
+                "Jasper Philipsen",
+                "Edward Planckaert",
+                "Kristian Sbaragli",
+                "Guillaume Van Keirsbulck"
+            ]
+        },
+        {
+            "name": "Astana Qazaqstan Team",
+            "riders": [
+                "Alexey Lutsenko",
+                "Alexandr Riabushenko",
+                "Joe Dombrowski",
+                "Fabio Felline",
+                "Dmitriy Gruzdev",
+                "Gianni Moscon",
+                "Simone Velasco",
+                "Andrey Zeits"
+            ]
+        },
+        {
+            "name": "B&B Hotels - KTM",
+            "riders": [
+                "Franck Bonnamour",
+                "Cyril Barthe",
+                "Alexis Gougeard",
+                "Jérémy Lecroq",
+                "Cyril Lemoine",
+                "Luca Mozzato",
+                "Pierre Rolland",
+                "Sebastian Schönberger"
+            ]
+        },
+        {
+            "name": "Bahrain - Victorious",
+            "riders": [
+                "Jack Haig",
+                "Damiano Caruso",
+                "Kamil Gradek",
+                "Matej Mohorič",
+                "Luis León Sánchez",
+                "Dylan Teuns",
+                "Jan Tratnik",
+                "Fred Wright"
+            ]
+        },
+        {
+            "name": "BORA - hansgrohe",
+            "riders": [
+                "Aleksandr Vlasov",
+                "Felix Großschartner",
+                "Marco Haller",
+                "Lennard Kämna",
+                "Patrick Konrad",
+                "Nils Politt",
+                "Maximilian Schachmann",
+                "Danny Van Poppel"
+            ]
+        },
+        {
+            "name": "Cofidis",
+            "riders": [
+                "Guillaume Martin",
+                "Pierre-Luc Périchon",
+                "Simon Geschke",
+                "Ion Izagirre",
+                "Victor Lafay",
+                "Anthony Perez",
+                "Benjamin Thomas",
+                "Max Walscheid"
+            ]
+        },
+        {
+            "name": "EF Education-EasyPost",
+            "riders": [
+                "Rigoberto Urán",
+                "Ruben Guerreiro",
+                "Allberto Bettiol",
+                "Stefan Bissegger",
+                "Owain Doull",
+                "Magnus Cort",
+                "Neilson Powless",
+                "Jonas Rutsch"
+            ]
+        },
+        {
+            "name": "Groupama - FDJ",
+            "riders": [
+                "David Gaudu",
+                "Antoine Duschesne",
+                "Kevin Geniets",
+                "Stefan Küng",
+                "Olivier Le Gac",
+                "Valentin Madouas",
+                "Thibaut Pinot",
+                "Michael Storer"
+            ]
+        },
+        {
+            "name": "INEOS Grenadiers",
+            "riders": [
+                "Geraint Thomas",
+                "Daniel Felipe Martínez",
+                "Jonathan Castroviejo",
+                "Filippo Ganna",
+                "Thomas Pidcock",
+                "Luke Rowe",
+                "Dylan Van Baarle",
+                "Adam Yates"
+            ]
+        },
+        {
+            "name": "Intermarché - Wanty - Gobert Matériaux",
+            "riders": [
+                "Alexander Kristoff",
+                "Sven Erik Bystrøm",
+                "Kobe Goossens",
+                "Louis Meintjes",
+                "Andrea Pasqualon",
+                "Adrien Petit",
+                "Taco Van Der Hoorn",
+                "Georg Zimmermann"
+            ]
+        },
+        {
+            "name": "Israel - Premier Tech",
+            "riders": [
+                "Chris Froome",
+                "Guillaume Boivin",
+                "Simon Clarke",
+                "Jakob Fuglsang",
+                "Guy Niv",
+                "Hugo Houle",
+                "Krists Neilands",
+                "Michael Woods"
+            ]
+        },
+        {
+            "name": "Jumbo-Visma",
+            "riders": [
+                "Rrimož Roglič",
+                "Tiesj Benoot",
+                "Steven Kruijswijk",
+                "Sepp Kuss",
+                "Laporte Christophe",
+                "Wout Van Aert",
+                "Nathan Van Hooydonck",
+                "Joans Vingegaard"
+            ]
+        },
+        {
+            "name": "Lotto Soudal",
+            "riders": [
+                "Caleb Ewan",
+                "Frederik Frison",
+                "Philippe Gilbert",
+                "Reinardt Janse Van Rensburg",
+                "Andreas Kron",
+                "Brent Van Moer",
+                "Florain Vermeersch",
+                "Tim Wellens"
+            ]
+        },
+        {
+            "name": "Movistar Team",
+            "riders": [
+                "Enric Mas",
+                "Imanol Erviti",
+                "Gorka Izagirre",
+                "Matteo Jorgenson",
+                "Gregor Mühlberger",
+                "Nelson Oliveira",
+                "Albert Torres",
+                "Carlos Verona"
+            ]
+        },
+        {
+            "name": "Quick-Step Alpha Vinyl Team",
+            "riders": [
+                "Fabio Jakobsen",
+                "Kasper Asgreen",
+                "Andrea Bagioli",
+                "Mattia Cattaneo",
+                "Mikkel Frølich Honoré",
+                "Yves Lampaert",
+                "Micheal Mørkøv",
+                "Florian Sénéchal"
+            ]
+        },
+        {
+            "name": "Team Arkéa Samsic",
+            "riders": [
+                "Nairo Quintana",
+                "Warren Barguil",
+                "Maxime Bouet",
+                "Amaury Capiot",
+                "Hugo Hofstetter",
+                "Matis Louvel",
+                "Łukasz Owsian",
+                "Connor Swift"
+            ]
+        },
+        {
+            "name": "Team BikeExchange - Jayco",
+            "riders": [
+                "Micheal Matthews",
+                "Jack Bauer",
+                "Luke Durbridge",
+                "Dylan Groenewegen",
+                "Amund Grøndahl Jansen",
+                "Christopher Juul-Jensen",
+                "Luka Mezgec",
+                "Nick Schultz"
+            ]
+        },
+        {
+            "name": "Team DSM",
+            "riders": [
+                "Romain Bardet",
+                "Alberto Dainese",
+                "John DegenKolb",
+                "Nils EEkhoff",
+                "Chris Hamilition",
+                "Andreas Leknessund",
+                "Martijn Tusveld",
+                "Kevin Vermaerke"
+            ]
+        },
+        {
+            "name": "TotalEnergies",
+            "riders": [
+                "Peter Sagen",
+                "Edvald Boasson Hagen",
+                "Maciej Bodnar",
+                "Mathieu Burgaudeau",
+                "Pierre Latour",
+                "Daniel Oss",
+                "Anthony Turgis",
+                "Alexis Vuillermoz"
+            ]
+        },
+        {
+            "name": "Trek - Segafredo",
+            "riders": [
+                "Mads Pedersen",
+                "Giulio Ciccone",
+                "Tony Gallopin",
+                "Alex Kirsch",
+                "Bauke Mollema",
+                "Quinn Simmons",
+                "Toms Skujiņš",
+                "Jasper Stuyven"
+            ]
+        },
+        {
+            "name": "UAE Team Emirates",
+            "riders": [
+                "Tadej Pogačar",
+                "George Bennett",
+                "Mikkel Bjerg",
+                "Vegard Stake Laengen",
+                "Rafał Majka",
+                "Brandon McNulty",
+                "Marc Soler",
+                "Marc Hirschi"
+            ]
+        }
+    ]
+}

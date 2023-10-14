@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/grandTours/static/css/main.55e8bda2.css",
+    "main.js": "/grandTours/static/js/main.16d1766a.js",
+    "static/js/787.fc920699.chunk.js": "/grandTours/static/js/787.fc920699.chunk.js",
+    "static/media/JosefinSans-VariableFont_wght.ttf": "/grandTours/static/media/JosefinSans-VariableFont_wght.613585db06f849ca7717.ttf",
+    "static/media/Israel - Premier Tech.png": "/grandTours/static/media/Israel - Premier Tech.d6050defee9c65845eba.png",
+    "static/media/Jumbo-Visma.png": "/grandTours/static/media/Jumbo-Visma.9b48827b5d2b47e80310.png",
+    "static/media/EF Education-EasyPost.png": "/grandTours/static/media/EF Education-EasyPost.6f9b7ea5ad99cecdcbad.png",
+    "static/media/TotalEnergies.png": "/grandTours/static/media/TotalEnergies.1c4d839f32a7cec64e76.png",
+    "static/media/polka_jersey.png": "/grandTours/static/media/polka_jersey.35907401a32b850c8e7c.png",
+    "static/media/Bahrain - Victorious.png": "/grandTours/static/media/Bahrain - Victorious.5433911b1ea8b9d191b3.png",
+    "static/media/B&B Hotels - KTM.png": "/grandTours/static/media/B&B Hotels - KTM.bc0965c0d6901ec81306.png",
+    "static/media/BORA - hansgrohe.png": "/grandTours/static/media/BORA - hansgrohe.e576201100ff3dba3c35.png",
+    "static/media/InterMarché - Wanty - Gobert Matériaux.png": "/grandTours/static/media/InterMarché - Wanty - Gobert Matériaux.e58e328216555b07a70d.png",
+    "static/media/Groupama - FDJ.png": "/grandTours/static/media/Groupama - FDJ.1fb50a07668a9e2a35dc.png",
+    "static/media/AG2R Citroën Team.png": "/grandTours/static/media/AG2R Citroën Team.ad52202cf9c97aafec94.png",
+    "static/media/Astana Qazaqstan Team.png": "/grandTours/static/media/Astana Qazaqstan Team.023b1693f4047e626679.png",
+    "static/media/UAE Team Emirates.png": "/grandTours/static/media/UAE Team Emirates.afcfa883398d64651fc8.png",
+    "static/media/Trek - Segafredo.png": "/grandTours/static/media/Trek - Segafredo.ff8982b8076a7911aeac.png",
+    "static/media/Quick-Step Alpha Vinyl Team.png": "/grandTours/static/media/Quick-Step Alpha Vinyl Team.95c3dea01d14716d1d0b.png",
+    "static/media/INEOS Grenadiers.png": "/grandTours/static/media/INEOS Grenadiers.092509fa7aae7bee2589.png",
+    "static/media/Team Arkéa Samsic.png": "/grandTours/static/media/Team Arkéa Samsic.2dff778eb398d0e521e1.png",
+    "static/media/Alpecin-Deceuninck.png": "/grandTours/static/media/Alpecin-Deceuninck.e86cd42d31db1811fe66.png",
+    "static/media/Lotto Soudal.png": "/grandTours/static/media/Lotto Soudal.2d4a96469542d61dbad3.png",
+    "static/media/Team BikeExchange - Jayco.png": "/grandTours/static/media/Team BikeExchange - Jayco.052b4020b0ad516cab34.png",
+    "static/media/Team DSM.png": "/grandTours/static/media/Team DSM.bd2f2f891953a74e8e51.png",
+    "static/media/Movistar Team.png": "/grandTours/static/media/Movistar Team.ee5bbc19a9cf61224732.png",
+    "static/media/Cofidis.png": "/grandTours/static/media/Cofidis.7709dbb3e18374ad3439.png",
+    "static/media/EF Education-EasyPost.jpg": "/grandTours/static/media/EF Education-EasyPost.7b5d5bf11fb0cd67d719.jpg",
+    "static/media/Quick-Step Alpha Vinyl Team.jpg": "/grandTours/static/media/Quick-Step Alpha Vinyl Team.6381d3fb3e8443c8ef12.jpg",
+    "static/media/UAE Team Emirates.jpg": "/grandTours/static/media/UAE Team Emirates.e157ea572cf16b30f10a.jpg",
+    "index.html": "/grandTours/index.html",
+    "main.55e8bda2.css.map": "/grandTours/static/css/main.55e8bda2.css.map",
+    "main.16d1766a.js.map": "/grandTours/static/js/main.16d1766a.js.map",
+    "787.fc920699.chunk.js.map": "/grandTours/static/js/787.fc920699.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55e8bda2.css",
+    "static/js/main.16d1766a.js"
+  ]
+}
