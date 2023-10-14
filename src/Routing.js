@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import StartListPage from "./pages/startList/startList";
 import StagesPage from "./pages/stages/stages";
-
+const publicURL = process.env.PUBLIC_URL;
 
 const router = createBrowserRouter([
     {
@@ -11,11 +11,11 @@ const router = createBrowserRouter([
         element: <App />,
         children: [
             {
-                path: "/",
+                path: `${publicURL}/`,
                 element: <StartListPage />
             },
             {
-                path: "stages",
+                path: `${publicURL}/stages`,
                 element: <StagesPage />
             },
         ]

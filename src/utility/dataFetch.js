@@ -1,5 +1,6 @@
 export async function getJsonData(url) {
-    const response = await fetch(url, {
+    const publicURL = process.env.PUBLIC_URL;
+    const response = await fetch(`${publicURL}/${url}`, {
         headers: {
             'content-type': 'application/json',
             'Attept': 'application/json'
