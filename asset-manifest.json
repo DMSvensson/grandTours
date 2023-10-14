@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/grandTours/static/css/main.55e8bda2.css",
-    "main.js": "/grandTours/static/js/main.16d1766a.js",
+    "main.js": "/grandTours/static/js/main.8d82a81c.js",
     "static/js/787.fc920699.chunk.js": "/grandTours/static/js/787.fc920699.chunk.js",
     "static/media/JosefinSans-VariableFont_wght.ttf": "/grandTours/static/media/JosefinSans-VariableFont_wght.613585db06f849ca7717.ttf",
     "static/media/Israel - Premier Tech.png": "/grandTours/static/media/Israel - Premier Tech.d6050defee9c65845eba.png",
@@ -12,7 +12,7 @@
     "static/media/Bahrain - Victorious.png": "/grandTours/static/media/Bahrain - Victorious.5433911b1ea8b9d191b3.png",
     "static/media/B&B Hotels - KTM.png": "/grandTours/static/media/B&B Hotels - KTM.bc0965c0d6901ec81306.png",
     "static/media/BORA - hansgrohe.png": "/grandTours/static/media/BORA - hansgrohe.e576201100ff3dba3c35.png",
-    "static/media/InterMarché - Wanty - Gobert Matériaux.png": "/grandTours/static/media/InterMarché - Wanty - Gobert Matériaux.e58e328216555b07a70d.png",
+    "static/media/Intermarché - Wanty - Gobert Matériaux.png": "/grandTours/static/media/Intermarché - Wanty - Gobert Matériaux.e58e328216555b07a70d.png",
     "static/media/Groupama - FDJ.png": "/grandTours/static/media/Groupama - FDJ.1fb50a07668a9e2a35dc.png",
     "static/media/AG2R Citroën Team.png": "/grandTours/static/media/AG2R Citroën Team.ad52202cf9c97aafec94.png",
     "static/media/Astana Qazaqstan Team.png": "/grandTours/static/media/Astana Qazaqstan Team.023b1693f4047e626679.png",
@@ -32,11 +32,11 @@
     "static/media/UAE Team Emirates.jpg": "/grandTours/static/media/UAE Team Emirates.e157ea572cf16b30f10a.jpg",
     "index.html": "/grandTours/index.html",
     "main.55e8bda2.css.map": "/grandTours/static/css/main.55e8bda2.css.map",
-    "main.16d1766a.js.map": "/grandTours/static/js/main.16d1766a.js.map",
+    "main.8d82a81c.js.map": "/grandTours/static/js/main.8d82a81c.js.map",
     "787.fc920699.chunk.js.map": "/grandTours/static/js/787.fc920699.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.55e8bda2.css",
-    "static/js/main.16d1766a.js"
+    "static/js/main.8d82a81c.js"
   ]
 }
