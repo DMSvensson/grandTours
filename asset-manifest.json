@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/grandTours/static/css/main.55e8bda2.css",
-    "main.js": "/grandTours/static/js/main.8d82a81c.js",
+    "main.css": "/grandTours/static/css/main.887337e6.css",
+    "main.js": "/grandTours/static/js/main.d23ea9ec.js",
     "static/js/787.fc920699.chunk.js": "/grandTours/static/js/787.fc920699.chunk.js",
     "static/media/JosefinSans-VariableFont_wght.ttf": "/grandTours/static/media/JosefinSans-VariableFont_wght.613585db06f849ca7717.ttf",
     "static/media/Israel - Premier Tech.png": "/grandTours/static/media/Israel - Premier Tech.d6050defee9c65845eba.png",
@@ -31,12 +31,12 @@
     "static/media/Quick-Step Alpha Vinyl Team.jpg": "/grandTours/static/media/Quick-Step Alpha Vinyl Team.6381d3fb3e8443c8ef12.jpg",
     "static/media/UAE Team Emirates.jpg": "/grandTours/static/media/UAE Team Emirates.e157ea572cf16b30f10a.jpg",
     "index.html": "/grandTours/index.html",
-    "main.55e8bda2.css.map": "/grandTours/static/css/main.55e8bda2.css.map",
-    "main.8d82a81c.js.map": "/grandTours/static/js/main.8d82a81c.js.map",
+    "main.887337e6.css.map": "/grandTours/static/css/main.887337e6.css.map",
+    "main.d23ea9ec.js.map": "/grandTours/static/js/main.d23ea9ec.js.map",
     "787.fc920699.chunk.js.map": "/grandTours/static/js/787.fc920699.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.55e8bda2.css",
-    "static/js/main.8d82a81c.js"
+    "static/css/main.887337e6.css",
+    "static/js/main.d23ea9ec.js"
   ]
 }
