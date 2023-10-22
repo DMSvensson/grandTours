@@ -1,13 +1,20 @@
 .background {
     background-color: hsl(56 100% 75%);;
 }
+
 .info {
     text-align: center;
-    margin-bottom: 100px;
+}
+
+.info > div{
+    width: 50%;
+    margin: 10px auto 0 auto;
+    line-height: 1.4;
 }
 
 .center {
     align-self: center;
+    margin: 30px 0;
 }
 
 .teamsContainer {
