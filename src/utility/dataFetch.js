@@ -1,6 +1,5 @@
-export async function getJsonData(url) {
-    const publicURL = process.env.PUBLIC_URL;
-    const response = await fetch(`${publicURL}/${url}`, {
+export async function fetchData(path) {
+    const response = await fetch(`${process.env.REACT_APP_BASE_URL}${path}`, {
         headers: {
             'content-type': 'application/json',
             'Attept': 'application/json'
