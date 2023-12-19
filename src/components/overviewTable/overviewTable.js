@@ -47,7 +47,7 @@ const getGridClass = (resultType) => {
   }
 };
 
-function OverviewTable({ riders, type, isTime }) {
+function OverviewTable({ results, type, isTime }) {
   const {handleMouseEnter, handleMouseLeave} = useToggleScrollBehaviorByMouse();
   return (
     <div className={getGridClass(type)}>
@@ -78,16 +78,16 @@ function OverviewTable({ riders, type, isTime }) {
             </tr>
           </thead>
           <tbody className={type === "stage_results" ? styles.bodyStageResults : ''}>
-            {riders && riders.map((rider, index) => {
+            {results && results.map((result) => {
               return (
-                <tr>
-                  <td>{index + 1}</td>
-                  {type !== 'team' && <td>{rider.name}</td>}
+                <tr key={result.name}>
+                  <td>{result.position}</td>
+                  {type !== 'team' && <td>{result.name}</td>}
                   <td className={styles.tableTeam}>
-                    {type === 'team' && <img src={require(`../../assets/teams/logos/${rider.team}.jpg`)} alt={rider.team} className={styles.teamLogo} />}
-                    {type !== 'team' && <img src={require(`../../assets/teams/jerseys/${rider.team}.png`)} alt={rider.team} className={styles.jersey} />}
+                    {type === 'team' && <img src={require(`../../assets/teams/logos/${result.team}.jpg`)} alt={result.team} className={styles.teamLogo} />}
+                    {type !== 'team' && type && <img src={require(`../../assets/teams/jerseys/${result.team}.png`)} alt={result.team} className={styles.jersey} />}
                   </td>
-                  <td>{isTime ? rider.time : rider.points}</td>
+                  <td>{isTime ? result.time : result.points}</td>
                 </tr>
               );
             })}

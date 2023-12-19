@@ -12,10 +12,10 @@ function WinnerTable({winners, type, flagDirectionLeft, hide}) {
             className={`${styles.winners} ${hide ? '': 'hide'} ${styles.animationFromTop} ${type === 'mountain' ? styles.mountain : styles.sprint } ${flagDirectionLeft ? styles.left : styles.right}`}>
             <table>
                 <tbody>
-                    {winners.map((winner, index) => {
+                    {winners.map((winner) => {
                         return (
-                            <tr>
-                                <td>{index + 1}</td>
+                            <tr key={winner.name}>
+                                <td>{winner.position}</td>
                                 <td>{winner.name}</td>
                                 <td>{winner.points}</td>
                             </tr>
