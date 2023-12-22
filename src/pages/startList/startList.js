@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from './startList.module.css';
 import logo from '../../assets/logos/TDF_logo.png';
-import { fetchData } from "../../utility/dataFetch";
+import { fetchData, fetchTeamsImages } from "../../utility/dataFetch";
 import { Link } from "react-router-dom";
 
 function StartListPage() {
@@ -43,7 +43,7 @@ function StartListPage() {
                     {!isLoading && teams.map((team) => {
                         return (
                             <div className={styles.team} key={team.name}>
-                                <img src={require(`../../assets/teams/jerseys/${team.name}.png`)} alt={team.name} />
+                                <img src={fetchTeamsImages(2022, 'jersey', team.name)} alt={team.name} />
                                 <p>{team.name}</p>
                                 <ul>
                                     {team.riders.map((rider) => {

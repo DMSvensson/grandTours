@@ -3,6 +3,7 @@ import styles from './stageOverview.module.css';
 
 import logo from '../../assets/logos/TDF_logo.png';
 import OverviewTable from "../overviewTable/overviewTable";
+import { fetchRaceImages } from "../../utility/dataFetch";
 
 function StageOverview({results: overview, stageNumber}) {
     return (
@@ -17,7 +18,8 @@ function StageOverview({results: overview, stageNumber}) {
               return <OverviewTable results={result.result} type={result.type} isTime={result.isTime} key={result.type}/>
             })}
             <div className={styles.fighter}>
-              <img src={require('../../assets/jerseys/fighter.png')} alt="Fighter" />
+            {/* require('../../assets/jerseys/fighter.png') */}
+              <img src={fetchRaceImages(2022, 'fighter')} alt="Fighter" />
               <h1>{overview.combativity}</h1>
               <p>Combativity award</p>
             </div>
