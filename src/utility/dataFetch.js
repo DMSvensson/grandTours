@@ -42,3 +42,11 @@ export function fetchRaceImages(year, value) {
 
     return `${baseImgUrl}tdf/jerseys/${year}/${value}.png`;
 }
+
+export function fetchStageImages(year, img) {
+    if(isNaN(year)) {
+        return;
+    }
+
+    return `${baseImgUrl}tdf/stages/${year}/${img}`;
+}
