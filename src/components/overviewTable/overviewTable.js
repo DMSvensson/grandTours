@@ -1,14 +1,15 @@
 import React from "react";
 import styles from './overviewTable.module.css';
 import useToggleScrollBehaviorByMouse from "../../utility/toggleScrollBeavhior";
+import { fetchTeamsImages, fetchRaceImages } from "../../utility/dataFetch";
 
 const resultsTypes = {
   "stage_results": "Stage results",
-  "yellow": "yellow_jersey.png",
-  "green": "green_jersey.png",
-  "polka": "polka_jersey.png",
-  "youth": "youth_jersey.png",
-  "team": "best_team.png",
+  "yellow": "yellow_jersey",
+  "green": "green_jersey",
+  "polka": "polka_jersey",
+  "youth": "youth_jersey",
+  "team": "best_team",
 };
 
 const getHeaderByType = (resultType) => {
@@ -47,12 +48,12 @@ const getGridClass = (resultType) => {
   }
 };
 
-function OverviewTable({ results, type, isTime }) {
+function OverviewTable({ results, type, isTime, year }) {
   const {handleMouseEnter, handleMouseLeave} = useToggleScrollBehaviorByMouse();
   return (
     <div className={getGridClass(type)}>
       <div className={`${styles.gridContentHeader} ${getResultsClass(type)}`}>
-        {type !== "stage_results" && <img className={type !== 'team' ? styles.jersey : ''} src={require(`../../assets/jerseys/${getHeaderByType(type)}`)} alt={`${type} jersey`} />}
+        {type !== "stage_results" && <img className={type !== 'team' ? styles.jersey : ''} src={fetchRaceImages(year, getHeaderByType(type))} alt={`${type} jersey`} />}
         {type === "stage_results" && <h2>{getHeaderByType(type)}</h2>}
         {type === "team" && <h2>Team classification</h2>}
         {type === "polka" && <div>
@@ -84,8 +85,8 @@ function OverviewTable({ results, type, isTime }) {
                   <td>{result.position}</td>
                   {type !== 'team' && <td>{result.name}</td>}
                   <td className={styles.tableTeam}>
-                    {type === 'team' && <img src={require(`../../assets/teams/logos/${result.team}.jpg`)} alt={result.team} className={styles.teamLogo} />}
-                    {type !== 'team' && type && <img src={require(`../../assets/teams/jerseys/${result.team}.png`)} alt={result.team} className={styles.jersey} />}
+                    {type === 'team' && <img src={fetchTeamsImages(year, 'logo', result.team)} alt={result.team} className={styles.teamLogo} />}
+                    {type !== 'team' && type && <img src={fetchTeamsImages(year, 'jersey', result.team)} alt={result.team} className={styles.jersey} />}
                   </td>
                   <td>{isTime ? result.time : result.points}</td>
                 </tr>

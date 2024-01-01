@@ -1,8 +1,9 @@
 import React from "react";
 import styles from './stage.module.css';
 import KeyPoint from "../keyPoint/keyPoint";
+import { fetchStageImages } from "../../utility/dataFetch";
 
-function Stage({stage, boxRef}) {
+function Stage({stage, boxRef, year}) {
     return (
     <div className={styles.stageContainer}>
         <div className={styles.stageInfo}>
@@ -10,7 +11,7 @@ function Stage({stage, boxRef}) {
             <h2>{stage.route}</h2>
             <p>{stage.date}</p>
         </div>
-        <img className={styles.stage} alt={`stage ${stage.id}`} src={require(`./stages/${stage.stage_img}`)}/>
+        <img className={styles.stage} alt={`stage ${stage.id}`} src={fetchStageImages(year, stage.stage_img)}/>
         <div className={styles.stageKeyPoints}>
             <div className={styles.distance}>
                 <span>0 km</span>

@@ -6,8 +6,10 @@ import useScrollBehavior from '../../hooks/scrollBehavior';
 import {useWheelActive } from '../../contexts/WheelActiveContext';
 import StageOverview from '../../components/stageOverview/stageOverview';
 import { fetchData } from '../../utility/dataFetch';
+import { useParams } from 'react-router-dom';
 
 function StagesPage() {
+  const params = useParams();
   const [data, setData] = useState(null);
   const {isWheelActive} = useWheelActive();
   const boxRef = useRef(null);
@@ -29,19 +31,19 @@ function StagesPage() {
   };
   
   useEffect(() => {
-    fetchData(`stages/${currentStage + 1}`).then(stage => {
+    fetchData(`stages/${params.year}/${currentStage + 1}`).then(stage => {
       handleDataChange(stage);
     }).catch(error => {
       console.error(error);
     });
-  }, [currentStage]);
+  }, [params, currentStage]);
 
   return (
     <div style={{height: 'inherit'}}>
       <div ref={boxRef} id="box" className='box' style={{width: `${boxWidth}px`}}></div>
       <div onWheel={handleWheel} id='scrollContainer' className='container'>
-        {!isLoading && !showOverview && <Stage stage={stage} boxRef={boxRef}/>}
-        {!isLoading && showOverview && <StageOverview results={stage.overview} stageNumber={stage.stage_number}/>}
+        {!isLoading && !showOverview && <Stage stage={stage} boxRef={boxRef} year={params.year}/>}
+        {!isLoading && showOverview && <StageOverview results={stage.overview} stageNumber={stage.stage_number} year={params.year}/>}
       </div>
     </div>
   );
