@@ -18,8 +18,8 @@ const getTypeClass = (type) => {
 const getLengthClass = (length) => {
     if(length === 'short') {
         return styles.short;
-    } else if(length === 'medimum') {
-        return styles.medimum;
+    } else if(length === 'medium') {
+        return styles.medium;
     } else if(length === 'long') {
         return styles.long;
     } else {

@@ -1,0 +1,100 @@
+import React from "react";
+import styles from './home.module.css';
+import logo from '../../assets/logos/TDF_logo.png';
+import { Link } from "react-router-dom";
+import ITT from '../../assets/icons/ITT.svg';
+import flat from '../../assets/icons/flat.svg';
+import hilly from '../../assets/icons/hilly.svg';
+import mountain from '../../assets/icons/mountain.svg';
+import camera from '../../assets/icons/camera.svg';
+
+function HomePage() {
+    return (
+        <div className={styles.background}>
+            <img className={styles.logo} src={logo} alt='TDF Logo' />
+            <div className={styles.container}>
+                <div className={styles.info}>
+                    <h1>Experience Tour de France by Scrolling</h1>
+                    <div>
+                        <p>Select a Tour de France and scroll through all 21 stages to get a recap of every stage. For the best experience please use the website on a desktop or laptop.</p>
+                        <p>To stay updated on all the exciting moments, route details, and results of the Tour de France
+                            please visit the official website of the Tour de France: <a href="https://www.letour.fr/en/" target="blank">Tour de France Official Website</a></p>
+                    </div>
+                </div>
+                <div className={styles.editions}>
+                    <div>
+                        <Link to={`teams/2023`}>
+                            <div className={styles.edition} style={
+                                {
+                                    backgroundPosition: '0 -450px', backgroundImage: 'url(https://grandtourstorage.blob.core.windows.net/tdf/cover/TDF_Cover_2023.jpg)',
+                                }}>
+                                <div>
+                                    <h3>Tour de France 2023</h3>
+                                    <span>Bilbao - Paris</span>
+                                    <p>Edition 110</p>
+                                </div>
+                                <div className={styles.stageTypes}>
+                                    <div>
+                                        <span>1</span>
+                                        <img className={styles.icon} src={ITT} alt="ITT" />
+                                    </div>
+                                    <div>
+                                        <span>4</span>
+                                        <img className={styles.icon} src={flat} alt="Flat" />
+                                    </div>
+                                    <div>
+                                        <span>8</span>
+                                        <img className={styles.icon} src={hilly} alt="Hilly" />
+                                    </div>
+                                    <div>
+                                        <span>8</span>
+                                        <img className={styles.icon} src={mountain} alt="Mountain" />
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                        <a className={styles.credit} href="https://www.facebook.com/photo/?fbid=686043820232928&set=a.686045560232754" target="blank">
+                            <img src={camera} alt="Credit" />A.S.O. / Ashley Gruber & Jered Gruber
+                        </a>
+                    </div>
+                    <div>
+                        <Link to={`teams/2022`}>
+                            <div className={styles.edition} style={
+                                {
+                                    backgroundImage: 'url(https://grandtourstorage.blob.core.windows.net/tdf/cover/TDF_Cover_2022.jpg)',
+                                    backgroundPosition: '0 -210px'
+                                }}>
+                                <div>
+                                    <h3>Tour de France 2022</h3>
+                                    <span>Copenhaen - Paris</span>
+                                    <p>Edition 109</p>
+                                </div>
+                                <div className={styles.stageTypes}>
+                                    <div>
+                                        <span>2</span>
+                                        <img className={styles.icon} src={ITT} alt="ITT" />
+                                    </div>
+                                    <div>
+                                        <span>5</span>
+                                        <img className={styles.icon} src={flat} alt="Flat" />
+                                    </div>
+                                    <div>
+                                        <span>7</span>
+                                        <img className={styles.icon} src={hilly} alt="Hilly" />
+                                    </div>
+                                    <div>
+                                        <span>7</span>
+                                        <img className={styles.icon} src={mountain} alt="Mountain" />
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                        <a className={styles.credit} href="https://www.facebook.com/photo/?fbid=5224725550910115&set=a.5202251869824150" target="blank"><img src={camera} alt="Credit" />Le Tour de France Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default HomePage;
