@@ -21,6 +21,7 @@ jobs:
       - name: Install dependencies and Build
         run: | 
           npm install
+          npm run build 
         env:
           REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
           REACT_APP_BASE_URL: ${{ env.REACT_APP_BASE_URL }}
@@ -30,5 +31,5 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: 'grandTours/build'
+          FOLDER: build
         
