@@ -18,7 +18,6 @@ function StartListPage() {
         fetchData(`teams/${params.year}`).then(teams => {
             handleDataChange(teams);
         }).catch(error => {
-            console.error(error);
             setLoadingText('Could get the data right now');
         });
     }, [params]);
