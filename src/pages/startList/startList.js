@@ -15,10 +15,15 @@ function StartListPage() {
     };
     useEffect(() => {
         setLoadingText('Loading...');
+
+        setTimeout(() => {
+            setLoadingText('The teams are coming, they are properly warming up...');
+        }, 3500);
+
         fetchData(`teams/${params.year}`).then(teams => {
             handleDataChange(teams);
         }).catch(error => {
-            setLoadingText('Could get the data right now');
+            setLoadingText('Could not get the data right now');
         });
     }, [params]);
 
@@ -36,7 +41,7 @@ function StartListPage() {
                             please visit the official website of the Tour de France: <a href="https://www.letour.fr/en/" target="blank">Tour de France Official Website</a></p>
                     </div>
                 </div>
-                {teams && teams.length > 0 && <Link to={`${publicURL}/stages/${params.year}`} className={`btn btn-large ${styles.center}`}>Go to stages</Link>}
+                {teams && teams.length > 0 && !isLoading && <Link to={`${publicURL}/stages/${params.year}`} className={`btn btn-large ${styles.center}`} >Go to stages</Link>}
                 <h2>Teams & Riders</h2>
                 <div className={styles.teams}>
                     {isLoading && <div>{loadingText}</div>}
