@@ -26,5 +26,6 @@ const router = createBrowserRouter([
         ]
     }
 ]);
+router.basename = '/grandTours';
 
 export default router;
