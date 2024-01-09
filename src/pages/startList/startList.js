@@ -5,7 +5,6 @@ import { fetchData, fetchTeamsImages } from "../../utility/dataFetch";
 import { Link, useParams } from "react-router-dom";
 
 function StartListPage() {
-    const publicURL = process.env.PUBLIC_URL;
     const params = useParams();
     const [data, setData] = useState(null);
     const [loadingText, setLoadingText] = useState(null);
@@ -41,7 +40,7 @@ function StartListPage() {
                             please visit the official website of the Tour de France: <a href="https://www.letour.fr/en/" target="blank">Tour de France Official Website</a></p>
                     </div>
                 </div>
-                {teams && teams.length > 0 && !isLoading && <Link to={`${publicURL}/stages/${params.year}`} className={`btn btn-large ${styles.center}`} >Go to stages</Link>}
+                {teams && teams.length > 0 && !isLoading && <Link to={`/stages/${params.year}`} className={`btn btn-large ${styles.center}`} >Go to stages</Link>}
                 <h2>Teams & Riders</h2>
                 <div className={styles.teams}>
                     {isLoading && <div>{loadingText}</div>}
