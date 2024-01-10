@@ -36,6 +36,20 @@ function OverviewCard({ rider, result, type }) {
         <div className={styles.card}>
             <div className={`${styles.jerseyHeader} ${getResultsClass(type)}`}>
                 <img className={type !== 'team' && type !== 'fighter' ? styles.jersey : ''} src={fetchRaceImages(2023, getJerseyByType(type))} alt={`jersey`} />
+                {type === "polka" && <div>
+                    <div className={`${styles.polkaDot} ${styles.dotPosOne}`}></div>
+                    <div className={`${styles.polkaDot} ${styles.dotPosTwo}`}></div>
+                    <div className={`${styles.polkaDot} ${styles.dotPosThree}`}></div>
+                    <div className={`${styles.polkaDot} ${styles.dotPosFour}`}></div>
+                    <div className={`${styles.polkaDot} ${styles.dotPosFive}`}></div>
+                    <div className={`${styles.polkaDot} ${styles.dotPosSix}`}></div>
+                    <div className={`${styles.polkaDot} ${styles.dotPosSeven}`}></div>
+                    <div className={`${styles.polkaDot} ${styles.dotPosEight}`}></div>
+                    <div className={`${styles.polkaDot} ${styles.dotPosNine}`}></div>
+                    <div className={`${styles.polkaDot} ${styles.dotPosTen}`}></div>
+                    <div className={`${styles.polkaDot} ${styles.dotPosEleven}`}></div>
+                    <div className={`${styles.polkaDot} ${styles.dotPosTwelve}`}></div>
+                </div>}
             </div>
             <div className={styles.result}>
                 <p className={styles.winner}>{rider}</p>

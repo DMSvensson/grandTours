@@ -31,6 +31,11 @@
   border-bottom-right-radius: inherit;
 }
 
+.winner {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
 .yellowBg {
   background-color: yellow;
 }
@@ -47,7 +52,67 @@
   background-color: hsl(264, 11%, 91%);
 }
 
-.bestTeam, .fighter {
-    background-color: #666447;
-    padding: 20px 0;
+.bestTeam,
+.fighter {
+  background-color: #666447;
+  padding: 20px 0;
+}
+
+.polkaDot {
+  position: absolute;
+  --radius: 20px;
+  background-color: var(--polkaDot);
+  border-radius: 50%;
+  height: var(--radius);
+  width: var(--radius);
+}
+
+.dotPosOne {
+  top: 62%;
+  left: 9%;
+}
+
+.dotPosTwo {
+  top: 13%;
+  left: 20%;
+}
+.dotPosThree {
+  top: 60%;
+  left: 70%;
+}
+.dotPosFour {
+  top: 30%;
+  left: 2%;
+}
+.dotPosFive {
+  top: 15%;
+  left: 82%;
+}
+.dotPosSix {
+  top: 45%;
+  left: 96%;
+}
+.dotPosSeven {
+  top: 81%;
+  left: 29%;
+}
+.dotPosEight {
+  top: -2%;
+  left: 59%;
+}
+.dotPosNine {
+  top: 87%;
+  left: 93%;
+}
+.dotPosTen {
+  top: 0%;
+  left: -3%;
+}
+.dotPosEleven  {
+  top: 91%;
+  left: 3%;
+}
+.dotPosTwelve {
+  top: 90%;
+  left: 63%;
 }
