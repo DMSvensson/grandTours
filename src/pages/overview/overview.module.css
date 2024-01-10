@@ -1,0 +1,86 @@
+.background {
+  background-color: var(--yellow-bg);
+}
+
+.logo {
+  position: absolute;
+}
+
+.container {
+  padding: 50px 20px;
+}
+
+.headline {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "stageWins stageWins yellowWinner greenWinner"
+    "stageWins stageWins polkaWinner youthWinner"
+    "wins gap team combativity";
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+  gap: 20px;
+}
+
+.stageWins {
+  grid-area: stageWins;
+  /* background-color: powderblue; */
+  line-height: 1.5;
+}
+
+.stageWins .result {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.winner {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.yellow {
+  grid-area: yellowWinner;
+}
+
+.green {
+  grid-area: greenWinner;
+}
+
+.polka {
+  grid-area: polkaWinner;
+}
+
+.youth {
+  grid-area: youthWinner;
+}
+
+.team {
+  grid-area: team;
+}
+
+.combativity {
+  grid-area: combativity;
+}
+
+.wins {
+  grid-area: wins;
+  /* background-color: gold; */
+  padding: 20px;
+}
+
+.gap {
+  grid-area: gap;
+  /* background-color: mediumturquoise; */
+  padding: 20px;
+}

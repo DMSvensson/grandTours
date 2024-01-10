@@ -1,0 +1,53 @@
+.card {
+  height: 100%;
+  border-radius: 20px;
+}
+
+.jerseyHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 70%;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.jersey {
+  background-color: hsla(0, 0%, 70%, 0.2);
+  border-radius: 20px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  color: white;
+  background-color: #333329;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.yellowBg {
+  background-color: yellow;
+}
+
+.greenBg {
+  background-color: hsl(129, 50%, 44%);
+}
+
+.polkaBg {
+  background-color: var(--polka);
+}
+
+.whiteBg {
+  background-color: hsl(264, 11%, 91%);
+}
+
+.bestTeam, .fighter {
+    background-color: #666447;
+    padding: 20px 0;
+}
