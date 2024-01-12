@@ -1,68 +1,102 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './overview.module.css';
 import logo from '../../assets/logos/TDF_logo.png';
 import OverviewCard from '../../components/overviewCard/overviewCard';
+import { useParams } from 'react-router-dom';
+import { fetchData } from '../../utility/dataFetch';
 
-const array = Array.from(Array(21).keys());
+const getGridClass = (resultType) => {
+    if (resultType === 'yellow') {
+        return styles.yellowJersey;
+    } else if (resultType === 'green') {
+        return styles.greenJersey;
+    } else if (resultType === 'polka') {
+        return styles.polkaJersey;
+    } else if (resultType === 'youth') {
+        return styles.youngJersey;
+    } else if (resultType === 'team') {
+        return styles.team;
+    }
+};
 
 function OverviewPage() {
-    console.log(array);
+    const params = useParams();
+    const [data, setData] = useState(null);
+    const [loadingText, setLoadingText] = useState(null);
+
+    const handleDataChange = (data) => {
+        setData(data);
+    };
+    useEffect(() => {
+        setLoadingText('Loading...');
+
+        fetchData(`overview/${params.year}`).then(overview => {
+            handleDataChange(overview);
+        }).catch(error => {
+            setLoadingText('Could not get the data right now');
+        });
+    }, [params]);
+    const isLoading = data === null;
+    const overview = isLoading ? loadingText : data;
     return (
         <div className={styles.background}>
             <img className={styles.logo} src={logo} alt='TDF Logo' />
             <div className={styles.container}>
-                <h1 className={styles.headline}>Overview 2023</h1>
-                <div className={styles.grid}>
+                <h1 className={styles.headline}>Overview {params.year}</h1>
+                {isLoading && <div>{loadingText}</div>}
+                {!isLoading && <div className={styles.grid}>
                     <div className={styles.stageWins}>
-                        <h2>Stages winners</h2>
+                        <h2>Stage Winners</h2>
                         <div className={styles.flex}>
-                            {array.map((key) => {
+                            {overview && overview.stageWinners.map((stage) => {
                                 return (
-                                    <div className={styles.result}>
-                                        <h3>Stage {key}</h3>
-                                        <span>1. Jonas Vingegaard</span>
-                                        <span>2. Jonas Vingegaard</span>
-                                        <span>3. Jonas Vingegaard</span>
+                                    <div className={styles.result} key={stage.stageNumber}>
+                                        <h3>Stage {stage.stageNumber}</h3>
+                                        {stage.results && stage.results.map(result => {
+                                            return (
+                                                <span key={result.rider}>{result.position}. {result.rider}</span>
+                                            )
+                                        })}
                                     </div>
-                                )
+                                );
                             })}
                         </div>
                     </div>
                     <div className={styles.wins}>
                         <h2>Most Wins</h2>
                         <ol>
-                            <li>Wout Van Aeart - 4</li>
-                            <li>Wout Van Aeart - 3</li>
-                            <li>Wout Van Aeart - 2</li>
-                            <li>Wout Van Aeart - 2</li>
-                            <li>Wout Van Aeart - 1</li>
-                            <li>Wout Van Aeart - 1</li>
+                            {overview && overview.mostWins.map(winResult => {
+                                return <li key={winResult.name}>{winResult.name} - {winResult.wins}</li>
+                            })}
                         </ol>
                     </div>
-
-                    <div className={styles.yellow}>
-                        <OverviewCard rider={'Jonas Vingegaard'} result={'41:30:22'} type={'yellow'} />
-                    </div>
-                    <div className={styles.green}>
-                        <OverviewCard rider={'Jonas Vingegaard'} result={'41:30:22'} type={'green'} />
-                    </div>
-                    <div className={styles.polka}>
-                        <OverviewCard rider={'Jonas Vingegaard'} result={'41:30:22'} type={'polka'} />
-                    </div>
-                    <div className={styles.youth}>
-                        <OverviewCard rider={'Jonas Vingegaard'} result={'41:30:22'} type={'youth'} />
-                    </div>
-                    <div className={styles.team}>
-                        <OverviewCard rider={'Jonas Vingegaard'} result={'41:30:22'} type={'team'} />
-                    </div>
+                    {overview && overview.overallWinners.map(winner => {
+                        return (
+                            <div className={getGridClass(winner.type)}>
+                                <OverviewCard rider={winner.rider == null ? winner.team_time : winner.rider} team={winner.team} result={winner.points == null ? winner.time : winner.points} type={winner.type} key={winner.type} />
+                            </div>
+                        )
+                    })}
                     <div className={styles.combativity}>
                         <OverviewCard rider={'Jonas Vingegaard'} type={'fighter'} />
                     </div>
                     <div className={styles.gap}>
                         <h2>The Gap</h2>
-                        <p>Mikkel Bjerg (50:50:50) - Jonas Vingegaard (41:30:22)</p>
+                        {overview &&
+                            <>
+                                <p>{overview.gap.firstRider.rider} ({overview.gap.firstRider.time})</p>
+                                <p>.</p>
+                                <p>({overview.gap.gap})</p>
+                                <p>.</p>
+                                <p>{overview.gap.lastRider.rider} ({overview.gap.lastRider.time})</p>
+                            </>
+                        }
                     </div>
-                </div>
+                    <div className={styles.totalLength}>
+                        <h2>Total length</h2>
+                        <p>{overview && overview.totalLength.toFixed(2)} km</p>
+                    </div>
+                </div>}
             </div>
         </div>
     )
