@@ -47,6 +47,9 @@ function useScrollBehavior(viewportWidth, scrollSpeed, numberOfStages) {
                 handleStageChange(currentStage + 1);
                 handleShowOverviewChange(false);
               }
+              if(currentStage === numberOfStages - 1) {
+                handleStageChange(numberOfStages);
+              }
               return;
             }
     

@@ -81,7 +81,7 @@ function OverviewTable({ results, type, isTime, year }) {
           <tbody className={type === "stage_results" ? styles.bodyStageResults : ''}>
             {results && results.map((result) => {
               return (
-                <tr key={result.name}>
+                <tr key={result.position}>
                   <td>{result.position}</td>
                   {type !== 'team' && <td>{result.name}</td>}
                   <td className={styles.tableTeam}>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './overview.module.css';
 import OverviewCard from '../../components/overviewCard/overviewCard';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { fetchData } from '../../utility/dataFetch';
 import RaceLogo from '../../components/raceLogo/raceLogo';
 
@@ -40,7 +40,10 @@ function OverviewPage() {
     const overview = isLoading ? loadingText : data;
     return (
         <div className={styles.background}>
-            <RaceLogo />
+            <div className={styles.header}>
+                <RaceLogo />
+                <Link to={`/teams/${params.year}`} className='btn btn-primary'>Go back to {params.year}</Link>
+            </div>
             <div className={styles.container}>
                 <h1 className={styles.headline}>Overview {params.year}</h1>
                 {isLoading && <div>{loadingText}</div>}
@@ -52,9 +55,9 @@ function OverviewPage() {
                                 return (
                                     <div className={styles.result} key={stage.stageNumber}>
                                         <h3>Stage {stage.stageNumber}</h3>
-                                        {stage.results && stage.results.map(result => {
+                                        {stage.results && stage.results.map((result, index) => {
                                             return (
-                                                <span key={result.rider}>{result.position}. {result.rider}</span>
+                                                <span key={index}>{result.position}. {result.rider}</span>
                                             )
                                         })}
                                     </div>
@@ -72,8 +75,8 @@ function OverviewPage() {
                     </div>
                     {overview && overview.overallWinners.map(winner => {
                         return (
-                            <div className={getGridClass(winner.type)}>
-                                <OverviewCard rider={winner.rider == null ? winner.team_time : winner.rider} team={winner.team} result={winner.points == null ? winner.time : winner.points} type={winner.type} key={winner.type} />
+                            <div className={getGridClass(winner.type)} key={winner.type}>
+                                <OverviewCard rider={winner.rider == null ? winner.team_time : winner.rider} team={winner.team} result={winner.points == null ? winner.time : winner.points} type={winner.type} />
                             </div>
                         )
                     })}

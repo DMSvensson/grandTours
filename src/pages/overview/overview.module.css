@@ -2,6 +2,16 @@
   background-color: var(--yellow-bg);
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > :last-child{
+  margin-right: 20px;
+}
+
 .container {
   padding: 0px 20px 50px 20px;
 }

@@ -6,17 +6,18 @@ import useScrollBehavior from '../../hooks/scrollBehavior';
 import {useWheelActive } from '../../contexts/WheelActiveContext';
 import StageOverview from '../../components/stageOverview/stageOverview';
 import { fetchData } from '../../utility/dataFetch';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 function StagesPage() {
   const params = useParams();
   const [data, setData] = useState(null);
+  const navigate = useNavigate();
   const {isWheelActive} = useWheelActive();
   const boxRef = useRef(null);
   const scrollSpeed = 40;
   const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
   const isLoading = data === null;
-  const numberOfStages = isLoading ? 0 : 21;
+  const numberOfStages = 21;
   const {currentStage, boxWidth, showOverview, scrollBehavior} = useScrollBehavior(viewportWidth, scrollSpeed, numberOfStages);
   const stage = isLoading ? 'Loading...' : data;
   
@@ -31,12 +32,17 @@ function StagesPage() {
   };
   
   useEffect(() => {
+    if(currentStage === numberOfStages) {
+      navigate(`/overview/${params.year}`);
+      return;
+    }
+
     fetchData(`stages/${params.year}/${currentStage + 1}`).then(stage => {
       handleDataChange(stage);
     }).catch(error => {
       console.error(error);
     });
-  }, [params, currentStage]);
+  }, [params, currentStage, navigate]);
 
   return (
     <div style={{height: 'inherit'}}>
