@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from './startList.module.css';
-import logo from '../../assets/logos/TDF_logo.png';
 import { fetchData, fetchTeamsImages } from "../../utility/dataFetch";
 import { Link, useParams } from "react-router-dom";
+import RaceLogo from "../../components/raceLogo/raceLogo";
 
 function StartListPage() {
     const params = useParams();
@@ -30,7 +30,7 @@ function StartListPage() {
     const teams = isLoading ? loadingText : data;
     return (
         <div className={styles.background}>
-            <img className={styles.logo} src={logo} alt='TDF Logo' />
+            <RaceLogo />
             <div className={styles.teamsContainer}>
                 <div className={styles.info}>
                     <h1>Tour de France {params.year}</h1>
@@ -40,7 +40,10 @@ function StartListPage() {
                             please visit the official website of the Tour de France: <a href="https://www.letour.fr/en/" target="blank">Tour de France Official Website</a></p>
                     </div>
                 </div>
-                {teams && teams.length > 0 && !isLoading && <Link to={`/stages/${params.year}`} className={`btn btn-large ${styles.center}`} >Go to stages</Link>}
+                {teams && teams.length > 0 && !isLoading && <div className={styles.center}>
+                    <Link to={`/stages/${params.year}`} className={`btn btn-primary btn-large ${styles.spacing}`} >Go to stages</Link>
+                    <Link to={`/overview/${params.year}`} className={`btn btn-secondary btn-large ${styles.spacing}`} >Skip to overall Overview</Link>
+                </div>}
                 <h2>Teams & Riders</h2>
                 <div className={styles.teams}>
                     {isLoading && <div>{loadingText}</div>}

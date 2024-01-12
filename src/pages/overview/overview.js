@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styles from './overview.module.css';
-import logo from '../../assets/logos/TDF_logo.png';
 import OverviewCard from '../../components/overviewCard/overviewCard';
 import { useParams } from 'react-router-dom';
 import { fetchData } from '../../utility/dataFetch';
+import RaceLogo from '../../components/raceLogo/raceLogo';
 
 const getGridClass = (resultType) => {
     if (resultType === 'yellow') {
@@ -40,7 +40,7 @@ function OverviewPage() {
     const overview = isLoading ? loadingText : data;
     return (
         <div className={styles.background}>
-            <img className={styles.logo} src={logo} alt='TDF Logo' />
+            <RaceLogo />
             <div className={styles.container}>
                 <h1 className={styles.headline}>Overview {params.year}</h1>
                 {isLoading && <div>{loadingText}</div>}

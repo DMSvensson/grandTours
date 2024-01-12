@@ -14,8 +14,11 @@
 }
 
 .center {
-    align-self: center;
-    margin: 30px 0;
+    margin: auto;
+}
+
+.spacing {
+    margin: 50px 15px;
 }
 
 .teamsContainer {
