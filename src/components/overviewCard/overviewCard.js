@@ -31,11 +31,11 @@ const getResultsClass = (resultType) => {
     }
 };
 
-function OverviewCard({ rider, result, type }) {
+function OverviewCard({ rider, team, result, type }) {
     return (
         <div className={styles.card}>
             <div className={`${styles.jerseyHeader} ${getResultsClass(type)}`}>
-                <img className={type !== 'team' && type !== 'fighter' ? styles.jersey : ''} src={fetchRaceImages(2023, getJerseyByType(type))} alt={`jersey`} />
+                <img className={type !== 'team' && type !== 'fighter' ? styles.jersey : ''} src={fetchRaceImages(2023, getJerseyByType(type))} alt={`${type} jersey`} />
                 {type === "polka" && <div>
                     <div className={`${styles.polkaDot} ${styles.dotPosOne}`}></div>
                     <div className={`${styles.polkaDot} ${styles.dotPosTwo}`}></div>
@@ -53,6 +53,7 @@ function OverviewCard({ rider, result, type }) {
             </div>
             <div className={styles.result}>
                 <p className={styles.winner}>{rider}</p>
+                <span>{team}</span>
                 <p>{result}</p>
             </div>
         </div>
