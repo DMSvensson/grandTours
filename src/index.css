@@ -15,7 +15,7 @@
   --finishColor: gold;
   --polka: hsl(20, 12%, 90%);
   --polkaDot: #d50000;
-  --yellow-bg: hsl(56 100% 75%);
+  --yellow-bg: hsl(56 100% 45%);
 }
 
 html,body {
@@ -35,11 +35,9 @@ h1,h2,h3,h4,p,span,tr,li {
 }
 
 button, .btn {
+  --btn-color: hsl(0, 0%, 20%);
   display: inline-block;
-  background-color: hsl(0, 0%, 20%);
-  border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 6px;
-  color: #fff;
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
@@ -70,4 +68,20 @@ button:disabled, .btn:disabled {
 
 button:active, .btn:active {
   background-color: hsl(0, 0%, 30%);;
+}
+
+.btn-primary {
+  background-color: var(--btn-color);
+  border: 1px solid rgba(27, 31, 35, .15);
+  color: #fff;
+}
+
+.btn-secondary {
+  border: 2px solid var(--btn-color);
+  color: var(--btn-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--btn-color);
+  color: #fff;
 }
