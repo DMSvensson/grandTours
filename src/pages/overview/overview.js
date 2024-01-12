@@ -4,20 +4,7 @@ import OverviewCard from '../../components/overviewCard/overviewCard';
 import { Link, useParams } from 'react-router-dom';
 import { fetchData } from '../../utility/dataFetch';
 import RaceLogo from '../../components/raceLogo/raceLogo';
-
-const getGridClass = (resultType) => {
-    if (resultType === 'yellow') {
-        return styles.yellowJersey;
-    } else if (resultType === 'green') {
-        return styles.greenJersey;
-    } else if (resultType === 'polka') {
-        return styles.polkaJersey;
-    } else if (resultType === 'youth') {
-        return styles.youngJersey;
-    } else if (resultType === 'team') {
-        return styles.team;
-    }
-};
+import { getGridClass } from '../../utility/styles';
 
 function OverviewPage() {
     const params = useParams();
@@ -75,7 +62,7 @@ function OverviewPage() {
                     </div>
                     {overview && overview.overallWinners.map(winner => {
                         return (
-                            <div className={getGridClass(winner.type)} key={winner.type}>
+                            <div className={getGridClass(winner.type, styles)} key={winner.type}>
                                 <OverviewCard rider={winner.rider == null ? winner.team_time : winner.rider} team={winner.team} result={winner.points == null ? winner.time : winner.points} type={winner.type} />
                             </div>
                         )

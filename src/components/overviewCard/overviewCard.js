@@ -1,40 +1,13 @@
 import React from 'react';
 import styles from './overviewCard.module.css';
 import { fetchRaceImages } from '../../utility/dataFetch';
-
-const resultsTypes = {
-    "yellow": "yellow_jersey",
-    "green": "green_jersey",
-    "polka": "polka_jersey",
-    "youth": "youth_jersey",
-    "team": "best_team",
-    "fighter": "fighter",
-};
-
-const getJerseyByType = (resultType) => {
-    return resultsTypes[resultType];
-};
-
-const getResultsClass = (resultType) => {
-    if (resultType === 'yellow') {
-        return styles.yellowBg;
-    } else if (resultType === 'green') {
-        return styles.greenBg;
-    } else if (resultType === 'polka') {
-        return styles.polkaBg;
-    } else if (resultType === 'youth') {
-        return styles.whiteBg;
-    } else if (resultType === 'team') {
-        return styles.bestTeam;
-    } else if (resultType === 'fighter') {
-        return styles.fighter;
-    }
-};
+import { getJerseyByType } from '../../utility/resultsTypes';
+import { getResultsClass } from '../../utility/styles';
 
 function OverviewCard({ rider, team, result, type }) {
     return (
         <div className={styles.card}>
-            <div className={`${styles.jerseyHeader} ${getResultsClass(type)}`}>
+            <div className={`${styles.jerseyHeader} ${getResultsClass(type, false)}`}>
                 <img className={type !== 'team' && type !== 'fighter' ? styles.jersey : ''} src={fetchRaceImages(2023, getJerseyByType(type))} alt={`${type} jersey`} />
                 {type === "polka" && <div>
                     <div className={`${styles.polkaDot} ${styles.dotPosOne}`}></div>

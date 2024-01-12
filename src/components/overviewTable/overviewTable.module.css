@@ -45,28 +45,6 @@
   overflow: auto;
 }
 
-.yellowBg {
-  background-color: hsl(56, 100%, 53%);
-}
-
-.greenBg {
-  background-color: hsl(129, 50%, 44%);
-}
-
-.polkaBg {
-  background-color: var(--polka);
-  color: black;
-}
-
-.whiteBg {
-  background-color: hsl(264, 11%, 91%);
-  color: black;
-}
-
-.winnerBg {
-  background-color: gold;
-}
-
 .polkaDot {
   position: absolute;
   --radius: 20px;
@@ -107,10 +85,6 @@
 .dotPosEight {
   top: -2%;
   left: 59%;
-}
-
-.bestTeam > img {
-  width: 60px;
 }
 
 .table {
