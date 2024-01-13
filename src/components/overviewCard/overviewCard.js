@@ -4,11 +4,11 @@ import { fetchRaceImages } from '../../utility/dataFetch';
 import { getJerseyByType } from '../../utility/resultsTypes';
 import { getResultsClass } from '../../utility/styles';
 
-function OverviewCard({ rider, team, result, type }) {
+function OverviewCard({ rider, team, result, type, year }) {
     return (
         <div className={styles.card}>
             <div className={`${styles.jerseyHeader} ${getResultsClass(type, false)}`}>
-                <img className={type !== 'team' && type !== 'fighter' ? styles.jersey : ''} src={fetchRaceImages(2023, getJerseyByType(type))} alt={`${type} jersey`} />
+                <img className={type !== 'team' && type !== 'fighter' ? styles.jersey : ''} src={fetchRaceImages(year, getJerseyByType(type))} alt={`${type} jersey`} />
                 {type === "polka" && <div>
                     <div className={`${styles.polkaDot} ${styles.dotPosOne}`}></div>
                     <div className={`${styles.polkaDot} ${styles.dotPosTwo}`}></div>

@@ -8,6 +8,7 @@ import { getGridClass } from '../../utility/styles';
 
 function OverviewPage() {
     const params = useParams();
+    const year = params.year;
     const [data, setData] = useState(null);
     const [loadingText, setLoadingText] = useState(null);
 
@@ -17,22 +18,22 @@ function OverviewPage() {
     useEffect(() => {
         setLoadingText('Loading...');
 
-        fetchData(`overview/${params.year}`).then(overview => {
+        fetchData(`overview/${year}`).then(overview => {
             handleDataChange(overview);
         }).catch(error => {
             setLoadingText('Could not get the data right now');
         });
-    }, [params]);
+    }, [year]);
     const isLoading = data === null;
     const overview = isLoading ? loadingText : data;
     return (
         <div className={styles.background}>
             <div className={styles.header}>
                 <RaceLogo />
-                <Link to={`/teams/${params.year}`} className='btn btn-primary'>Go back to {params.year}</Link>
+                <Link to={`/teams/${year}`} className='btn btn-primary'>Go back to {year}</Link>
             </div>
             <div className={styles.container}>
-                <h1 className={styles.headline}>Overview {params.year}</h1>
+                <h1 className={styles.headline}>Overview {year}</h1>
                 {isLoading && <div>{loadingText}</div>}
                 {!isLoading && <div className={styles.grid}>
                     <div className={styles.stageWins}>
@@ -63,13 +64,10 @@ function OverviewPage() {
                     {overview && overview.overallWinners.map(winner => {
                         return (
                             <div className={getGridClass(winner.type, styles)} key={winner.type}>
-                                <OverviewCard rider={winner.rider == null ? winner.team_time : winner.rider} team={winner.team} result={winner.points == null ? winner.time : winner.points} type={winner.type} />
+                                <OverviewCard rider={winner.rider == null ? winner.team_time : winner.rider} team={winner.team} result={winner.points == null ? winner.time : winner.points} type={winner.type} year={year} />
                             </div>
                         )
                     })}
-                    <div className={styles.combativity}>
-                        <OverviewCard rider={'Jonas Vingegaard'} type={'fighter'} />
-                    </div>
                     <div className={styles.gap}>
                         <h2>The Gap</h2>
                         {overview &&
