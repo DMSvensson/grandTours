@@ -4,6 +4,7 @@ import App from "./App";
 import StartListPage from "./pages/startList/startList";
 import StagesPage from "./pages/stages/stages";
 import HomePage from "./pages/home/home";
+import OverviewPage from "./pages/overview/overview";
 
 const router = createBrowserRouter([
     {
@@ -11,17 +12,21 @@ const router = createBrowserRouter([
         element: <App />,
         children: [
             {
-                path: `/`,
+                path: '/',
                 element: <HomePage />
             },
             {
-                path: `/teams/:year`,
+                path: '/teams/:year',
                 element: <StartListPage />
             },
             {
-                path: `/stages/:year`,
+                path: '/stages/:year',
                 element: <StagesPage />
             },
+            {
+                path: '/overview/:year',
+                element: <OverviewPage />
+            }
         ]
     }
 ], {basename: "/grandTours"});

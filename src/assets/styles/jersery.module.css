@@ -1,0 +1,31 @@
+.winnerBg {
+    background-color: gold;
+    color: black;
+}
+
+.yellowBg {
+  background-color: yellow;
+}
+
+.greenBg {
+  background-color: hsl(129, 50%, 44%);
+}
+
+.polkaBg {
+  background-color: var(--polka);
+}
+
+.whiteBg {
+  background-color: hsl(264, 11%, 91%);
+}
+
+.bestTeam,
+.fighter,
+.bestTeamOverview {
+  background-color: #666447;
+  padding: 20px 0;
+}
+
+.bestTeamOverview > img {
+    width: 60px;
+}

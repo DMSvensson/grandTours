@@ -1,17 +1,17 @@
 import React from "react";
 import styles from './home.module.css';
-import logo from '../../assets/logos/TDF_logo.png';
 import { Link } from "react-router-dom";
 import ITT from '../../assets/icons/ITT.svg';
 import flat from '../../assets/icons/flat.svg';
 import hilly from '../../assets/icons/hilly.svg';
 import mountain from '../../assets/icons/mountain.svg';
 import camera from '../../assets/icons/camera.svg';
+import RaceLogo from "../../components/raceLogo/raceLogo";
 
 function HomePage() {
     return (
         <div className={styles.background}>
-            <img className={styles.logo} src={logo} alt='TDF Logo' />
+            <RaceLogo />
             <div className={styles.container}>
                 <div className={styles.info}>
                     <h1>Experience Tour de France by Scrolling</h1>

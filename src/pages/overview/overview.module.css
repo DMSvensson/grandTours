@@ -1,0 +1,101 @@
+.background {
+  background-color: var(--yellow-bg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > :last-child{
+  margin-right: 20px;
+}
+
+.container {
+  padding: 0px 20px 50px 20px;
+}
+
+.headline {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "stageWins stageWins stageWins yellowWinner greenWinner"
+    "stageWins stageWins stageWins polkaWinner  youthWinner"
+    "wins      length    gap       team         combativity";
+    grid-template-columns: auto 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.container h2 {
+    margin-bottom: 10px;
+}
+
+.stageWins {
+  grid-area: stageWins;
+  line-height: 1.5;
+}
+
+.stageWins .result {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding: 15px 25px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.yellow {
+  grid-area: yellowWinner;
+}
+
+.green {
+  grid-area: greenWinner;
+}
+
+.polka {
+  grid-area: polkaWinner;
+}
+
+.youth {
+  grid-area: youthWinner;
+}
+
+.team {
+  grid-area: team;
+}
+
+.combativity {
+  grid-area: combativity;
+}
+
+.wins {
+  grid-area: wins;
+}
+
+.wins > ol {
+    padding: 0 30px;
+    line-height: 1.4;
+    max-height: 250px;
+    width: fit-content;
+    overflow: auto;
+}
+
+.totalLength {
+  grid-area: length;
+  text-align: center;
+}
+
+.gap {
+  grid-area: gap;
+}
