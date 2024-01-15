@@ -9,7 +9,7 @@ function OverviewTable({ results, type, isTime, year }) {
   const {handleMouseEnter, handleMouseLeave} = useToggleScrollBehaviorByMouse();
   return (
     <div className={getGridClass(type, styles)}>
-      <div className={`${styles.gridContentHeader} ${getResultsClass(type, true)}`}>
+      <div className={`${styles.gridContentHeader} ${getResultsClass(type, true)} TDF-${year}`}>
         {type !== "stage_results" && <img className={type !== 'team' ? styles.jersey : ''} src={fetchRaceImages(year, getJerseyByType(type))} alt={`${type} jersey`} />}
         {type === "stage_results" && <h2>{getJerseyByType(type)}</h2>}
         {type === "team" && <h2>Team classification</h2>}

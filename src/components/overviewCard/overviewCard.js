@@ -7,7 +7,7 @@ import { getResultsClass } from '../../utility/styles';
 function OverviewCard({ rider, team, result, type, year }) {
     return (
         <div className={styles.card}>
-            <div className={`${styles.jerseyHeader} ${getResultsClass(type, false)}`}>
+            <div className={`${styles.jerseyHeader} ${getResultsClass(type, false)} TDF-${year}`}>
                 <img className={type !== 'team' && type !== 'fighter' ? styles.jersey : ''} src={fetchRaceImages(year, getJerseyByType(type))} alt={`${type} jersey`} />
                 {type === "polka" && <div>
                     <div className={`${styles.polkaDot} ${styles.dotPosOne}`}></div>
