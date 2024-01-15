@@ -4,11 +4,13 @@
 }
 
 .yellowBg {
-  background-color: yellow;
+  --_yellowBg: var(--yellow, hsl(56, 100%, 53%));
+  background-color: var(--_yellowBg);
 }
 
 .greenBg {
-  background-color: hsl(129, 50%, 44%);
+  --_greenBg: var(--greenBg, hsl(129, 50%, 44%));
+  background-color: var(--_greenBg);
 }
 
 .polkaBg {
