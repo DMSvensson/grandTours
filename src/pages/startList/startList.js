@@ -15,13 +15,14 @@ function StartListPage() {
     useEffect(() => {
         setLoadingText('Loading...');
 
-        setTimeout(() => {
+        const loadingTimeout = setTimeout(() => {
             setLoadingText('The teams are coming, they are properly warming up...');
-        }, 3500);
+        }, 5000);
 
         fetchData(`teams/${params.year}`).then(teams => {
             handleDataChange(teams);
         }).catch(error => {
+            clearTimeout(loadingTimeout);
             setLoadingText('Could not get the data right now');
         });
     }, [params]);

@@ -39,7 +39,7 @@ function OverviewPage() {
                     <div className={styles.stageWins}>
                         <h2>Stage Winners</h2>
                         <div className={styles.flex}>
-                            {overview && overview.stageWinners.map((stage) => {
+                            {overview && overview.stageWinners && overview.stageWinners.map((stage) => {
                                 return (
                                     <div className={styles.result} key={stage.stageNumber}>
                                         <h3>Stage {stage.stageNumber}</h3>
@@ -56,12 +56,12 @@ function OverviewPage() {
                     <div className={styles.wins}>
                         <h2>Most Wins</h2>
                         <ol>
-                            {overview && overview.mostWins.map(winResult => {
+                            {overview && overview.mostWins && overview.mostWins.map(winResult => {
                                 return <li key={winResult.name}>{winResult.name} - {winResult.wins}</li>
                             })}
                         </ol>
                     </div>
-                    {overview && overview.overallWinners.map(winner => {
+                    {overview && overview.overallWinners && overview.overallWinners.map(winner => {
                         return (
                             <div className={getGridClass(winner.type, styles)} key={winner.type}>
                                 <OverviewCard rider={winner.rider == null ? winner.team_time : winner.rider} team={winner.team} result={winner.points == null ? winner.time : winner.points} type={winner.type} year={year} />
@@ -70,7 +70,7 @@ function OverviewPage() {
                     })}
                     <div className={styles.gap}>
                         <h2>The Gap</h2>
-                        {overview &&
+                        {overview && overview.gap &&
                             <>
                                 <p>{overview.gap.firstRider.rider} ({overview.gap.firstRider.time})</p>
                                 <p>.</p>
@@ -82,7 +82,7 @@ function OverviewPage() {
                     </div>
                     <div className={styles.totalLength}>
                         <h2>Total length</h2>
-                        <p>{overview && overview.totalLength.toFixed(2)} km</p>
+                        <p>{overview && overview.totalLength && overview.totalLength.toFixed(2)} km</p>
                     </div>
                 </div>}
             </div>
