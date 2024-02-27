@@ -1,6 +1,6 @@
 @font-face {
-  font-family: JosefinSans;
-  src: local('JosefinSans'), url(./assets/fonts/JosefinSans-VariableFont_wght.ttf) format('ttf');
+  font-family: 'JosefinSans';
+  src: local('JosefinSans'), url(~./assets/fonts/JosefinSans-VariableFont_wght.ttf) format('truetype');
 }
 
 * {
@@ -23,7 +23,7 @@ html,body {
 }
 
 h1,h2,h3,h4,p,span,tr,li {
-  font-family: JosefinSans, sans-serif, system-ui;
+  font-family: sans-serif, system-ui;
 }
 
 #root {
@@ -32,6 +32,10 @@ h1,h2,h3,h4,p,span,tr,li {
 
 .hide {
   display: none;
+}
+
+.font-family-jose {
+  font-family: JosefinSans, sans-serif, system-ui;
 }
 
 button, .btn {
