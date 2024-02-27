@@ -9,8 +9,9 @@ import { fetchData } from '../../utility/dataFetch';
 import { useNavigate, useParams } from 'react-router-dom';
 
 function StagesPage() {
-  const params = useParams();
+  const {year} = useParams();
   const [data, setData] = useState(null);
+  const [currentStage, setCurrentState] = useState(1);
   const navigate = useNavigate();
   const {isWheelActive} = useWheelActive();
   const boxRef = useRef(null);
@@ -18,7 +19,18 @@ function StagesPage() {
   const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
   const isLoading = data === null;
   const numberOfStages = 21;
-  const {currentStage, boxWidth, showOverview, scrollBehavior} = useScrollBehavior(viewportWidth, scrollSpeed, numberOfStages);
+  const handleStageChange = (stageNumber) => {
+    if(stageNumber < 0) {
+      setCurrentState(0);
+      return;
+    }
+    if(stageNumber > 21) {
+      setCurrentState(21);
+      return;
+    }
+    setCurrentState(stageNumber);
+  }
+  const {boxWidth, showOverview, scrollBehavior} = useScrollBehavior(+currentStage, handleStageChange, viewportWidth, scrollSpeed, numberOfStages);
   const stage = isLoading ? 'Loading...' : data;
   
   const handleDataChange = (data) => {
@@ -33,23 +45,23 @@ function StagesPage() {
   
   useEffect(() => {
     if(currentStage === numberOfStages) {
-      navigate(`/overview/${params.year}`);
+      navigate(`/overview/${year}`);
       return;
     }
 
-    fetchData(`stages/${params.year}/${currentStage + 1}`).then(stage => {
+    fetchData(`stages/${year}/${currentStage}`).then(stage => {
       handleDataChange(stage);
     }).catch(error => {
       console.error(error);
     });
-  }, [params, currentStage, navigate]);
+  }, [year, currentStage, navigate]);
 
   return (
     <div style={{height: 'inherit'}}>
       <div ref={boxRef} id="box" className='box' style={{width: `${boxWidth}px`}}></div>
       <div onWheel={handleWheel} id='scrollContainer' className='container'>
-        {!isLoading && !showOverview && <Stage stage={stage} boxRef={boxRef} year={params.year}/>}
-        {!isLoading && showOverview && <StageOverview results={stage.overview} stageNumber={stage.stage_number} year={params.year}/>}
+        {!isLoading && !showOverview && <Stage stage={stage} boxRef={boxRef} year={year} handleSelectedStage={handleStageChange}/>}
+        {!isLoading && showOverview && <StageOverview results={stage.overview} stageNumber={stage.stage_number} year={year}/>}
       </div>
     </div>
   );

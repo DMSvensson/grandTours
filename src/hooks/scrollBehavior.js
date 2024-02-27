@@ -1,13 +1,8 @@
 import { useState } from "react";
 
-function useScrollBehavior(viewportWidth, scrollSpeed, numberOfStages) {
-    const [currentStage, setCurrentState] = useState(0);
+function useScrollBehavior(currentStage, handleStageChange, viewportWidth, scrollSpeed, numberOfStages) {
     const [boxWidth, setBoxWidth] = useState(0);
     const [showOverview, setShowOvevriew] = useState(false);
-
-    const handleStageChange = (currentStage) => {
-        setCurrentState(currentStage)
-    }
     
     const handleBoxWidth = (width) => {
         setBoxWidth(width);

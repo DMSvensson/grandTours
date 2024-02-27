@@ -16,6 +16,12 @@
     text-align: left;
 }
 
+.stageInfo > div {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 .stageKeyPoints {
     display: contents;
 }
@@ -48,4 +54,144 @@
     width: 100%;
     height: 1px;
     background-color: white;
+}
+
+.arrow {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: white;
+    z-index: 2;
+}
+
+.arrow:hover,
+.arrow:focus {
+    background-color: var(--yellow-bg);
+}
+
+.arrow::after,
+.arrow::before {
+    position: absolute;
+    content: '';
+    width: 35%;
+    height: 2px;
+    border-radius: 20px;
+    background-color: black;
+    transition: all .5s ease-in-out;
+}
+
+.arrow::after {
+    bottom: 7.8px;
+}
+
+.arrow::before {
+    top: 7.8px;
+}
+
+.right.arrow::after,
+.right.arrow::before {
+    left: 8px;
+}
+
+.left.arrow::after,
+.left.arrow::before {
+    left: 6px;
+}
+
+.right.arrow::after {
+    transform: rotate(-45deg);
+}
+
+.right.arrow::before {
+    transform: rotate(45deg);
+}
+
+.left.arrow::after {
+    transform: rotate(45deg);
+}
+
+.left.arrow::before {
+    transform: rotate(-45deg);
+}
+
+.box {
+    position: relative;
+    background-color: lightslategray;
+    border-radius: 5px;
+    padding: 2px;
+    padding-left: 15px;
+    left: -13px;
+    z-index: 1;
+    max-width: 540px;
+    opacity: 1;
+    visibility: visible;
+    transition: max-width 1.4s cubic-bezier(0.52, 0, 1, 0.89);
+}
+
+.box.hidden {
+    max-width: 0px;
+    transition: visibility 1.9s, max-width 1.9s cubic-bezier(0.52, 0, 1, 0.89);
+    visibility: hidden;
+}
+
+.box.hidden > span{
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+.box > span {
+    padding: 0 5px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 1s linear;
+    transition-delay: 1.3s;
+}
+
+.box > span:nth-child(1),
+.box.hidden > span:nth-child(10){
+    transition-delay: .3s;
+}
+.box > span:nth-child(2),
+.box.hidden > span:nth-child(9){
+    transition-delay: .4s;
+}
+.box > span:nth-child(3),
+.box.hidden > span:nth-child(8) {
+    transition-delay: .5s;
+}
+.box > span:nth-child(4),
+.box.hidden > span:nth-child(7) {
+    transition-delay: .6s;
+}
+.box > span:nth-child(5),
+.box.hidden > span:nth-child(6) {
+    transition-delay: .7s;
+}
+.box > span:nth-child(6),
+.box.hidden > span:nth-child(5) {
+    transition-delay: .8s;
+}
+.box > span:nth-child(7),
+.box.hidden > span:nth-child(4) {
+    transition-delay: .8s;
+}
+.box > span:nth-child(8),
+.box.hidden > span:nth-child(3) {
+    transition-delay: .9s;
+}
+.box > span:nth-child(9),
+.box.hidden > span:nth-child(2) {
+    transition-delay: .9s;
+}
+.box > span:nth-child(10),
+.box.hidden > span:nth-child(1) {
+    transition-delay: 1s;
+}
+
+.box > span:hover {
+    color: var(--yellow-bg);
 }
