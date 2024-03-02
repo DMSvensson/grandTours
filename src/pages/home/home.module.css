@@ -62,6 +62,12 @@
     z-index: 1;
 }
 
+.edition:hover {
+    transform: scale(1.02);
+    transition: transform .3s ease-in-out;
+    box-shadow: hsla(0, 0%, 40%, 0.5) 0px 0px 10px 7px;
+}
+
 .edition > div {
     color: white;
     z-index: 2;
