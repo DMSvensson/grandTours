@@ -45,7 +45,6 @@ function StagesPage() {
   };
   
   useEffect(() => {
-    console.log(state)
     let stageNumber = currentStage;
     if(state) {
       if(state.stageNumber) {
@@ -59,7 +58,9 @@ function StagesPage() {
 
     fetchData(`stages/${year}/${stageNumber}`).then(stage => {
       handleDataChange(stage);
-      state.stageNumber = undefined;
+      if(state) {
+        state.stageNumber = undefined;
+      }
     }).catch(error => {
       console.error(error);
     });

@@ -1,13 +1,15 @@
 .winners {
+    --width: 180px;
     position: relative;
     top: -35px;
-    width: 187px;
+    width: var(--width);
     max-height: 163px;
     overflow: auto;
+    z-index: 3;
 }
 
 .winners.left {
-    right: 189px;
+    right: var(--width);
 }
 
 .winners.right {
@@ -15,6 +17,7 @@
 }
 
 .winners > table {
+    width: 100%;
     text-align: center;
     line-height: 20px;
     border-collapse: collapse;
@@ -34,10 +37,7 @@
     font-size: 0.7rem;
 }
 
-.sprint > table > tbody > tr:first-child {
-    background-color: var(--sprint);
-}
-
+.sprint > table > tbody > tr:first-child,
 .finish table tbody tr:first-child {
     background-color: var(--sprint);
 }
