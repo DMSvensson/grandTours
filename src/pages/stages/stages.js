@@ -45,9 +45,12 @@ function StagesPage() {
   };
   
   useEffect(() => {
+    console.log(state)
     let stageNumber = currentStage;
-    if(state.stageNumber) {
-      stageNumber = state.stageNumber;
+    if(state) {
+      if(state.stageNumber) {
+        stageNumber = state.stageNumber;
+      }
     }
     if(currentStage === numberOfStages) {
       navigate(`/overview/${year}`);
