@@ -1,0 +1,27 @@
+.tab {
+    width: 100%;
+}
+
+.tabsHeader {
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid hsl(0, 0%, 20%);
+}
+
+.tabsHeader:first-child {
+    padding-left: 20px;
+}
+
+.tabsHeader > button {
+    border-radius:  10px 10px 0px 0px;
+    border-bottom: 0;
+    padding: 6px 15px;
+}
+
+.tabsHeader > button:focus {
+    box-shadow: hsla(0, 0%, 40%, 0.4) 0 -4px 0 0px;
+}
+
+.tabContent {
+    padding: 10px;
+}

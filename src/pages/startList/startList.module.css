@@ -63,3 +63,22 @@
     font-weight: bold;
     text-align: center;
 }
+
+.stages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 0;
+}
+
+.stages > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 200px;
+    line-height: 1.5;
+}
+
+.stages p {
+    word-break: break-word;
+}

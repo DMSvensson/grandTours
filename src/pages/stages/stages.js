@@ -6,10 +6,11 @@ import useScrollBehavior from '../../hooks/scrollBehavior';
 import {useWheelActive } from '../../contexts/WheelActiveContext';
 import StageOverview from '../../components/stageOverview/stageOverview';
 import { fetchData } from '../../utility/dataFetch';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 function StagesPage() {
   const {year} = useParams();
+  const {state} = useLocation();
   const [data, setData] = useState(null);
   const [currentStage, setCurrentState] = useState(1);
   const navigate = useNavigate();
@@ -44,17 +45,23 @@ function StagesPage() {
   };
   
   useEffect(() => {
+    let stageNumber = currentStage;
+    if(state.stageNumber) {
+      stageNumber = state.stageNumber;
+    }
     if(currentStage === numberOfStages) {
       navigate(`/overview/${year}`);
       return;
     }
 
-    fetchData(`stages/${year}/${currentStage}`).then(stage => {
+    fetchData(`stages/${year}/${stageNumber}`).then(stage => {
       handleDataChange(stage);
+      state.stageNumber = undefined;
     }).catch(error => {
       console.error(error);
     });
-  }, [year, currentStage, navigate]);
+  }, [year, state, currentStage, navigate]);
+  
 
   return (
     <div style={{height: 'inherit'}}>

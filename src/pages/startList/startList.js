@@ -1,67 +1,80 @@
 import React, { useEffect, useState } from "react";
 import styles from './startList.module.css';
-import { fetchData, fetchTeamsImages } from "../../utility/dataFetch";
+import { fetchData } from "../../utility/dataFetch";
 import { Link, useParams } from "react-router-dom";
 import RaceLogo from "../../components/raceLogo/raceLogo";
+import Tabs from "../../components/tabs/tabs";
+import { tabContent } from "./tabContent";
 
 function StartListPage() {
-    const params = useParams();
-    const [data, setData] = useState(null);
-    const [loadingText, setLoadingText] = useState(null);
-
-    const handleDataChange = (data) => {
-        setData(data);
+    const { year } = useParams();
+    const [teamsAndRiders, setTeamAndRider] = useState(null);
+    const [stages, setStages] = useState(null);
+    const [isStagesClicked, setIsStagesClicked] = useState(false);
+    const [teamLoadingText, setTeamLoadingText] = useState('');
+    const [stagesLoadingText, setStagesLoadingText] = useState('');
+    
+    const handleTeamsAndRiders = (data) => {
+        setTeamAndRider(data);
     };
+    const handleStages = (data) => {
+        setStages(data);
+    };
+    const handleIsStagesClicked = () => {
+        setIsStagesClicked(true);
+    }
+
     useEffect(() => {
-        setLoadingText('Loading...');
+        setTeamLoadingText('Loading...');
 
         const loadingTimeout = setTimeout(() => {
-            setLoadingText('The teams are coming, they are properly warming up...');
+            setTeamLoadingText('The teams are coming, they are properly warming up...');
         }, 5000);
 
-        fetchData(`teams/${params.year}`).then(teams => {
-            handleDataChange(teams);
+        fetchData(`teams/${year}`).then(teams => {
+            handleTeamsAndRiders(teams);
         }).catch(error => {
             clearTimeout(loadingTimeout);
-            setLoadingText('Could not get the data right now');
+            setTeamLoadingText('Could not get teams right now');
         });
-    }, [params]);
+    }, [year]);
 
-    const isLoading = data === null;
-    const teams = isLoading ? loadingText : data;
+    useEffect(() => {
+        if(!isStagesClicked) {
+            return;
+        }
+        setStagesLoadingText('Loading...');
+        
+        fetchData(`stages/${year}`).then(stages => {
+            handleStages(stages);
+        }).catch(error => {
+            console.error(error);
+            setStagesLoadingText('Could not get the stages right now');
+        });
+    }, [isStagesClicked, year])
+
+    const isLoadingTeam = teamsAndRiders === null;
+    const isLoadingStages = stages === null;
+
+    const tabs = tabContent(isLoadingTeam, teamLoadingText, teamsAndRiders, isLoadingStages, stagesLoadingText, stages, year);
+
     return (
         <div className={styles.background}>
             <RaceLogo />
             <div className={styles.teamsContainer}>
                 <div className={styles.info}>
-                    <h1>Tour de France {params.year}</h1>
+                    <h1>Tour de France {year}</h1>
                     <div>
-                        <p>Scroll through all 21 stages of Tour de France {params.year} to get a recap of every stage. For the best experience please use the website on a desktop or laptop.</p>
+                        <p>Scroll through all 21 stages of Tour de France {year} to get a recap of every stage. For the best experience please use the website on a desktop or laptop.</p>
                         <p>To stay updated on all the exciting moments, route details, and results of the Tour de France
                             please visit the official website of the Tour de France: <a href="https://www.letour.fr/en/" target="blank">Tour de France Official Website</a></p>
                     </div>
                 </div>
-                {teams && teams.length > 0 && !isLoading && <div className={styles.center}>
-                    <Link to={`/stages/${params.year}`} className={`btn btn-primary btn-large ${styles.spacing}`} >Go to stages</Link>
-                    <Link to={`/overview/${params.year}`} className={`btn btn-secondary btn-large ${styles.spacing}`} >Skip to overall Overview</Link>
+                {teamsAndRiders && teamsAndRiders.length > 0 && !isLoadingTeam && <div className={styles.center}>
+                    <Link to={`/stages/${year}`} className={`btn btn-primary btn-large ${styles.spacing}`} >Go to stages</Link>
+                    <Link to={`/overview/${year}`} className={`btn btn-secondary btn-large ${styles.spacing}`} >Skip to overall Overview</Link>
                 </div>}
-                <h2>Teams & Riders</h2>
-                <div className={styles.teams}>
-                    {isLoading && <div>{loadingText}</div>}
-                    {!isLoading && teams && teams.map((team) => {
-                        return (
-                            <div className={styles.team} key={team.name}>
-                                <img src={fetchTeamsImages(params.year, 'jersey', team.name)} alt={team.name} />
-                                <p>{team.name}</p>
-                                <ul>
-                                    {team.riders.map((rider) => {
-                                        return <li key={rider}>{rider}</li>
-                                    })}
-                                </ul>
-                            </div>
-                        );
-                    })}
-                </div>
+                <Tabs tabs={tabs} handleAction={handleIsStagesClicked}/>
             </div>
         </div>
     );
