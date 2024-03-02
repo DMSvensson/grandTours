@@ -90,3 +90,27 @@ button:active, .btn:active {
   background-color: var(--btn-color);
   color: #fff;
 }
+
+#error-page {
+  background-color: var(--yellow-bg);
+}
+
+#error-page > a {
+  position: absolute;
+}
+
+#error-page > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100svh;
+}
+
+#error-page > div > h1 {
+  font-size: 3rem;
+}
+#error-page > div > p {
+  font-size: 1.3rem;
+  margin: 20px 0;
+}

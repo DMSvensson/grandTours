@@ -63,6 +63,9 @@ function StagesPage() {
       }
     }).catch(error => {
       console.error(error);
+      if(error.message === '404') {
+        navigate('/');
+      }
     });
   }, [year, state, currentStage, navigate]);
   
