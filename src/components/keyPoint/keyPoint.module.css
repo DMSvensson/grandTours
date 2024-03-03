@@ -1,6 +1,14 @@
 .keyPoint {
     position: absolute;
+}
+
+.keyPoint::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 5px;
+    height: 100%;
     z-index: 2;
 }
 
@@ -26,28 +34,19 @@
     height: 80% !important;
 }
 
-.sprint {
+.sprint::before,
+.sprint > .flag  {
     background-color: var(--sprint);
 }
 
-.mountain {
-    background-color: var(--mountation);
-}
-
-.finish {
-    background-color: var(--finishColor);
-}
-
-.sprint > .flag {
-    background-color: var(--sprint);
-}
-
+.mountain::before,
 .mountain > .flag {
     background-color: var(--mountation);
 }
 
+.finish::before,
 .finish > .flag {
-    background-color: gold;
+    background-color: var(--finishColor);
 }
 
 .flag {

@@ -5,6 +5,7 @@ import StartListPage from "./pages/startList/startList";
 import StagesPage from "./pages/stages/stages";
 import HomePage from "./pages/home/home";
 import OverviewPage from "./pages/overview/overview";
+import ErrorPage from "./error-page";
 
 const router = createBrowserRouter([
     {
@@ -27,7 +28,9 @@ const router = createBrowserRouter([
                 path: '/overview/:year',
                 element: <OverviewPage />
             }
-        ]
+        ],
+        errorElement: <ErrorPage />
     }
 ], {basename: "/grandTours"});
+
 export default router;

@@ -41,10 +41,10 @@ function KeyPoint({keyPoint, stageKm, boxRef}) {
     return (
         <div ref={element2Ref} className={`${styles.keyPoint} ${getTypeClass(keyPoint.type)} ${getLengthClass(keyPoint.keypointLength)}`} style={{left: `${calculatePosition(keyPoint.km, stageKm, keyPoint.type)}%`}}>
             <div className={`${styles.flag} ${keyPoint.flagDirection ? styles.left : styles.right}`}>
-                <span>{keyPoint.text}</span>
+                <span className="font-family-jose">{keyPoint.text}</span>
                 <div className={`${styles.keyPointInfo} ${(keyPoint.km === stageKm && keyPoint.type !== "finish") ? styles.finishLine : ''}`} >
-                    <h3>{keyPoint.name}</h3>
-                    {keyPoint.type === 'mountain' && <div><p>{keyPoint.avgProcent}%</p><p>{keyPoint.length} km</p><p>{keyPoint.altitude}m</p></div>}
+                    <h3 className="font-family-jose">{keyPoint.name}</h3>
+                    {keyPoint.type === 'mountain' && <div><p className="font-family-jose">{keyPoint.avgProcent}%</p><p className="font-family-jose">{keyPoint.length} km</p><p className="font-family-jose">{keyPoint.altitude}m</p></div>}
                 </div>
             </div>
             <WinnerTable hide={useHasPassedDetection(boxRef, element2Ref)} winners={keyPoint.results} type={keyPoint.type} flagDirectionLeft={keyPoint.flagDirection} key={keyPoint.name}/>

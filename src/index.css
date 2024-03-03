@@ -1,6 +1,6 @@
 @font-face {
-  font-family: JosefinSans;
-  src: local('JosefinSans'), url(./assets/fonts/JosefinSans-VariableFont_wght.ttf) format('ttf');
+  font-family: 'JosefinSans';
+  src: local('JosefinSans'), url(~./assets/fonts/JosefinSans-VariableFont_wght.ttf) format('truetype');
 }
 
 * {
@@ -23,7 +23,7 @@ html,body {
 }
 
 h1,h2,h3,h4,p,span,tr,li {
-  font-family: JosefinSans, sans-serif, system-ui;
+  font-family: sans-serif, system-ui;
 }
 
 #root {
@@ -34,12 +34,16 @@ h1,h2,h3,h4,p,span,tr,li {
   display: none;
 }
 
+.font-family-jose {
+  font-family: JosefinSans, sans-serif, system-ui;
+}
+
 button, .btn {
   --btn-color: hsl(0, 0%, 20%);
   display: inline-block;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: 600;
   line-height: 20px;
   padding: 6px 16px;
@@ -67,16 +71,17 @@ button:disabled, .btn:disabled {
 }
 
 button:active, .btn:active {
-  background-color: hsl(0, 0%, 30%);;
+  background-color: hsl(0, 0%, 30%);
 }
 
 .btn-primary {
   background-color: var(--btn-color);
-  border: 1px solid rgba(27, 31, 35, .15);
+  border: 2px solid rgba(27, 31, 35, .15);
   color: #fff;
 }
 
 .btn-secondary {
+  background-color: transparent;
   border: 2px solid var(--btn-color);
   color: var(--btn-color);
 }
@@ -84,4 +89,28 @@ button:active, .btn:active {
 .btn-secondary:hover {
   background-color: var(--btn-color);
   color: #fff;
+}
+
+#error-page {
+  background-color: var(--yellow-bg);
+}
+
+#error-page > a {
+  position: absolute;
+}
+
+#error-page > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100svh;
+}
+
+#error-page > div > h1 {
+  font-size: 3rem;
+}
+#error-page > div > p {
+  font-size: 1.3rem;
+  margin: 20px 0;
 }
