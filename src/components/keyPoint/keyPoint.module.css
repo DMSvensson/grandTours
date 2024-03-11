@@ -86,3 +86,31 @@
 .flag > .finishLine > h3 {
     width: 120px;
 }
+
+.neutralized {
+    position: absolute;
+    top: -22px;
+    right: 20px;
+    width: 200px;
+    background: hsl(0 0% 80% / 0.4);
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: none;
+}
+
+.info {
+    position: absolute;
+    top: 10px;
+    left: -25px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 0 6px;
+    transform: rotate(345deg);
+    font-size: 0.8rem;
+    cursor: default;
+}
+
+.info:hover > :only-child {
+    display: block;
+}

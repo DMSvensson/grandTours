@@ -40,7 +40,9 @@ function KeyPoint({keyPoint, stageKm, boxRef}) {
     const element2Ref = useRef(null);
     return (
         <div ref={element2Ref} className={`${styles.keyPoint} ${getTypeClass(keyPoint.type)} ${getLengthClass(keyPoint.keypointLength)}`} style={{left: `${calculatePosition(keyPoint.km, stageKm, keyPoint.type)}%`}}>
+            
             <div className={`${styles.flag} ${keyPoint.flagDirection ? styles.left : styles.right}`}>
+                {keyPoint.neutralizedMsg && <div className={styles.info}>i <p className={styles.neutralized}>{keyPoint.neutralizedMsg}</p></div>}
                 <span className="font-family-jose">{keyPoint.text}</span>
                 <div className={`${styles.keyPointInfo} ${(keyPoint.km === stageKm && keyPoint.type !== "finish") ? styles.finishLine : ''}`} >
                     <h3 className="font-family-jose">{keyPoint.name}</h3>
