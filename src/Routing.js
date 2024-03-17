@@ -6,6 +6,7 @@ import StagesPage from "./pages/stages/stages";
 import HomePage from "./pages/home/home";
 import OverviewPage from "./pages/overview/overview";
 import ErrorPage from "./error-page";
+import { StageProvider } from "./contexts/StageContext";
 
 const router = createBrowserRouter([
     {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/stages/:year',
-                element: <StagesPage />
+                element: <StageProvider><StagesPage /></StageProvider>
             },
             {
                 path: '/overview/:year',

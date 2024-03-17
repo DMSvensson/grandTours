@@ -1,5 +1,5 @@
 .winners {
-    --width: 180px;
+    --width: 185px;
     position: relative;
     top: -35px;
     width: var(--width);

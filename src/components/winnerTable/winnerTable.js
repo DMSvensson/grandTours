@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import styles from "./winnerTable.module.css";
-import useToggleScrollBehaviorByMouse from "../../utility/toggleScrollBeavhior";
+import useToggleScrollBehaviorByMouse from "../../hooks/useToggleScrollBeavhior";
 
 function WinnerTable({winners, type, flagDirectionLeft, hide}) {
     const table = useRef(null);
