@@ -17,3 +17,58 @@
   background-color: yellow;
   z-index: 1;
 }
+
+.outerPlayButton {
+  position: absolute;
+  top: 90px;
+  left: 10px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
+}
+
+.outerPlayButton[data-overview='true'] {
+  top: 45px;
+  left: 20px;
+}
+
+.outerPlayButton:focus-within {
+  box-shadow: hsla(0, 0%, 40%, 0.4) 0 0 0 3px;
+}
+
+.playButton {
+  position: absolute;
+  height: 15px;
+  border-color: transparent transparent transparent #202020;
+  transition: 100ms all ease;
+  will-change: border-width;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.playButton:hover {
+  border-color: transparent transparent transparent #404040;
+  background-color: transparent;
+}
+
+.playButton:focus {
+  box-shadow: none;
+}
+
+.play {
+  border-style: solid;
+  border-width: 7px 0px 7px 11px;   
+}
+
+.pause {
+  border-style: double;
+  border-width: 0px 0px 0px 12px;
+}

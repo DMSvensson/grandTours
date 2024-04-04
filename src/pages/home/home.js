@@ -91,6 +91,40 @@ function HomePage() {
                         </Link>
                         <a className={styles.credit} href="https://www.facebook.com/photo/?fbid=5224725550910115&set=a.5202251869824150" target="blank"><img src={camera} alt="Credit" />Le Tour de France Facebook</a>
                     </div>
+                    <div>
+                        <Link to={`teams/2021`}>
+                            <div className={styles.edition} style={
+                                {
+                                    backgroundImage: 'url(https://grandtourstorage.blob.core.windows.net/tdf/cover/TDF_Cover_2021.jpg)',
+                                    backgroundPosition: '0 -480px'
+                                }}>
+                                <div>
+                                    <h3>Tour de France 2021</h3>
+                                    <span>Brest - Paris</span>
+                                    <p>Edition 108</p>
+                                </div>
+                                <div className={styles.stageTypes}>
+                                    <div>
+                                        <span>2</span>
+                                        <img className={styles.icon} src={ITT} alt="ITT" />
+                                    </div>
+                                    <div>
+                                        <span>3</span>
+                                        <img className={styles.icon} src={flat} alt="Flat" />
+                                    </div>
+                                    <div>
+                                        <span>8</span>
+                                        <img className={styles.icon} src={hilly} alt="Hilly" />
+                                    </div>
+                                    <div>
+                                        <span>8</span>
+                                        <img className={styles.icon} src={mountain} alt="Mountain" />
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                        <a className={styles.credit} href="https://www.facebook.com/photo/?fbid=4087043051345043&set=a.4067212993328049" target="blank"><img src={camera} alt="Credit" />A.S.O. / Ashley Gruber - Jered Gruber</a>
+                    </div>
                 </div>
             </div>
         </div>

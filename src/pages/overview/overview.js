@@ -7,8 +7,7 @@ import RaceLogo from '../../components/raceLogo/raceLogo';
 import { getGridClass } from '../../utility/styles';
 
 function OverviewPage() {
-    const params = useParams();
-    const year = params.year;
+    const {year} = useParams();
     const [data, setData] = useState(null);
     const [loadingText, setLoadingText] = useState(null);
 

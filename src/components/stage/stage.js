@@ -4,7 +4,7 @@ import KeyPoint from "../keyPoint/keyPoint";
 import { fetchStageImages } from "../../utility/dataFetch";
 
 const numbers = Array.from({ length: 21 }, (_, i) => i + 1);
-function Stage({ stage, boxRef, year, handleSelectedStage }) {
+function Stage({ stage, year, handleSelectedStage }) {
     const [hideStages, setHideStages] = useState(true);
     const handleHideStages = () => {
         setHideStages((prev) => !prev);
@@ -36,9 +36,9 @@ function Stage({ stage, boxRef, year, handleSelectedStage }) {
                     <div className={styles.line}></div>
                     <span>{`${stage.length} km`}</span>
                 </div>
-                {stage.keyPoints.map((keyPoint) => {
+                {stage.keyPoints.map((keyPoint, index) => {
                     return (
-                        <KeyPoint boxRef={boxRef} keyPoint={keyPoint} stageKm={stage.length} key={keyPoint.name} />
+                        <KeyPoint keyPoint={keyPoint} stageKm={stage.length} key={index} />
                     );
                 })}
 

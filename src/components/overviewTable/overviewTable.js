@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './overviewTable.module.css';
-import useToggleScrollBehaviorByMouse from "../../utility/toggleScrollBeavhior";
+import useToggleScrollBehaviorByMouse from "../../hooks/useToggleScrollBeavhior";
 import { fetchTeamsImages, fetchRaceImages } from "../../utility/dataFetch";
 import {getJerseyByType} from "../../utility/resultsTypes";
 import { getResultsClass, getGridClass } from "../../utility/styles";
