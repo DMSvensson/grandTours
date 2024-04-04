@@ -36,9 +36,9 @@ function Stage({ stage, year, handleSelectedStage }) {
                     <div className={styles.line}></div>
                     <span>{`${stage.length} km`}</span>
                 </div>
-                {stage.keyPoints.map((keyPoint) => {
+                {stage.keyPoints.map((keyPoint, index) => {
                     return (
-                        <KeyPoint keyPoint={keyPoint} stageKm={stage.length} key={keyPoint.name} />
+                        <KeyPoint keyPoint={keyPoint} stageKm={stage.length} key={index} />
                     );
                 })}
 

@@ -24,27 +24,25 @@ function StagesPage() {
   };
 
   useEffect(() => {
-    let stageNumber = currentStage;
-    if (state) {
-      if (state.stageNumber) {
-        stageNumber = state.stageNumber;
-        handleStageChange(stageNumber);
-      }
+    if(state?.stageNumber > currentStage) {
+      handleStageChange(state.stageNumber);
+    } else {
+      getData(currentStage);
+      
     }
+  // eslint-disable-next-line
+  }, [currentStage]);
 
+  const getData = (stageNumber) => {
     fetchData(`stages/${year}/${stageNumber}`).then(stage => {
       handleDataChange(stage);
-      if (state) {
-        state.stageNumber = undefined;
-      }
     }).catch(error => {
       console.error(error);
       if (error.message === '404') {
         navigate('/');
       }
     });
-  }, [year, state, currentStage, navigate, handleStageChange]);
-
+  }
 
   return (
     <WheelActiveProvider>
