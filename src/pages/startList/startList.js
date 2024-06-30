@@ -9,6 +9,7 @@ import { tabContent } from "./tabContent";
 function StartListPage() {
     const { year } = useParams();
     const [teamsAndRiders, setTeamAndRider] = useState(null);
+    const [finishedStages, setFinishedStages] = useState([]);
     const [stages, setStages] = useState(null);
     const [isStagesClicked, setIsStagesClicked] = useState(false);
     const [teamLoadingText, setTeamLoadingText] = useState('');
@@ -17,6 +18,9 @@ function StartListPage() {
     const handleTeamsAndRiders = (data) => {
         setTeamAndRider(data);
     };
+    const handlFinishedStages = (data) => {
+        setFinishedStages(data)
+    }
     const handleStages = (data) => {
         setStages(data);
     };
@@ -33,10 +37,15 @@ function StartListPage() {
 
         fetchData(`teams/${year}`).then(teams => {
             handleTeamsAndRiders(teams);
+            fetchData(`stages/finishedStages/${year}`).then(stages => {
+                handlFinishedStages(stages);
+            }).catch(error => {
+                console.error(error);
+            });
         }).catch(error => {
             clearTimeout(loadingTimeout);
             setTeamLoadingText('Could not get teams right now');
-        });
+        });        
     }, [year]);
 
     useEffect(() => {
@@ -51,13 +60,13 @@ function StartListPage() {
             console.error(error);
             setStagesLoadingText('Could not get the stages right now');
         });
-    }, [isStagesClicked, year])
+    }, [isStagesClicked, year]);
 
     const isLoadingTeam = teamsAndRiders === null;
     const isLoadingStages = stages === null;
 
-    const tabs = tabContent(isLoadingTeam, teamLoadingText, teamsAndRiders, isLoadingStages, stagesLoadingText, stages, year);
-
+    const tabs = tabContent(isLoadingTeam, teamLoadingText, teamsAndRiders, isLoadingStages, stagesLoadingText, stages, year, finishedStages);
+ 
     return (
         <div className={styles.background}>
             <RaceLogo />
@@ -70,7 +79,7 @@ function StartListPage() {
                             please visit the official website of the Tour de France: <a href="https://www.letour.fr/en/" target="blank">Tour de France Official Website</a></p>
                     </div>
                 </div>
-                {teamsAndRiders && teamsAndRiders.length > 0 && !isLoadingTeam && <div className={styles.center}>
+                {!isLoadingTeam && finishedStages.length > 0 && <div className={styles.center}>
                     <Link to={`/stages/${year}`} className={`btn btn-primary btn-large ${styles.spacing}`} >Go to stages</Link>
                     <Link to={`/overview/${year}`} className={`btn btn-secondary btn-large ${styles.spacing}`} >Skip to overall Overview</Link>
                 </div>}

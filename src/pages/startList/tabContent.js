@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './startList.module.css';
 import { fetchTeamsImages } from '../../utility/dataFetch';
-export const tabContent = (isLoadingTeam, teamLoadingText, teamsAndRiders, isLoadingStages, stagesLoadingText, stages, year) => {
+export const tabContent = (isLoadingTeam, teamLoadingText, teamsAndRiders, isLoadingStages, stagesLoadingText, stages, year, finishedStages) => {
     return [
         {
             label: 'Teams & Riders',
@@ -12,6 +12,7 @@ export const tabContent = (isLoadingTeam, teamLoadingText, teamsAndRiders, isLoa
                         <div className={styles.team} key={team.name}>
                             <img src={fetchTeamsImages(year, 'jersey', team.name)} alt={team.name} />
                             <p>{team.name}</p>
+                            <hr className={styles.divider} />
                             <ul>
                                 {team.riders.map((rider) => {
                                     return <li key={rider}>{rider}</li>
@@ -32,7 +33,7 @@ export const tabContent = (isLoadingTeam, teamLoadingText, teamsAndRiders, isLoa
                                 <p className="font-family-jose">{stage.route}</p>
                                 <p className="font-family-jose">{stage.length} km</p>
                                 <p className="font-family-jose">{stage.date}</p>
-                                <Link to={`/stages/${year}`} state={{stageNumber: stage.stage_number}} className="btn btn-primary">Go to stage</Link>
+                                {finishedStages.some(stageNumber => stageNumber.stage_number === stage.stage_number) && <Link to={`/stages/${year}`} state={{stageNumber: stage.stage_number}} className="btn btn-primary">Go to stage</Link>}
                             </div>
                         ))}
                     </div>)

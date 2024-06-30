@@ -23,6 +23,41 @@ function HomePage() {
                 </div>
                 <div className={styles.editions}>
                     <div>
+                        <Link to={`teams/2024`}>
+                            <div className={styles.edition} style={
+                                {
+                                    backgroundPosition: '0 -730px', backgroundImage: 'url(https://images.unsplash.com/photo-1537366057310-3501fc868fd8?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
+                                }}>
+                                <div>
+                                    <h3>Tour de France 2024</h3>
+                                    <span>Firenze - Nice</span>
+                                    <p>Edition 111</p>
+                                </div>
+                                <div className={styles.stageTypes}>
+                                    <div>
+                                        <span>2</span>
+                                        <img className={styles.icon} src={ITT} alt="ITT" />
+                                    </div>
+                                    <div>
+                                        <span>8</span>
+                                        <img className={styles.icon} src={flat} alt="Flat" />
+                                    </div>
+                                    <div>
+                                        <span>4</span>
+                                        <img className={styles.icon} src={hilly} alt="Hilly" />
+                                    </div>
+                                    <div>
+                                        <span>7</span>
+                                        <img className={styles.icon} src={mountain} alt="Mountain" />
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                        <a className={styles.credit} href="https://www.facebook.com/photo/?fbid=686043820232928&set=a.686045560232754" target="blank">
+                            <img src={camera} alt="Credit" />Unsplash / Josh Hild
+                        </a>
+                    </div>
+                    <div>
                         <Link to={`teams/2023`}>
                             <div className={styles.edition} style={
                                 {

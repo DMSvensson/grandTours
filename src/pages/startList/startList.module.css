@@ -40,8 +40,7 @@
 .teams ul {
     list-style: none;
     width: 75%;
-    margin: auto;
-    border-top: 1px solid;
+    margin: 0 auto;
     padding-top: 5px;
 }
 
@@ -53,7 +52,6 @@
     display: flex;
     flex-direction: column;
     width: 200px;
-    justify-content: space-between;
 }
 
 .team > img {
@@ -81,4 +79,9 @@
 
 .stages p {
     word-break: break-word;
+}
+
+.divider {
+    margin: 10px 0;
+    border: 1px black solid;
 }
