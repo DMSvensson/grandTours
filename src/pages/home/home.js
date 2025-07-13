@@ -30,7 +30,7 @@ function HomePage() {
                                 }}>
                                 <div>
                                     <h3>Tour de France 2025</h3>
-                                    <span>Lille - Nice</span>
+                                    <span>Lille - Paris</span>
                                     <p>Edition 112</p>
                                 </div>
                                 <div className={styles.stageTypes}>
