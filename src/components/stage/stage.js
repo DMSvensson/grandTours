@@ -29,7 +29,10 @@ function Stage({ stage, year, handleSelectedStage }) {
                 <h2 className="font-family-jose">{stage.route}</h2>
                 <p className="font-family-jose">{stage.date}</p>
             </div>
-            <img className={styles.stage} alt={`stage ${stage.id}`} src={fetchStageImages(year, stage.stage_img)} />
+            <div className={styles.stage}>
+                <div className={styles.stageWhiteTop}></div>
+                <img className={styles.stageImage} alt={`stage ${stage.id}`} src={fetchStageImages(year, stage.stage_img)} />
+            </div>
             <div className={styles.stageKeyPoints}>
                 <div className={styles.distance}>
                     <span>0 km</span>

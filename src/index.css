@@ -16,6 +16,8 @@
   --polka: hsl(20, 12%, 90%);
   --polkaDot: #d50000;
   --yellow-bg: hsl(56 100% 45%);
+
+  --stage-z-index: 2
 }
 
 html,body {

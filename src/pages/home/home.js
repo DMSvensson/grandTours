@@ -22,11 +22,46 @@ function HomePage() {
                     </div>
                 </div>
                 <div className={styles.editions}>
+                <div>
+                        <Link to={`teams/2025`}>
+                            <div className={styles.edition} style={
+                                {
+                                    backgroundPosition: '0 -467px', backgroundImage: 'url(https://images.unsplash.com/photo-1709486815648-e34d369d7c6b?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
+                                }}>
+                                <div>
+                                    <h3>Tour de France 2025</h3>
+                                    <span>Lille - Nice</span>
+                                    <p>Edition 112</p>
+                                </div>
+                                <div className={styles.stageTypes}>
+                                    <div>
+                                        <span>2</span>
+                                        <img className={styles.icon} src={ITT} alt="ITT" />
+                                    </div>
+                                    <div>
+                                        <span>7</span>
+                                        <img className={styles.icon} src={flat} alt="Flat" />
+                                    </div>
+                                    <div>
+                                        <span>6</span>
+                                        <img className={styles.icon} src={hilly} alt="Hilly" />
+                                    </div>
+                                    <div>
+                                        <span>6</span>
+                                        <img className={styles.icon} src={mountain} alt="Mountain" />
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                        <a className={styles.credit} href="https://unsplash.com/photos/a-large-building-with-a-clock-tower-on-top-of-it-sdZd8K2q2hs" target="blank">
+                            <img src={camera} alt="Credit" />Philippe Patin
+                        </a>
+                    </div>
                     <div>
                         <Link to={`teams/2024`}>
                             <div className={styles.edition} style={
                                 {
-                                    backgroundPosition: '0 -730px', backgroundImage: 'url(https://images.unsplash.com/photo-1537366057310-3501fc868fd8?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
+                                    backgroundPosition: '0 -857px', backgroundImage: 'url(https://grandtourstorage.blob.core.windows.net/tdf/cover/TDF_Cover_2024.png)',
                                 }}>
                                 <div>
                                     <h3>Tour de France 2024</h3>
@@ -53,8 +88,8 @@ function HomePage() {
                                 </div>
                             </div>
                         </Link>
-                        <a className={styles.credit} href="https://www.facebook.com/photo/?fbid=686043820232928&set=a.686045560232754" target="blank">
-                            <img src={camera} alt="Credit" />Unsplash / Josh Hild
+                        <a className={styles.credit} href="https://www.theguardian.com/sport/live/2024/jul/10/tour-de-france-2024-stage-11-from-evaux-les-bains-to-le-lioran-live?filterKeyEvents=false&page=with%3Ablock-668e664e8f0837e48ab117c4" target="blank">
+                            <img src={camera} alt="Credit" />Daniel Cole/AP
                         </a>
                     </div>
                     <div>
