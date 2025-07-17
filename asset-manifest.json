@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/grandTours/static/css/main.60eb7beb.css",
-    "main.js": "/grandTours/static/js/main.b8636911.js",
+    "main.css": "/grandTours/static/css/main.10ac0b39.css",
+    "main.js": "/grandTours/static/js/main.3453e0fb.js",
     "static/js/787.fc920699.chunk.js": "/grandTours/static/js/787.fc920699.chunk.js",
     "static/media/JosefinSans-VariableFont_wght.ttf": "/grandTours/static/media/JosefinSans-VariableFont_wght.613585db06f849ca7717.ttf",
     "static/media/ITT.svg": "/grandTours/static/media/ITT.2a1187f77fe49d8fedac446485eede1c.svg",
@@ -10,12 +10,12 @@
     "static/media/hilly.svg": "/grandTours/static/media/hilly.90ca30203b92816928cde62018343776.svg",
     "static/media/camera.svg": "/grandTours/static/media/camera.398ce6933a39a62b9cd0ce0f0da026d6.svg",
     "static/media/flat.svg": "/grandTours/static/media/flat.c41996d03564f395d2d023ff02108e81.svg",
-    "main.60eb7beb.css.map": "/grandTours/static/css/main.60eb7beb.css.map",
-    "main.b8636911.js.map": "/grandTours/static/js/main.b8636911.js.map",
+    "main.10ac0b39.css.map": "/grandTours/static/css/main.10ac0b39.css.map",
+    "main.3453e0fb.js.map": "/grandTours/static/js/main.3453e0fb.js.map",
     "787.fc920699.chunk.js.map": "/grandTours/static/js/787.fc920699.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60eb7beb.css",
-    "static/js/main.b8636911.js"
+    "static/css/main.10ac0b39.css",
+    "static/js/main.3453e0fb.js"
   ]
 }
