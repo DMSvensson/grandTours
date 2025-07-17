@@ -67,22 +67,26 @@ function OverviewPage() {
                             </div>
                         )
                     })}
-                    <div className={styles.gap}>
-                        <h2>The Gap</h2>
-                        {overview && overview.gap &&
-                            <>
-                                <p>{overview.gap.firstRider.rider} ({overview.gap.firstRider.time})</p>
-                                <p>.</p>
-                                <p>({overview.gap.gap})</p>
-                                <p>.</p>
-                                <p>{overview.gap.lastRider.rider} ({overview.gap.lastRider.time})</p>
-                            </>
-                        }
-                    </div>
-                    <div className={styles.totalLength}>
-                        <h2>Total length</h2>
-                        <p>{overview && overview.totalLength && overview.totalLength.toFixed(2)} km</p>
-                    </div>
+                    {overview.gap && 
+                        <div className={styles.gap}>
+                            <h2>The Gap</h2>
+                            {
+                                <>
+                                    <p>{overview.gap.firstRider.rider} ({overview.gap.firstRider.time})</p>
+                                    <p>.</p>
+                                    <p>({overview.gap.gap})</p>
+                                    <p>.</p>
+                                    <p>{overview.gap.lastRider.rider} ({overview.gap.lastRider.time})</p>
+                                </>
+                            }
+                        </div>
+                    }
+                    {overview.totalLength && 
+                        <div className={styles.totalLength}>
+                            <h2>Total length</h2>
+                            <p>{overview.totalLength.toFixed(2)} km</p>
+                        </div>
+                    }
                 </div>}
             </div>
         </div>
