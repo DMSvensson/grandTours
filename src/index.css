@@ -24,6 +24,10 @@ html,body {
   height: 100%;
 }
 
+body {
+  background-color: var(--yellow-bg);
+}
+
 h1,h2,h3,h4,p,span,tr,li {
   font-family: sans-serif, system-ui;
 }

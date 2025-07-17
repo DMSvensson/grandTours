@@ -1,8 +1,3 @@
-.background {
-    background-color: var(--yellow-bg);
-    height: 100svh;
-}
-
 .info {
     width: 100%;
     text-align: center;
