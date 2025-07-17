@@ -11,7 +11,7 @@ function StageOverview({results: overview, stageNumber, year}) {
           <div className={styles.header}>
             <img className={styles.logo} src={logo} alt='TDF Logo' />
             <h1>STAGE {stageNumber}</h1>
-            <span className="font-family-jose">{year}</span>
+            <span>{year}</span>
           </div>
           <div className={styles.gridContainer}>
             {overview.results.map(result => {
