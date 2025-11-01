@@ -2,6 +2,7 @@ const baseImgUrl = 'https://grandtourstorage.blob.core.windows.net/';
 
 export async function fetchData(path) {
     const response = await fetch(`${process.env.REACT_APP_BASE_URL}${path}`, {
+        method: "GET",
         headers: {
             'content-type': 'application/json',
             'Attept': 'application/json',

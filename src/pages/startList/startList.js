@@ -12,6 +12,7 @@ function StartListPage() {
     const [finishedStages, setFinishedStages] = useState([]);
     const [stages, setStages] = useState(null);
     const [isStagesClicked, setIsStagesClicked] = useState(false);
+    const [raceId, setRaceId] = useState(null);
     const [teamLoadingText, setTeamLoadingText] = useState('');
     const [stagesLoadingText, setStagesLoadingText] = useState('');
     
@@ -36,8 +37,9 @@ function StartListPage() {
         }, 5000);
 
         fetchData(`teams/${year}`).then(teams => {
-            handleTeamsAndRiders(teams);
-            fetchData(`stages/finishedStages/${year}`).then(stages => {
+            handleTeamsAndRiders(teams.teams);
+            setRaceId(teams.raceId);
+            fetchData(`stages/finishedStages/${teams.raceId}`).then(stages => {
                 handlFinishedStages(stages);
             }).catch(error => {
                 console.error(error);
@@ -49,23 +51,23 @@ function StartListPage() {
     }, [year]);
 
     useEffect(() => {
-        if(!isStagesClicked) {
+        if(!isStagesClicked || !raceId) {
             return;
         }
         setStagesLoadingText('Loading...');
         
-        fetchData(`stages/${year}`).then(stages => {
+        fetchData(`stages/${raceId}`).then(stages => {
             handleStages(stages);
         }).catch(error => {
             console.error(error);
             setStagesLoadingText('Could not get the stages right now');
         });
-    }, [isStagesClicked, year]);
+    }, [isStagesClicked, raceId]);
 
     const isLoadingTeam = teamsAndRiders === null;
     const isLoadingStages = stages === null;
 
-    const tabs = tabContent(isLoadingTeam, teamLoadingText, teamsAndRiders, isLoadingStages, stagesLoadingText, stages, year, finishedStages);
+    const tabs = tabContent(isLoadingTeam, teamLoadingText, teamsAndRiders, isLoadingStages, stagesLoadingText, stages, raceId, year, finishedStages);
  
     return (
         <div className={styles.background}>
@@ -80,8 +82,8 @@ function StartListPage() {
                     </div>
                 </div>
                 {!isLoadingTeam && finishedStages.length > 0 && <div className={styles.center}>
-                    <Link to={`/stages/${year}`} className={`btn btn-primary btn-large ${styles.spacing}`} >Go to stages</Link>
-                    <Link to={`/overview/${year}`} className={`btn btn-secondary btn-large ${styles.spacing}`} >Skip to overall Overview</Link>
+                    <Link to={`stages/${raceId}`} className={`btn btn-primary btn-large ${styles.spacing}`} >Go to stages</Link>
+                    <Link to={`overview`} className={`btn btn-secondary btn-large ${styles.spacing}`} >Skip to overall Overview</Link>
                 </div>}
                 <Tabs tabs={tabs} handleAction={handleIsStagesClicked}/>
             </div>

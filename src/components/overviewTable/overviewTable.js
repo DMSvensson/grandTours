@@ -4,9 +4,11 @@ import useToggleScrollBehaviorByMouse from "../../hooks/useToggleScrollBeavhior"
 import { fetchTeamsImages, fetchRaceImages } from "../../utility/dataFetch";
 import {getJerseyByType} from "../../utility/resultsTypes";
 import { getResultsClass, getGridClass } from "../../utility/styles";
+import { formatTime, formatTimeBehind } from "../../utility/timeFormat"
 
-function OverviewTable({ results, type, isTime, year }) {
+function OverviewTable({ results, leadersTime, type, isTime, year }) {  
   const {handleMouseEnter, handleMouseLeave} = useToggleScrollBehaviorByMouse();
+  let positionOffeset = 0;
   return (
     <div className={getGridClass(type, styles)}>
       <div className={`${styles.gridContentHeader} ${getResultsClass(type, true)} TDF-${year}`}>
@@ -36,16 +38,26 @@ function OverviewTable({ results, type, isTime, year }) {
             </tr>
           </thead>
           <tbody className={type === "stage_results" ? styles.bodyStageResults : ''}>
-            {results && results.map((result) => {
+            {results && results.map((result, index) => {
+              if(result.isDisqualified) {
+                positionOffeset++;
+              }
+              let position;
+              if (result.status === "OTL") {
+                position = "OTL"
+              } else {
+                position = result.isDisqualified ? "DSQ" : result.position ? result.position - positionOffeset : index + 1 - positionOffeset;
+              }
               return (
-                <tr key={result.position}>
-                  <td>{result.position}</td>
-                  {type !== 'team' && <td>{result.name}</td>}
+                <tr key={position}>
+                  <td>{position}</td>
+                  {type !== 'team' && <td>{result.rider}</td>}
                   <td className={styles.tableTeam}>
-                    {type === 'team' && <img src={fetchTeamsImages(year, 'logo', result.team)} alt={result.team} className={styles.teamLogo} />}
+                    {type === 'team' && <img src={fetchTeamsImages(year, 'logo', result.team_name)} alt={result.team} className={styles.teamLogo} />}
                     {type !== 'team' && type && <img src={fetchTeamsImages(year, 'jersey', result.team)} alt={result.team} className={styles.jersey} />}
                   </td>
-                  <td>{isTime ? result.time : result.points}</td>
+                  {position === 1 && <td>{isTime ? formatTime(result.time) : result.points}</td>}
+                  {position !== 1 && <td>{isTime ? formatTimeBehind(result.time, leadersTime, result.status) : result.points}</td>}
                 </tr>
               );
             })}

@@ -9,7 +9,7 @@ function WinnerTable({winners, type, flagDirectionLeft, hide}) {
         <div ref={table} 
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className={`${styles.winners} ${hide ? '': 'hide'} ${styles.animationFromTop} ${type === 'mountain' ? styles.mountain : styles.sprint } ${flagDirectionLeft ? styles.left : styles.right}`}>
+            className={`${styles.winners} ${hide ? '': 'hide'} ${styles.animationFromTop} ${type === 'Mountain' ? styles.mountain : styles.sprint } ${flagDirectionLeft ? styles.left : styles.right}`}>
             <table>
                 <tbody>
                     {winners.map((winner) => {

@@ -27,7 +27,7 @@ function OverviewCard({ rider, team, result, type, year }) {
             <div className={styles.result}>
                 <p className={styles.winner}>{rider}</p>
                 <span>{team}</span>
-                <p>{result}</p>
+                <p>{result != null && result}</p>
             </div>
         </div>
     )

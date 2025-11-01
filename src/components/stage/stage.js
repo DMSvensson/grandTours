@@ -26,7 +26,7 @@ function Stage({ stage, year, handleSelectedStage }) {
                         ))}
                     </div>
                 </div>
-                <h2 className="font-family-jose">{stage.route}</h2>
+                <h2 className="font-family-jose">{stage.start_city} {'>'} {stage.end_city}</h2>
                 <p className="font-family-jose">{stage.date}</p>
             </div>
             <div className={styles.stage}>
@@ -37,11 +37,11 @@ function Stage({ stage, year, handleSelectedStage }) {
                 <div className={styles.distance}>
                     <span>0 km</span>
                     <div className={styles.line}></div>
-                    <span>{`${stage.length} km`}</span>
+                    <span>{`${stage.distance_km} km`}</span>
                 </div>
                 {stage.keyPoints.map((keyPoint, index) => {
                     return (
-                        <KeyPoint keyPoint={keyPoint} stageKm={stage.length} key={index} />
+                        <KeyPoint keyPoint={keyPoint} stageKm={stage.distance_km} key={index} />
                     );
                 })}
 

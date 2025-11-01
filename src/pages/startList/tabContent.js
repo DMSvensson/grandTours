@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './startList.module.css';
 import { fetchTeamsImages } from '../../utility/dataFetch';
-export const tabContent = (isLoadingTeam, teamLoadingText, teamsAndRiders, isLoadingStages, stagesLoadingText, stages, year, finishedStages) => {
+export const tabContent = (isLoadingTeam, teamLoadingText, teamsAndRiders, isLoadingStages, stagesLoadingText, stages, raceId, year, finishedStages) => {
     return [
         {
             label: 'Teams & Riders',
@@ -15,7 +15,10 @@ export const tabContent = (isLoadingTeam, teamLoadingText, teamsAndRiders, isLoa
                             <hr className={styles.divider} />
                             <ul>
                                 {team.riders.map((rider) => {
-                                    return <li key={rider}>{rider}</li>
+                                    return <li key={rider.rider}>
+                                        {rider.raceNumber && <div className={styles.raceNumber}><span>{rider.raceNumber}</span></div>} 
+                                        {rider.rider}
+                                    </li>
                                 })}
                             </ul>
                         </div>
@@ -25,18 +28,20 @@ export const tabContent = (isLoadingTeam, teamLoadingText, teamsAndRiders, isLoa
         },
         {
             label: 'Stages',
-            content: (<div className={styles.stages}>
+            content: (
+                <div className={styles.stages}>
                         {isLoadingStages && <p>{stagesLoadingText}</p>}
                         {!isLoadingStages && stages && stages.map(stage => (
                             <div key={stage.stage_number}>
                                 <h3>Stage {stage.stage_number}</h3>
-                                <p className="font-family-jose">{stage.route}</p>
-                                <p className="font-family-jose">{stage.length} km</p>
+                                <p className="font-family-jose">{stage.start_city} {'>'} {stage.end_city}</p>
+                                <p className="font-family-jose">{stage.distance_km} km</p>
                                 <p className="font-family-jose">{stage.date}</p>
-                                {finishedStages.some(stageNumber => stageNumber.stage_number === stage.stage_number) && <Link to={`/stages/${year}`} state={{stageNumber: stage.stage_number}} className="btn btn-primary">Go to stage</Link>}
+                                {finishedStages.some(stageNumber => stageNumber.stage_number === stage.stage_number) && <Link to={`stages/${raceId}`} state={{stageNumber: stage.stage_number}} className="btn btn-primary">Go to stage</Link>}
                             </div>
                         ))}
-                    </div>)
+                </div>
+            )
         },
     ];
 }

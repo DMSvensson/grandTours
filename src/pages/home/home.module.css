@@ -22,6 +22,19 @@
     margin: auto;
 }
 
+.editionBackground {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.editionBackground:hover {
+    transform: scale(1.02);
+    transition: transform .3s ease-in-out;
+    box-shadow: hsla(0, 0%, 40%, 0.5) 0px 0px 10px 7px;
+}
+
 .editions {
     width: 100%;
     margin-top: 50px;
@@ -56,12 +69,6 @@
     border-radius: 20px;
     background: rgba(0, 0, 0, 0.6);
     z-index: 1;
-}
-
-.edition:hover {
-    transform: scale(1.02);
-    transition: transform .3s ease-in-out;
-    box-shadow: hsla(0, 0%, 40%, 0.5) 0px 0px 10px 7px;
 }
 
 .edition > div {

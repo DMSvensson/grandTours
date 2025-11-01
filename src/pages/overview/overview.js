@@ -5,6 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 import { fetchData } from '../../utility/dataFetch';
 import RaceLogo from '../../components/raceLogo/raceLogo';
 import { getGridClass } from '../../utility/styles';
+import { formatTime } from '../../utility/timeFormat';
 
 function OverviewPage() {
     const {year} = useParams();
@@ -22,14 +23,15 @@ function OverviewPage() {
         }).catch(error => {
             setLoadingText('Could not get the data right now');
         });
-    }, [year]);
+    }, [year]);    
     const isLoading = data === null;
     const overview = isLoading ? loadingText : data;
+    console.log(overview)
     return (
         <div className={styles.background}>
             <div className={styles.header}>
                 <RaceLogo />
-                <Link to={`/teams/${year}`} className='btn btn-primary'>Go back to {year}</Link>
+                <Link to={`/${year}`} className='btn btn-primary'>Go back to {year}</Link>
             </div>
             <div className={styles.container}>
                 <h1 className={styles.headline}>Overview {year}</h1>
@@ -56,14 +58,14 @@ function OverviewPage() {
                         <h2>Most Wins</h2>
                         <ol>
                             {overview && overview.mostWins && overview.mostWins.map(winResult => {
-                                return <li key={winResult.name}>{winResult.name} - {winResult.wins}</li>
+                                return <li key={winResult.rider}>{winResult.rider} - {winResult.wins}</li>
                             })}
                         </ol>
                     </div>
                     {overview && overview.overallWinners && overview.overallWinners.map(winner => {
                         return (
                             <div className={getGridClass(winner.type, styles)} key={winner.type}>
-                                <OverviewCard rider={winner.rider == null ? winner.team_time : winner.rider} team={winner.team} result={winner.points == null ? winner.time : winner.points} type={winner.type} year={year} />
+                                <OverviewCard rider={winner.rider == null ? winner.team_time : winner.rider} team={winner.team} result={winner.points == null ? formatTime(winner.time) : winner.points} type={winner.type} year={year} />
                             </div>
                         )
                     })}
@@ -72,11 +74,11 @@ function OverviewPage() {
                             <h2>The Gap</h2>
                             {
                                 <>
-                                    <p>{overview.gap.firstRider.rider} ({overview.gap.firstRider.time})</p>
+                                    <p>{overview.gap.firstRider.rider} ({formatTime(overview.gap.firstRider.time)}) - {overview.gap.firstRider.avgSpeed} km/h</p>
                                     <p>.</p>
-                                    <p>({overview.gap.gap})</p>
+                                    <p>({formatTime(overview.gap.gap)})</p>
                                     <p>.</p>
-                                    <p>{overview.gap.lastRider.rider} ({overview.gap.lastRider.time})</p>
+                                    <p>{overview.gap.lastRider.rider} ({formatTime(overview.gap.lastRider.time)}) - {overview.gap.lastRider.avgSpeed} km/h</p>
                                 </>
                             }
                         </div>

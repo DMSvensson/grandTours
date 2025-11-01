@@ -7,8 +7,26 @@ import hilly from '../../assets/icons/hilly.svg';
 import mountain from '../../assets/icons/mountain.svg';
 import camera from '../../assets/icons/camera.svg';
 import RaceLogo from "../../components/raceLogo/raceLogo";
+import { useState } from "react";
+import { useEffect } from "react";
+import { fetchData } from "../../utility/dataFetch";
+
+
 
 function HomePage() {
+    const [races, setRaces] = useState([]);
+    const [loadingText, setLoadingText] = useState('Loading...');
+
+    useEffect(() => {        
+        fetchData('races').then(races => {
+            setRaces(races)
+        }).catch(error => {
+            setLoadingText('Ups something went wrong. Working on it')
+        });
+    }, []);
+
+    const isLoading = races === null;
+
     return (
         <div className={styles.background}>
             <RaceLogo />
@@ -22,179 +40,61 @@ function HomePage() {
                     </div>
                 </div>
                 <div className={styles.editions}>
-                <div>
-                        <Link to={`teams/2025`}>
-                            <div className={styles.edition} style={
-                                {
-                                    backgroundPosition: '0 -467px', backgroundImage: 'url(https://images.unsplash.com/photo-1709486815648-e34d369d7c6b?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-                                }}>
-                                <div>
-                                    <h3>Tour de France 2025</h3>
-                                    <span>Lille - Paris</span>
-                                    <p>Edition 112</p>
-                                </div>
-                                <div className={styles.stageTypes}>
-                                    <div>
-                                        <span>2</span>
-                                        <img className={styles.icon} src={ITT} alt="ITT" />
-                                    </div>
-                                    <div>
-                                        <span>7</span>
-                                        <img className={styles.icon} src={flat} alt="Flat" />
-                                    </div>
-                                    <div>
-                                        <span>6</span>
-                                        <img className={styles.icon} src={hilly} alt="Hilly" />
-                                    </div>
-                                    <div>
-                                        <span>6</span>
-                                        <img className={styles.icon} src={mountain} alt="Mountain" />
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                        <a className={styles.credit} href="https://unsplash.com/photos/a-large-building-with-a-clock-tower-on-top-of-it-sdZd8K2q2hs" target="blank">
-                            <img src={camera} alt="Credit" />Philippe Patin
-                        </a>
-                    </div>
-                    <div>
-                        <Link to={`teams/2024`}>
-                            <div className={styles.edition} style={
-                                {
-                                    backgroundPosition: '0 -857px', backgroundImage: 'url(https://grandtourstorage.blob.core.windows.net/tdf/cover/TDF_Cover_2024.png)',
-                                }}>
-                                <div>
-                                    <h3>Tour de France 2024</h3>
-                                    <span>Firenze - Nice</span>
-                                    <p>Edition 111</p>
-                                </div>
-                                <div className={styles.stageTypes}>
-                                    <div>
-                                        <span>2</span>
-                                        <img className={styles.icon} src={ITT} alt="ITT" />
-                                    </div>
-                                    <div>
-                                        <span>8</span>
-                                        <img className={styles.icon} src={flat} alt="Flat" />
-                                    </div>
-                                    <div>
-                                        <span>4</span>
-                                        <img className={styles.icon} src={hilly} alt="Hilly" />
-                                    </div>
-                                    <div>
-                                        <span>7</span>
-                                        <img className={styles.icon} src={mountain} alt="Mountain" />
+                    {isLoading && <p>{loadingText}</p>}
+                    { 
+                     !isLoading && races && races.map((race) => {
+                            return (
+                                <div key={race.year} className={`${styles.editionBackground}`} style={{backgroundImage: `url(https://grandtourstorage.blob.core.windows.net/tdf/cover/TDF_Cover_${race.year}.jpg)`}}>
+                                    <Link to={`${race.year}`}>
+                                        <div className={styles.edition} >
+                                            <div>
+                                                <h3>Tour de France {race.year}</h3>
+                                                <span>{race.startCity} - {race.endCity}</span>
+                                                <p>Edition {race.edition}</p>
+                                            </div>
+                                            {
+                                                race.flat > 0 &&
+                                                race.hilly > 0 &&
+                                                race.mountain > 0 &&
+                                                <div className={styles.stageTypes}>
+                                                    <div>
+                                                        <span>{race.flat}</span>
+                                                        <img className={styles.icon} src={flat} alt="Flat" />
+                                                    </div>
+                                                    <div>
+                                                        <span>{race.hilly}</span>
+                                                        <img className={styles.icon} src={hilly} alt="Hilly" />
+                                                    </div>
+                                                    <div>
+                                                        <span>{race.mountain}</span>
+                                                        <img className={styles.icon} src={mountain} alt="Mountain" />
+                                                    </div>
+                                                    {
+                                                        race.itt > 0 &&
+                                                        <div>
+                                                            <span>{race.itt}</span>
+                                                            <img className={styles.icon} src={ITT} alt="ITT" />
+                                                        </div>
+                                                    }
+                                                    {
+                                                        race.ttt > 0 &&
+                                                        <div>
+                                                            <span>{race.ttt}</span>
+                                                            <img className={styles.icon} src={ITT} alt="ITT" />
+                                                        </div>
+                                                    }
+                                                </div>
+                                            }
+                                            
+                                        </div>
+                                    </Link>
+                                    <div className={styles.credit}>
+                                        <img src={camera} alt="Credit" />{race.imageCredit}
                                     </div>
                                 </div>
-                            </div>
-                        </Link>
-                        <a className={styles.credit} href="https://www.theguardian.com/sport/live/2024/jul/10/tour-de-france-2024-stage-11-from-evaux-les-bains-to-le-lioran-live?filterKeyEvents=false&page=with%3Ablock-668e664e8f0837e48ab117c4" target="blank">
-                            <img src={camera} alt="Credit" />Daniel Cole/AP
-                        </a>
-                    </div>
-                    <div>
-                        <Link to={`teams/2023`}>
-                            <div className={styles.edition} style={
-                                {
-                                    backgroundPosition: '0 -450px', backgroundImage: 'url(https://grandtourstorage.blob.core.windows.net/tdf/cover/TDF_Cover_2023.jpg)',
-                                }}>
-                                <div>
-                                    <h3>Tour de France 2023</h3>
-                                    <span>Bilbao - Paris</span>
-                                    <p>Edition 110</p>
-                                </div>
-                                <div className={styles.stageTypes}>
-                                    <div>
-                                        <span>1</span>
-                                        <img className={styles.icon} src={ITT} alt="ITT" />
-                                    </div>
-                                    <div>
-                                        <span>4</span>
-                                        <img className={styles.icon} src={flat} alt="Flat" />
-                                    </div>
-                                    <div>
-                                        <span>8</span>
-                                        <img className={styles.icon} src={hilly} alt="Hilly" />
-                                    </div>
-                                    <div>
-                                        <span>8</span>
-                                        <img className={styles.icon} src={mountain} alt="Mountain" />
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                        <a className={styles.credit} href="https://www.facebook.com/photo/?fbid=686043820232928&set=a.686045560232754" target="blank">
-                            <img src={camera} alt="Credit" />A.S.O. / Ashley Gruber & Jered Gruber
-                        </a>
-                    </div>
-                    <div>
-                        <Link to={`teams/2022`}>
-                            <div className={styles.edition} style={
-                                {
-                                    backgroundImage: 'url(https://grandtourstorage.blob.core.windows.net/tdf/cover/TDF_Cover_2022.jpg)',
-                                    backgroundPosition: '0 -210px'
-                                }}>
-                                <div>
-                                    <h3>Tour de France 2022</h3>
-                                    <span>Copenhaen - Paris</span>
-                                    <p>Edition 109</p>
-                                </div>
-                                <div className={styles.stageTypes}>
-                                    <div>
-                                        <span>2</span>
-                                        <img className={styles.icon} src={ITT} alt="ITT" />
-                                    </div>
-                                    <div>
-                                        <span>5</span>
-                                        <img className={styles.icon} src={flat} alt="Flat" />
-                                    </div>
-                                    <div>
-                                        <span>7</span>
-                                        <img className={styles.icon} src={hilly} alt="Hilly" />
-                                    </div>
-                                    <div>
-                                        <span>7</span>
-                                        <img className={styles.icon} src={mountain} alt="Mountain" />
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                        <a className={styles.credit} href="https://www.facebook.com/photo/?fbid=5224725550910115&set=a.5202251869824150" target="blank"><img src={camera} alt="Credit" />Le Tour de France Facebook</a>
-                    </div>
-                    <div>
-                        <Link to={`teams/2021`}>
-                            <div className={styles.edition} style={
-                                {
-                                    backgroundImage: 'url(https://grandtourstorage.blob.core.windows.net/tdf/cover/TDF_Cover_2021.jpg)',
-                                    backgroundPosition: '0 -480px'
-                                }}>
-                                <div>
-                                    <h3>Tour de France 2021</h3>
-                                    <span>Brest - Paris</span>
-                                    <p>Edition 108</p>
-                                </div>
-                                <div className={styles.stageTypes}>
-                                    <div>
-                                        <span>2</span>
-                                        <img className={styles.icon} src={ITT} alt="ITT" />
-                                    </div>
-                                    <div>
-                                        <span>3</span>
-                                        <img className={styles.icon} src={flat} alt="Flat" />
-                                    </div>
-                                    <div>
-                                        <span>8</span>
-                                        <img className={styles.icon} src={hilly} alt="Hilly" />
-                                    </div>
-                                    <div>
-                                        <span>8</span>
-                                        <img className={styles.icon} src={mountain} alt="Mountain" />
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                        <a className={styles.credit} href="https://www.facebook.com/photo/?fbid=4087043051345043&set=a.4067212993328049" target="blank"><img src={camera} alt="Credit" />A.S.O. / Ashley Gruber - Jered Gruber</a>
-                    </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>

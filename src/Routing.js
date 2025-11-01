@@ -8,30 +8,42 @@ import OverviewPage from "./pages/overview/overview";
 import ErrorPage from "./error-page";
 import { StageProvider } from "./contexts/StageContext";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
     {
-        path: "/",
-        element: <App />,
-        children: [
+      path: "/",
+      element: <App />,
+      children: [
+        {
+          path: "/",
+          element: <HomePage />,
+        },
+        {
+          path: "/:year",
+          children: [
             {
-                path: '/',
-                element: <HomePage />
+              path: "/:year",
+              element: <StartListPage />,
             },
             {
-                path: '/teams/:year',
-                element: <StartListPage />
+              path: "/:year/stages/:raceId",
+              element: (
+                <StageProvider>
+                  <StagesPage />
+                </StageProvider>
+              ),
             },
             {
-                path: '/stages/:year',
-                element: <StageProvider><StagesPage /></StageProvider>
+              path: "/:year/overview",
+              element: <OverviewPage />,
             },
-            {
-                path: '/overview/:year',
-                element: <OverviewPage />
-            }
-        ],
-        errorElement: <ErrorPage />
-    }
-], {basename: "/grandTours"});
+          ],
+        },
+      ],
+      errorElement: <ErrorPage />,
+    },
+  ],
+  { basename: "/grandTours" }
+);
 
 export default router;

@@ -10,7 +10,7 @@ import { useStage } from '../../contexts/StageContext';
 import ProgressBox from '../../components/progressBox/progressBox';
 
 function StagesPage() {
-  const { year } = useParams();
+  const { raceId, year } = useParams();
   const { state } = useLocation();
   const navigate = useNavigate();
   const [data, setData] = useState(null);
@@ -34,7 +34,7 @@ function StagesPage() {
   }, [currentStage]);
 
   const getData = (stageNumber) => {
-    fetchData(`stages/${year}/${stageNumber}`).then(stage => {
+    fetchData(`stages/${raceId}/${stageNumber}`).then(stage => {
       handleDataChange(stage);
     }).catch(error => {
       console.error(error);
@@ -49,7 +49,7 @@ function StagesPage() {
       <ProgressBox showOverview={showOverview} year={year}/>
       <div id='scrollContainer' className='container'>
         {!isLoading && !showOverview && <Stage stage={stage} year={year} handleSelectedStage={handleStageChange} />}
-        {!isLoading && showOverview && <StageOverview results={stage.overview} stageNumber={stage.stage_number} year={year} />}
+        {!isLoading && showOverview && <StageOverview results={stage.allResults} combativity={stage.combativity} stageNumber={stage.stage_number} year={year} />}
       </div>
     </WheelActiveProvider>
   );
