@@ -43,7 +43,7 @@ const router = createBrowserRouter(
       errorElement: <ErrorPage />,
     },
   ],
-  { basename: "/grandTours" }
+  { basename: "/" }
 );
 
 export default router;
