@@ -17,7 +17,7 @@ function goForward(setBoxWidth, stageNumber, year, showOverview, handleShowOverv
       handleStageChange(stageNumber + 1);
       handleShowOverview(false);
     } else if (stageNumber === numberOfStages) {
-      navigate(`/overview/${year}`);
+      navigate(`/${year}/overview`);
     }
   }
 }
