@@ -7,6 +7,7 @@ import { RouterProvider } from 'react-router-dom';
 import router from './Routing';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+  document.title = "Grand Peloton"
 root.render(
   <React.StrictMode>
       <RouterProvider router={router} />
