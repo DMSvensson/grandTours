@@ -1,9 +1,5 @@
 <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="110" height="110" fill="white"/>
 <rect width="110" height="110" fill="white"/>
-<mask id="path-3-inside-1_21_8" fill="white">
-<path d="M0 69H110V110H0V69Z"/>
-</mask>
 <path d="M0 69H110V110H0V69Z" fill="#4BAB00"/>
-<path d="M0 70H110V68H0V70Z" fill="black" mask="url(#path-3-inside-1_21_8)"/>
 </svg>
