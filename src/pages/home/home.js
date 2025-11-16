@@ -2,6 +2,7 @@ import React from "react";
 import styles from './home.module.css';
 import { Link } from "react-router-dom";
 import ITT from '../../assets/icons/ITT.svg';
+import TTT from '../../assets/icons/TTT.svg';
 import flat from '../../assets/icons/flat.svg';
 import hilly from '../../assets/icons/hilly.svg';
 import mountain from '../../assets/icons/mountain.svg';
@@ -10,6 +11,7 @@ import RaceLogo from "../../components/raceLogo/raceLogo";
 import { useState } from "react";
 import { useEffect } from "react";
 import { fetchData } from "../../utility/dataFetch";
+import CountDown from "../../components/countdown/countdown";
 
 
 
@@ -17,7 +19,7 @@ function HomePage() {
     const [races, setRaces] = useState([]);
     const [loadingText, setLoadingText] = useState('Loading...');
 
-    useEffect(() => {        
+    useEffect(() => {      
         fetchData('races').then(races => {
             setRaces(races)
         }).catch(error => {
@@ -52,6 +54,7 @@ function HomePage() {
                                                 <span>{race.startCity} - {race.endCity}</span>
                                                 <p>Edition {race.edition}</p>
                                             </div>
+                                            <CountDown raceStartDate={new Date(race.startDate)} />
                                             {
                                                 race.flat > 0 &&
                                                 race.hilly > 0 &&
@@ -80,7 +83,7 @@ function HomePage() {
                                                         race.ttt > 0 &&
                                                         <div>
                                                             <span>{race.ttt}</span>
-                                                            <img className={styles.icon} src={ITT} alt="ITT" />
+                                                            <img className={styles.icon} src={TTT} alt="ITT" />
                                                         </div>
                                                     }
                                                 </div>

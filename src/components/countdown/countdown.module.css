@@ -1,0 +1,6 @@
+.countDown {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    padding: 15px;
+}

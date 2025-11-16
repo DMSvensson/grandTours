@@ -51,6 +51,7 @@
 .edition {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     border-radius: 20px;
