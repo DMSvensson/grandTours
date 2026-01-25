@@ -5,7 +5,8 @@ const resultsTypes = {
     polka: 'polka',
     youth: 'youth',
     team: 'team',
-    fighter: 'fighter'
+    fighter: 'fighter',
+    bestMate: 'bestMate',
 }
 
 const jerseryTypes = {
@@ -16,6 +17,7 @@ const jerseryTypes = {
     [resultsTypes.youth]: "youth_jersey",
     [resultsTypes.team]: "best_team",
     [resultsTypes.fighter]: "fighter",
+    [resultsTypes.bestMate]: "best_mate",
 };
 
 const getJerseyByType = (resultType) => {

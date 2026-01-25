@@ -37,6 +37,10 @@ const getGridClass = (type, styles) => {
             return styles.youngJersey;
         case resultsTypes.team:
             return styles.team;
+        case resultsTypes.fighter:
+            return styles.combativity;
+        case resultsTypes.bestMate:
+            return styles.bestMate;
         default:
             break;
     }

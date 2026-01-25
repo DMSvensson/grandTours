@@ -6,6 +6,8 @@ import { fetchData } from '../../utility/dataFetch';
 import RaceLogo from '../../components/raceLogo/raceLogo';
 import { getGridClass } from '../../utility/styles';
 import { formatTime } from '../../utility/timeFormat';
+import { fetchRaceImages } from '../../utility/dataFetch';
+import { getJerseyByType } from '../../utility/resultsTypes';
 
 function OverviewPage() {
     const {year} = useParams();
@@ -26,7 +28,7 @@ function OverviewPage() {
     }, [year]);    
     const isLoading = data === null;
     const overview = isLoading ? loadingText : data;
-    console.log(overview)
+
     return (
         <div className={styles.background}>
             <div className={styles.header}>
@@ -69,6 +71,30 @@ function OverviewPage() {
                             </div>
                         )
                     })}
+                    {overview.bestTeamMates &&
+                        <div className={getGridClass('bestMate', styles)}>
+                            {overview.bestTeamMates.map((bestTeamMate) => {
+                        return (
+                            <>
+                                <div className={styles.bestMateWeeklyWinners} key={`${bestTeamMate.week}-${bestTeamMate.is_super}`}>
+                                    <p>Week {bestTeamMate.week}</p>
+                                    <p className={`${styles.bestMateWeekWinner} ${styles.bestMateWinner}`}>{bestTeamMate.rider}</p>
+                                </div>
+                                {
+                                    bestTeamMate.is_super &&
+                                    <div className={styles.bestMateOverallWinner} key={`${bestTeamMate.rider}-${bestTeamMate.is_super}`}>
+                                        <img src={fetchRaceImages(year, getJerseyByType('bestMate'))} alt={`Best teammate`} />
+                                        <p>Winner of best team-mate</p>
+                                        <p className={`${styles.bestMateOverallWinner}  ${styles.bestMateWinner}`}>{bestTeamMate.rider}</p>
+                                    </div>
+                                }
+                            </>
+                        )
+                    })
+
+                    }
+                        </div>
+                    }
                     {overview.gap && 
                         <div className={styles.gap}>
                             <h2>The Gap</h2>
